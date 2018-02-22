@@ -1,0 +1,271 @@
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.font-normal {
+  font-size: 13px;
+}
+.font-small {
+  font-size: 12px;
+}
+.font-medium {
+  font-size: 14px;
+}
+.font-large {
+  font-size: 16px;
+}
+.dashboard-members {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+}
+.dashboard-members .itemCheckOut a,
+.dashboard-members .status-active,
+.dashboard-members .status-suspended,
+.dashboard-members .status-expired,
+.dashboard-members .status-pending {
+  background-color: transparent;
+  color: #999899;
+  font-size: 12px;
+}
+.intro {
+  padding: 10px 0;
+  line-height: 15px;
+}
+.intro p {
+  font-size: 13px;
+  color: #383838;
+}
+.intro span {
+  font-size: 12px;
+}
+.intro span em {
+  color: #95a5a6;
+  font-style: normal;
+  font-weight: normal;
+}
+.mini-profile .profile-img {
+  border: 1px solid #383838;
+  float: right;
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+.bell {
+  border-radius: 30px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 11px;
+  font-style: normal;
+  padding: 0.5px 2.5px;
+  margin: 0 5px;
+  line-height: 10px;
+}
+.rate {
+  font-size: 20px;
+}
+.turquoise {
+  color: #1abc9c;
+}
+.dashboard {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dashboard .dashboard-list {
+  width: 30%;
+  margin-right: 2%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dashboard .dashboard-list .webitem {
+  background-color: #fcfcfc;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  height: 60px;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+.dashboard .dashboard-list .webitem p {
+  line-height: 20px;
+}
+.dashboard .dashboard-list .webitem .action {
+  display: none;
+  font-size: 12px;
+}
+.dashboard .dashboard-list .webitem:hover,
+.dashboard .dashboard-list .webitem.active {
+  background-color: #ecf0f1;
+}
+.dashboard .dashboard-list .webitem:hover .action,
+.dashboard .dashboard-list .webitem.active .action {
+  display: block;
+}
+.dashboard .dashboard-list .webitem:hover p,
+.dashboard .dashboard-list .webitem.active p {
+  color: #383838;
+}
+.dashboard .dashboard-stats {
+  float: left;
+  width: 68%;
+  border: 1px solid #eeeeee;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dashboard .dashboard-stats section {
+  float: left;
+}
+.dashboard .dashboard-stats header {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.dashboard .dashboard-stats header h1 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.dashboard .dashboard-stats header span {
+  font-size: 12px;
+  color: #999899;
+}
+.dashboard .dashboard-stats header .btn-info {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 5px;
+}
+.dashboard .dashboard-stats .stats {
+  float: left;
+  width: 100%;
+}
+.dashboard .dashboard-stats .stats .column {
+  float: left;
+  width: 20%;
+  border-right: 1px solid #eeeeee;
+  padding: 10px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dashboard .dashboard-stats .stats .column.last {
+  border: none;
+  padding-right: 0;
+}
+.dashboard .dashboard-stats .stats .column.first {
+  padding-left: 0;
+}
+.dashboard .dashboard-stats .stats p {
+  color: #999899;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.dashboard .dashboard-stats .stats b {
+  color: #16a085;
+  font-size: 18px;
+  font-weight: 600;
+}
+.dashboard .dashboard-stats .stats b.big {
+  font-size: 36px;
+  line-height: 36px;
+}
+.dashboard .dashboard-stats .charts {
+  background-color: #fcfcfc;
+  padding: 20px;
+  margin: 10px 0;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.dashboard .dashboard-stats .charts h3 {
+  color: #16a085;
+  font-size: 16px;
+  line-height: 20px;
+}
+.dashboard .dashboard-stats .charts p {
+  font-size: 11px;
+}
+.dashboard .dashboard-stats .charts .doughnut {
+  float: left;
+  width: 50%;
+}
+.dashboard .dashboard-stats .charts .doughnut .full {
+  float: left;
+  width: 100%;
+}
+.dashboard .dashboard-stats .charts .doughnut .left {
+  float: left;
+  width: 40%;
+}
+.dashboard .dashboard-stats .charts .doughnut .right {
+  float: left;
+  width: 60%;
+}
+.dashboard .dashboard-stats .charts .doughnut .task .percent {
+  padding-top: 10px;
+  color: #2980b9;
+  font-size: 18px;
+  font-weight: bold;
+}
+.dashboard .dashboard-stats .charts .doughnut .task p {
+  color: #16a085;
+  font-size: 13px;
+}
+.dashboard .dashboard-stats .charts .bars {
+  float: left;
+  width: 50%;
+}
+.dashboard .dashboard-stats .charts .bars p {
+  color: #383838;
+  font-size: 13px;
+}
+.dashboard .dashboard-stats .charts .bars abbr {
+  font-size: 8px;
+  color: #999899;
+  margin: 0 6px 0 0.5px;
+}
+.circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-top: 10px;
+}
+.circle > .percent {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 94px;
+  font-size: 24px;
+  text-align: center;
+}
+.circle .slice {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 5px solid #2980b9;
+  border-radius: 60px;
+}
+.circle .slice .pie {
+  border: 5px solid #bdc3c7;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 60px;
+  margin: -5px 0 0 -5px;
+  clip: rect(0px,43px,50px,0px);
+}
+.chart-bars b {
+  background-color: #16a085;
+  width: 12px;
+  display: inline-block;
+  margin: 0 3.6px;
+  cursor: pointer;
+}

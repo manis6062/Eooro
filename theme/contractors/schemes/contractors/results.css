@@ -1,0 +1,171 @@
+div.map {
+  border: 1px solid #cccccc;
+  background-color: #fff !important;
+}
+div.map .map-loading {
+  background: url(images/iconography/icon-loading-content.gif) no-repeat 80% center transparent;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+.map-info-view {
+  overflow: hidden !important;
+}
+.map-info-view p,
+.map-info-view a {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 0;
+}
+.map-info-view img {
+  width: 13px;
+}
+#list_rating label {
+  font-size: 0px;
+}
+.summary {
+  border: 1px solid #d9d9d7;
+  background-color: #ffffff;
+}
+.summary.summary-backlink {
+  border: 1px solid #33b5e5;
+}
+.summary .divisor {
+  border-color: white;
+}
+.summary .title {
+  border-bottom: 1px solid #dee1e3;
+  padding-bottom: 12px;
+}
+.summary .title p {
+  padding-top: 1px;
+  font-size: 12px;
+}
+.summary .title h3 {
+  line-height: 1.2em;
+  font-weight: 600;
+  font-size: 18px;
+}
+.summary .title h3 a {
+  color: #3d3d3d;
+}
+.summary .title h3 a:hover {
+  color: #6ab0de;
+}
+.summary .title h4 {
+  color: #2980b9;
+  font-size: 12px;
+}
+.summary .title em {
+  color: #d35400;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+.summary .map-link {
+  padding: 0 2px 0 20px;
+  background: url(images/iconography/pin-map.png) no-repeat 1px 1px;
+}
+.summary .line-footer {
+  background-color: #F5F5F4;
+  color: #939496;
+}
+.summary .line-footer .stars-rating [class*="rate-"] {
+  background-color: #f2f3f5;
+}
+.summary .review-count {
+  text-decoration: none;
+}
+.summary .claim a {
+  color: #d35400;
+  font-size: 0.85em;
+}
+.summary .claim a:hover {
+  color: #ff6702;
+}
+.summary-small .line-footer .review > a {
+  line-height: 30px;
+}
+.summary-small .row-fluid > p {
+  color: #939496;
+  line-height: 1.4em;
+  font-size: 93%;
+}
+.summary-small .rate p,
+.summary-small .rate p a,
+.summary-small .show-inline,
+.summary-small .line-footer a {
+  font-size: 12px;
+}
+.summary-small .info {
+  font-size: 12px;
+}
+.summary-small .info p {
+  line-height: 1.15em;
+}
+.summary-small .info small {
+  font-size: 12px;
+}
+.summary-article .media-body p {
+  font-size: 90%;
+  color: #939496;
+}
+.summary-article p {
+  font-size: 12px;
+}
+.summary-deal .media-body p {
+  color: #939496;
+  line-height: 1.3em;
+  font-size: 105%;
+}
+.listing-tag-deal,
+.deal-tag-small {
+  background-color: #d35400;
+}
+.name-tag-deal {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.name-tag-deal,
+.name-tag-deal a {
+  color: white;
+}
+.name-tag-deal a:hover {
+  color: #f8f8f8;
+}
+.name-tag-deal small {
+  color: #e8e9eb;
+}
+.summary .deal-tag,
+.summary .title .price {
+  color: #dee1e3;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: right;
+}
+.tabs .mapView.disableMapTab {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.tabs .mapView.disableMapTab a,
+.tabs .mapView.disableMapTab a:hover {
+  background-color: #e8e9eb;
+  color: #939496;
+  cursor: default;
+  border: none;
+}
+.results-info-listing p {
+  font-size: 12px;
+}
+.results-info-listing p strong:after,
+.results-info-listing p strong:before,
+.search-info p strong:after,
+.search-info p strong:before {
+  content: "\0022";
+}
+.sidebar-filters .item-filter h3 a:hover,
+.sidebar-filters .item-filter h3 a:focus {
+  background-color: transparent;
+}

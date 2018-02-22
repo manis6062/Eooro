@@ -1,0 +1,197 @@
+<?php
+	extract($_GET);
+	include("conf/loadconfig.inc.php");	
+	$dbMain = db_getDBObject(DEFAULT_DB, true);
+	$dbObj  = db_getDBObjectByDomainID(SELECTED_DOMAIN_ID, $dbMain);
+
+	//If add business listing not found page
+	if($type == md5("addbusiness")){
+
+		$code   = mysql_real_escape_string(htmlentities($code));
+		$sql    = "SELECT * FROM ListingRequest WHERE activation_code = '$code' AND activation_code_is_used ='0'";
+		$result = $dbObj->query($sql);
+		while($row = mysql_fetch_assoc($result)){
+			$extract = $row;
+		}
+
+		if ($extract) {
+             
+			$sql 	= "UPDATE ListingRequest SET listing_confirmed = '1', listing_confirmed_date = NOW(), activation_code_is_used ='1' WHERE activation_code = '$code'";
+			$result =  $dbObj->query($sql);
+
+			$listingObj = new Listing();
+			$listingObj->title 			= $extract['company_title'];
+			$listingObj->friendly_url   = system_generateFriendlyURL($listingObj->title). md5(rand(111111, 999999));
+			$listingObj->phone 			= $extract['phone'];
+			$listingObj->url   			= $extract['website'];
+			$listingObj->status   		= "A";
+			$listingObj->facebook_page 	= $extract['facebook_url'];
+			$listingObj->custom_text1  	= $extract['twitter_url']; //Twitter widget ID
+			$listingObj->location_1		= $extract['location_1'];
+			$listingObj->location_3		= $extract['location_3'];
+			$listingObj->location_4		= $extract['location_4'];
+			$listingObj->address 		= $extract['street_address'];
+			$listingObj->avg_review		= $extract['rating'];
+                        $listingObj->review_count= 1;
+			$listingObj->save();
+                       
+			if($extract['is_owner'] == 1){ 
+
+				setting_get("sitemgr_email",$sitemgr_email);
+				$emailNotificationObj = new EmailNotification(44);
+				$subject 			  = $emailNotificationObj->subject;
+				$body				  = $emailNotificationObj->body;
+				$claimLink 			  = DEFAULT_URL."/".ALIAS_LISTING_MODULE."/claim/".$listingObj->friendly_url;
+				$detailLink           = LISTING_DEFAULT_URL."/".$listingObj->friendly_url;
+
+				if($acctID){
+					$body			  = str_replace("FIRSTNAME",ucfirst($contact->first_name), $body);
+					$body			  = str_replace("LASTNAME",ucfirst($contact->last_name), $body);
+				} else {
+					$body			  = str_replace("FIRSTNAME","", $body);
+					$body			  = str_replace("LASTNAME","Business Owner", $body);
+				}
+				$body			 	  = str_replace("CLAIM_LINK",$claimLink, $body);
+				$body			 	  = str_replace("LISTING_NAME",  htmlspecialchars($listingObj->title), $body);
+				$body			 	  = str_replace("LISTING_URL",$detailLink, $body);
+				$subject		 	  = str_replace("LISTING_NAME",$listingObj->title, $subject);
+
+				$return  = system_mail($extract['email'], $subject, $body, EDIRECTORY_TITLE." <$sitemgr_email>","text/html", "", "", $error, "", "", "", $listingObj->id, $listingObj->account_id, "44");
+				$message  = "<h1>Verification Successful</h1>";
+				$message .= "<p style='margin-top:50px;'>A link to claim your business has been sent to your email.</p>";
+			}
+
+			if($extract['is_owner'] == 0){
+
+				//Check if email exists in our database
+				$email_exists = Account::checkUser($extract['reviewer_email']);
+
+				if( !sess_getAccountIdFromSession() && $email_exists == false ){
+
+					//Create New Account
+					$pass 				= md5(rand(1111,9999));
+					$account 		   	= new Account();
+					$account->username 	= $extract['reviewer_email'];
+					$account->password 	= $pass;
+					$account->active    = "y";
+					$account->agree_tou = "y";
+					$account->save();
+
+					$contact 				= new Contact();
+					$contact->account_id 	= $account->id;
+					$nameData = $extract['reviewer_name'];
+						if(strpos($nameData, " ") > -1){
+							$reviewer_name = explode(" ", $nameData);
+							$contact->first_name = $reviewer_name[0];
+							$contact->last_name = $reviewer_name[1];
+						} else {
+							$contact->first_name = $nameData;
+						}
+					$contact->email = $extract['reviewer_email'];
+					$contact->save();	
+
+					$profileObj = new Profile($account->getNumber("id"));
+					$profileObj->setNumber("account_id", $account->getNumber("id"));
+					if (!$profileObj->getString("nickname")) {
+						$profileObj->setString("nickname", $extract['reviewer_name']);
+					}
+					$profileObj->Save();
+
+					$accDomain = new Account_Domain($account->getNumber("id"), SELECTED_DOMAIN_ID);
+					$accDomain->Save();
+					$accDomain->saveOnDomain($account->getNumber("id"), $account, $contact, $profileObj);
+
+					//Send email with option to reset password
+					setting_get("sitemgr_email", $sitemgr_email);
+					$emailNotificationObj = new EmailNotification(46);
+					$subject 			  = $emailNotificationObj->subject;
+					$body				  = $emailNotificationObj->body;
+					$forgotLink			  = DEFAULT_URL . "/sponsors/forgot.php?email=" . $extract['reviewer_email'];
+
+					//Replace
+					$body				  = str_replace("FIRSTNAME","", $body);
+					$body				  = str_replace("LASTNAME", $extract['reviewer_name'], $body);
+					$body				  = str_replace("LISTING_URL", $detailLink , $body);
+					$body				  = str_replace("REVIEWER_EMAIL", $extract['reviewer_email'] , $body);
+					$body				  = str_replace("CHANGE_PASSWORD_LINK", $forgotLink , $body);
+					$body				  = str_replace("PASSWORD", $pass , $body);
+					$body				  = str_replace("LISTING_NAME", $listingObj->title , $body);
+
+					$return  = system_mail($extract['reviewer_email'], $subject, $body, EDIRECTORY_TITLE." <$sitemgr_email>","text/html", "", "", $error, "", "", "", $listingObj->id, $account->id, "46");
+
+					$reviewObj 		   	  	   = new Review();
+					$reviewObj->item_type 	   = "listing";
+					$reviewObj->item_id	  	   = $listingObj->id;
+					$reviewObj->added	  	   = date('Y-m-d H:i:s');
+					$reviewObj->rating 	  	   = $extract['rating'];
+					$reviewObj->review_title   = $extract['review_title'];
+					$reviewObj->review 		   = $extract['review'];
+					$reviewObj->ip 			   = $_SERVER['REMOTE_ADDR'];
+					$reviewObj->reviewer_name  = $extract['reviewer_name'];
+					$reviewObj->reviewer_email = $extract['reviewer_email'];
+					$reviewObj->member_id      = $account->id;
+					$reviewObj->approved       = "1";
+					$reviewObj->save();
+
+					$message  = "<h1>Verification Successful</h1>";
+					$message .= "<p style='margin-top:50px;'>Your review has been noted and an account has been created. Please check your email and follow the instructions.</p>";
+				
+				} else {
+
+					setting_get("sitemgr_email",$sitemgr_email);
+					$contactObj = new Contact(Account::getAccountIDFromEmail($extract['reviewer_email']));
+					$reviewObj 		   	  	   = new Review();
+					$reviewObj->item_type 	   = "listing";
+					$reviewObj->item_id	  	   = $listingObj->id;
+					$reviewObj->added	  	   = date('Y-m-d H:i:s');
+					$reviewObj->rating 	  	   = $extract['rating'];
+					$reviewObj->review_title   = $extract['review_title'];
+					$reviewObj->review 		   = $extract['review'];
+					$reviewObj->ip 			   = $_SERVER['REMOTE_ADDR'];
+					$reviewObj->reviewer_name  = ucfirst($contactObj->first_name) . " " . ucfirst($contactObj->last_name);
+					$reviewObj->reviewer_email = $extract['reviewer_email'];
+					$reviewObj->member_id 	   = $contactObj->account_id;
+					$reviewObj->approved       = "1";
+					$reviewObj->save();
+
+					//Mail the reviewer successful Review Posted
+					$emailNotificationObj = new EmailNotification(45);
+					$subject 			  = $emailNotificationObj->subject;
+					$body				  = $emailNotificationObj->body;
+					$detailLink           = LISTING_DEFAULT_URL."/".$listingObj->friendly_url;
+
+					//Replace
+					$body				  = str_replace("FIRSTNAME",ucfirst($contactObj->first_name), $body);
+					$body				  = str_replace("LASTNAME",ucfirst($contactObj->last_name), $body);
+					$body				  = str_replace("LISTING_URL", $detailLink , $body);
+
+					$return  = system_mail($contactObj->email, $subject, $body, EDIRECTORY_TITLE." <$sitemgr_email>","text/html", "", "", $error, "", "", "", $listingObj->id, $contactObj->account_id, "45");
+
+					$message  = "<h1>Verification Successful</h1>";
+					$message .= "<p style='margin-top:50px;'>Thank you. Your review has been posted.</p>";
+				}
+			}
+
+		} else {
+			
+			$message  = "<h1>Invalid Activation Code.</h1>";
+			$message .= "Sorry you entered an invalid activation code. Please try again.";
+
+		}
+
+	}
+	
+	# ----------------------------------------------------------------------------------------------------
+	# HEADER
+	# ----------------------------------------------------------------------------------------------------
+	include(system_getFrontendPath("header.php", "layout"));
+
+	# ----------------------------------------------------------------------------------------------------
+	# BODY
+	# ----------------------------------------------------------------------------------------------------
+	include(INCLUDES_DIR."/views/view_activation_action.php");
+
+	# ----------------------------------------------------------------------------------------------------
+	# FOOTER
+	# ----------------------------------------------------------------------------------------------------
+	include(system_getFrontendPath("footer.php", "layout"));

@@ -1,0 +1,272 @@
+/**
+* eDirectory - Order Section
+*
+* @package			layout
+* @filesource		order.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+/*No Image*/
+.summary-small .media .summary-image .no-image {width:280px; height:121px!important; max-width:100%;}
+
+/* #Content*/
+.content.content-full {float: left; margin: 30px auto; padding: 0%; width: 100%; }
+
+.content-main
+{padding:20px 2%; border:none; }
+
+/**/
+
+.inputRadio {
+    float: right;
+}
+.radioChooseLevel {width:20px;}
+.standardSIGNUPTable td, .standardSIGNUPTable th, .standardSIGNUPTable tr
+{ padding: 0 5px;}
+
+.standardSubTitle, .orderTopdetail .standardSubTitle
+{margin:0 0 15px 0; overflow:hidden; padding:15px 0 10px 0; text-align:left; }
+
+#checkUsername {margin:0; padding:0; clear:both; line-height: 0;}
+
+.standardSIGNUPTable td span {   float: left;  margin: 0 0 10px;  line-height: 20px;}
+
+	.standardSubTitle span
+	{display:block; float:none; font-size: 13px;    line-height: 20px; }
+
+.nomargin
+{ margin:0 !important; }
+
+.alignLeft
+{ text-align:left !important; }
+
+/** Order structure */
+
+.standardForm
+{ margin:0; padding:0; }
+
+.orderTable
+{ margin-bottom:10px; width:100%; }
+
+	.orderTable td, 
+	.orderTable th,
+	.orderTable tr
+	{ color:#636363; }
+
+	.orderTable td
+	{ vertical-align:top; }
+
+	.orderTitle
+	{ background:#069; color:#FFF; padding:10px; width:600px; }
+	
+	orderTable .paddingUserTable
+	{ padding:10px 5px 15px 5px; }
+	
+	.orderUserTable
+	{ background:#F7F7F7; padding:0 0 10px 0; vertical-align:top; width:400px; }
+	
+	.orderUserTable table
+	{ text-align:left; margin:8px auto 0 auto; background:#FFF; border:2px solid #EFEFEF; width:95%; }
+	
+	.orderUserTable table td,
+	.orderUserTable table th
+	{ border:0; padding:5px; text-align:left; }
+	
+	.orderUserTable table td.warning
+	{ /*width:300px;*/ }
+	
+	.orderTable .orderUserTable .formFieldsLogin
+	{ font-size:11px; float:left; margin:0; padding:10px; width:300px; overflow:hidden; }
+	
+	.orderTable .orderUserTable .formFieldsLogin label
+	{ display:block; float:left; font-weight:bold; padding-right:10px; width:120px; text-align:right; }
+
+	.orderTable .orderUserTable .formFieldsLogin input
+	{ border:1px solid #E1E1E1; border-bottom:1px solid #EEE; float:left; font-size:10px; margin-bottom:7px; padding:2px; width:110px; }
+	
+	.orderTable .orderUserTable .formFieldsLogin .standardButton
+	{ padding:0 0 0 78px; }
+	
+	#formFacebookUser
+	{ padding:0 0 10px 0; }
+	
+		#formFacebookUser .button-facebook, #formGoogleUser .button-google
+		{ padding:0; }
+		
+.field.locationSelect select { max-width: 423px;} 
+        
+.form-location label{font-size:11px;}
+.form-location th, .form-location tr, .form-location td{padding:5px;}
+/** Order message */
+
+.standardMessage
+{ margin:0 auto 0 auto; }
+	
+	.errorTitle
+	{padding:5px 5px 5px 5px; text-align:left; }
+	
+/** Misc */
+
+.extendedContent .summary
+{ float:none; margin:0 auto 20px auto; width:auto; }
+
+	.extendedContent .summary .left
+	{ float:none; margin:0 auto; }
+
+
+/* #Advertising SignUP*/
+.order > div {clear:both;}
+.order input.inpemail {width: 268px;margin-right: 0;padding: 5px 3px 5px 20px; height: 15px;}
+.order input.inpname {width: 115px;margin-right: 10px;padding: 5px 3px 5px 20px; height: 15px;}
+.order input.openid { line-height: 20px;  padding: 4px 10px; width: 133px; height:27px;}
+.ie .order input.openid {line-height:30px;}
+
+.order .inputimg input {margin: 0 10px 0 0;}
+.order .identification .create label {clear:both;width:258px;}
+.order .identification .create .option label {clear:none;width:80%;}
+
+.order .identification div.inputimg.large > input[type=password]{width:240px;}
+.order .identification div.cont_50 {width:100%;}
+.order .cont_50 > input.inppassword {width: 115px;padding: 5px 3px 5px 20px; height: 15px;}
+.order  input.inppassword {width: 268px;margin-right: 10px;padding: 5px 3px 5px 20px; height: 15px;}
+.order .content-custom.cont_100.textcenter {margin: -3px 0 -10px 0;}
+.order .content-custom.cont_100.textcenter h3 {clear:none;}
+	
+.order div.btn-openid{margin: 0 23px 0 0; width: 275px;}
+	
+.order .right div.signup {float:left; width:48%; margin-right:2%;}
+.order .right div.create {float:left; width:47%; margin-left:2%;}
+	
+.order .checking {float:left; vertical-align:middle;}
+.order .checking img {margin:0 5px;}
+.order .checking input {width:190px;}
+
+.order .cont_50 select {width:100%;}
+.order .cont_50 .standardButton {margin: 10px auto 8px 0;  text-align: center;}
+.order .standardButton.buttoncenter {margin: 0 auto 10px -26px;text-align:center;}
+.order .standardButton.btn-openid button {margin: 10px 0 0 10px; padding: 10px 1px; line-height:16px; width: 100px;}
+
+.order .btn-facebook, 
+.order .btn-google {
+    clear: both;
+    float: left;
+    line-height: 16px;
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 10px 9px 10px 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 242px;
+}
+#screenPackage {
+	padding:20px 2%;
+}
+.order-package .right {     
+	float: left;
+    padding-right: 0;
+    padding-top: 0;
+    width: 72.6%;
+}
+.order-package .right h1 { 
+	margin:0;
+	line-height: 1em;
+ }
+#screenPackage .blockcontinue {
+    margin: 20px 0;
+    padding: 20px 2%;
+    width: 96%;
+}
+
+.blockcontinue .orderTotalAmount {display: table-cell;height: 54px;vertical-align: middle;width: 60%;}
+.blockcontinue .cont_40 {text-align:right;}
+
+.blockcontinue {  margin: 20px 0 20px -1%; padding: 20px 2%; width: 98%;}
+
+/*#Dining Guide Theme*/
+
+.identification div.inputimg, .create-profile div.inputimg {  float: left;  margin: 10px 0;}
+
+.identification label#checkUsername, .create-profile label#checkUsername {   float: left;   margin: -15px 0;}
+.order label#checkUsername > span {display: block;  padding: 15px 0;line-height: 10px;}
+
+.content-full input[type="checkbox"], .content-full input[type="radio"] {width:17px; margin:auto;height:17px;}
+
+.create .option label {height:auto;}
+
+.treeView {margin-top:10px;}
+
+#listing-info .cont_30 input { width: 85%;}
+#listing-info .cont_70 input {width: 68%} #listing-info .cont_70 select  { width: 71%;}
+#listing-info .cont_100 > .cont_30 {width:37%;}
+
+.ie #feed {height:100px;}
+
+/* #Table*/
+.cont_70 .standardChooseLevel {margin:0 auto;}
+.standardChooseLevel td {padding:5px 10px 5px 1px;}
+
+/*FIx*/
+.identification .standardButton.btn-openid, .identification .standardButton.btn-openid input {clear:none;float:left;}
+	.identification .standardButton.btn-openid input {margin-top:10px;}
+
+
+@media (min-width: 768px) and (max-width: 979px) { 
+		.content-main {
+	    padding:0;
+	}
+
+}
+
+
+@media (max-width:  979px) { 
+
+	.order .mgt-10 {float:left; padding-top:30px;}
+
+	.order .left {
+	    float: left;
+	    width: 100%;
+	    text-align:center;
+	}
+
+	.order .right {
+		width:100%;
+		padding:25px 0 0;
+	}
+
+	.order .right div.signup, .order .right div.create {
+	    border: medium none !important;
+	    float: none;
+	    margin: 0 auto;
+	    width: 280px;
+	}
+
+
+	.blockcontinue.cont_100 [class*="cont_"] {
+		width:100%;
+		float:none;
+		margin: 0 auto;
+		height:auto;
+		min-height:0;
+	}
+
+	.blockcontinue .checkoutButton.bt-highlight {
+		text-align:center;
+	}
+	.blockcontinue .checkoutButton.bt-highlight button {
+		width:80%;float:none;
+	}
+
+	.summary .line-footer .span9.review .rate {
+		padding-top:5px;
+		display: inline-block !important;
+	}
+
+	.content-custom.cont_100.textcenter {
+		display: none;
+	}
+
+}

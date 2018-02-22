@@ -1,0 +1,55 @@
+<?php include(EDIRECTORY_ROOT.'/custom/domain_1/theme/review/frontend/recent_review_queries.php'); ?>
+<div class="row">
+<div class="thumbnail custhumbnail detailpage-sidereview">
+    <div class="col-sm-12">
+        
+        
+        
+        
+        <?php  if(is_array($featuredReviews)) :
+                foreach ($featuredReviews as $featureReview) :?>
+        
+                <h5 class="rr"><?=system_showText(LANG_RECENT_REVIEWS)?></h5>
+
+        <div class="thumbnail businessDetail businessDetail1 fixedheight1 vetical">
+            
+       <!--      <img src="<?=getImageUrl( $featureReview );?>" class="img-circle detailImage" width="96" height="95" alt="img1" /> -->
+            <div class="abc">
+                <h4 class="footer-hreview">
+                <a href="<?=$featureReview['detailItemLink']?>">
+                   <!--  <em><?=$featureReview["title"];?></em> -->
+                    <em><?=system_showTruncatedText($featureReview["title"],30, false, true);?></em>
+                </a>
+                </h4>
+                <?=  display_star_rating( $featureReview['avg_review'] )?>
+                
+            </div>
+            
+            
+            <!--            <span class="rev"> <a href="#">5 reviews</a></span>-->
+            <a href="<?php echo DEFAULT_URL.'/review.php'.'?id='.$featureReview["id"]; ?>" target="_blank">
+                <strong style="color:#000;"><?=  ucwords($featureReview["review_title"])?></strong>
+                <!-- <p><?=$featureReview["review"]?></p> -->
+                 <p><?= system_showTruncatedText($featureReview["review"],85, false, true)?></p>
+                <span class="reviewedBy"><strong><date><?php  echo date('d M Y', strtotime($featureReview['added'])); ?></date></strong>
+                                    <br>
+                                    <strong>    
+                                <?php
+                                            echo substr($res, 0, 12);
+                                            if (strlen($res) > 12){
+                                                echo "...";
+                                            }
+                                ?>
+                                </strong></span>
+               <!--  <?php  $str=$featureReview["reviewer_name"];
+                $res = preg_replace('/<\/?a[^>]*>(.+)<\/a>/', '${1}', $str); ?>
+                <span><strong><?=$res?></strong></span> -->
+            </a>
+            </div><!-- end businessDetail-->
+            <?php endforeach;
+            endif;
+            ?>
+            
+        </div>
+        </div>
+        </div><!--/thumbnail-->

@@ -1,0 +1,127 @@
+
+/**
+* eDirectory - Popups ( Modal boxes )
+*
+* This style sheet describes the structure and the main components
+* about eDirectory's interface
+*
+* @package          layout
+* @filesource       popup.css
+* @author           Arca Solutions
+*
+*/
+
+
+
+.modal-content > h2{
+	background-color: #2D3E50;
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 16px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	text-indent: 10px;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: left;
+}
+
+.modal-content > h2 > b {
+	text-overflow:ellipsis; 
+	overflow:hidden;
+	max-width:230px; 
+	white-space:nowrap; 
+	display:inline-block;
+}
+
+.modal-content > h2 > span a {
+	float: right;
+	font-weight: normal;
+	margin-right: 10px;
+	text-transform: capitalize;
+    color:#fff;
+    font-size: 10px;
+}
+
+.modal-content > h2 > span a:hover {text-decoration: underline;}
+
+.modal-content  .button h2 {
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px;
+	margin-bottom: 0;
+}
+
+
+/* Popups > body */
+
+body
+{ background: #fff; }
+
+/* Popups > modal content */
+
+.modal-content form span.comment { color: #8A8A8A; }
+
+.modal-content .customInvoice h3 { color: #636363; }
+
+/** Popups > buttons */
+
+.modal-content button[type="submit"], .modal-content .button-profile h2 a {
+	background-color: #2ecc71;
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 auto 5px;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 250px;
+	float:none;
+}
+
+.modal-content button[type="submit"]:hover, .modal-content .button-profile h2 a:hover { background-color: #27ae60; }
+
+.modal-content .button-google h2 a { }
+
+p.input-button-form { padding:0;}
+
+p.input-button-form button { background:transparent; padding:10px 30px; cursor:pointer; color:#fff; }
+
+
+/** Popups > deal */
+
+.modal-content .redeem-deal h1 {
+	background-color: #efefef;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+}
+
+.modal-content .redeem-deal h2 {font-size:20px;margin:10px 20px;}
+.modal-content .redeem-deal .terms p { color: #888; font-size: 10px; }
+.modal-content .redeem-deal .listing-info p { font-size: 11px; }
+
+
+/** Popups > rate */
+
+.modal-content .rate
+{ background-color: transparent; }
+
+
+/** Contact form > form > form tags */
+
+.modal-content .form div .text, .modal-content .form div .textarea
+{ margin-bottom: 2px; }
+
+
+/** Contact form > form > captcha */
+
+.modal-content .form .captcha img
+{ border: 1px solid #B7C0C7; }
+
+

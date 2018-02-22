@@ -1,0 +1,47 @@
+
+[class*="colorSelector"] {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	background: url(../images/select_empty.png);
+}
+[class*="colorSelector"]  span {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: url(../images/select.png) center;
+}
+
+.colorSelector-3 {
+	width: 36px;
+	height: 36px;
+	background: url(../images/select_empty3.png);
+}
+
+.colorSelector-3 span {
+	width: 36px;
+	height: 36px;
+	background: url(../images/select3.png) center;
+}
+
+.colorSelector-4 {
+	width: 72px;
+	height: 24px;
+	background: url(../images/select_empty4.png);
+}
+
+.colorSelector-4 span {
+	width: 72px;
+	height: 24px;
+	background: url(../images/select4.png) center;
+}
+.colorSelector-5  {
+	height: 40px;
+    width: 40px;
+	background: url(../images/select5.png) center;
+}
+.colorSelector-5 span {
+	height: 40px;
+    width: 40px;
+	background: url(../images/select_empty5.png) center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Galleria Dining Guide Theme</title>
+        <style>
+
+            /* Demo styles */
+            html,body{background:#F1F0EB;margin:0;}
+            .content{color:#777;font:12px/1.4 "Open Sans",arial,sans-serif;width:330px;margin:20px auto;}
+            h1{font-size:12px;font-weight:normal;color:#ddd;margin:0;}
+            p{margin:0 0 20px}
+            a {color:#22BCB9;text-decoration:none;}
+            .cred{margin-top:20px;font-size:11px;}
+
+           
+
+        </style>
+
+        <!-- load jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+        <!-- load Galleria -->
+        <script src="../../galleria-1.2.9.min.js"></script>
+
+    </head>
+<body>
+    <div class="content">       
+
+        <!-- Adding gallery images. We use resized thumbnails here for better performance, but it’s not necessary -->
+
+       <div id="galleria" class="galleria">
+                            <a href="http://lorempixel.com/697/302/food">
+                               <img src="http://lorempixel.com/697/302/food"
+                                 data-big="http://lorempixel.com/697/302/food"
+                                 data-title="Image caption Food image"
+                                 data-description="Image description once upona time, a little bird... "
+                                 />
+                            </a>
+                            <a href="http://lorempixel.com/697/302/cats">
+                               <img src="http://lorempixel.com/697/302/cats"
+                                 data-big="http://lorempixel.com/697/302/cats"
+                                 data-title="Image caption Cats images"
+                                 data-description="Image description once upona time, a little bird... "
+                                 />
+                            </a>
+                            <a href="http://lorempixel.com/697/302/nightlife">
+                               <img src="http://lorempixel.com/697/302/nightlife"
+                                 data-big="http://lorempixel.com/697/302/nightlife"
+                                 data-title="Image caption Nightlife image"
+                                 data-description="Image description once upona time, a little bird... "
+                                 />
+                            </a>
+                            <a href="http://lorempixel.com/697/302/business">
+                               <img src="http://lorempixel.com/697/302/business"
+                                 data-big="http://lorempixel.com/697/302/business"
+                                 data-title="Image caption Business image"
+                                 data-description="Image description once upona time, a little bird... "
+                                 />
+                            </a>
+                            
+      </div>
+
+    </div>
+
+    <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('galleria.diningguide.js');
+
+    // Initialize Galleria
+    Galleria.run('#galleria');
+
+    </script>
+    </body>
+</html>

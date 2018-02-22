@@ -1,0 +1,118 @@
+
+// User select
+// For selecting text on the page
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select; // IE10+
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// Optional hyphenation
+.hyphens(@mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: @mode;
+     -moz-hyphens: @mode;
+      -ms-hyphens: @mode; // IE10+
+       -o-hyphens: @mode;
+          hyphens: @mode;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.transition(@transition) {
+  -webkit-transition: all @transition ease @transition/3;
+     -moz-transition: all @transition ease @transition/3;
+       -o-transition: all @transition ease @transition/3;
+          transition: all @transition ease @transition/3;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+//Box Sizing  use = .box-sizing(border-box); 
+
+.box-sizing(@box-sizing) {
+  -webkit-box-sizing:@box-sizing;
+     -moz-box-sizing:@box-sizing; 
+          box-sizing:@box-sizing;  
+
+}
+
+
+// Tables
+// -------------------------
+.table-row-variant(@state; @background; @border) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table > thead > tr,
+  .table > tbody > tr,
+  .table > tfoot > tr {
+    > td.@{state},
+    > th.@{state},
+    &.@{state} > td,
+    &.@{state} > th {
+      background-color: @background;
+      border-color: @border;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover > tbody > tr {
+    > td.@{state}:hover,
+    > th.@{state}:hover,
+    &.@{state}:hover > td,
+    &.@{state}:hover > th {
+      background-color: darken(@background, 5%);
+      border-color: darken(@border, 5%);
+    }
+  }
+}
+
+
+// Button backgrounds
+// ------------------
+.buttonBackground(@startColor, @endColor, @textColor: #fff) {
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  .gradientBar(@startColor, @endColor, @textColor);
+  *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  .reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: @textColor;
+    background-color: @endColor;
+    *background-color: darken(@endColor, 5%);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+  }
+}
+
+
+// Gradiente background
+.gradientBackground (@startColor, @endColor, @textColor) {
+    background-image: -moz-linear-gradient(top, @startColor, @endColor);
+    background-image: -ms-linear-gradient(top, @startColor, @endColor);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+    background-image: -o-linear-gradient(top, @startColor, @endColor);
+    background-image: linear-gradient(top, @startColor, @endColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@startColor, endColorstr=@endColor, GradientType=0);
+    color:@textColor;
+}

@@ -1,0 +1,49 @@
+ErrorDocument 400 /errorpage.php
+ErrorDocument 401 /errorpage.php
+ErrorDocument 403 /errorpage.php
+ErrorDocument 404 /errorpage.php
+ErrorDocument 500 /errorpage.php
+
+RewriteEngine On
+
+## Listing ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/listing|listing)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/listing|listing)/?(.*)\.html$ ./listingdetail.php?item=$3 [L]
+
+###################################
+
+## Deal ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/deal|deal)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/deal|deal)/?(.*)\.html$ ./dealdetail.php?item=$3 [L]
+
+###################################
+
+## Event ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/event|event)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/event|event)/?(.*)\.html$ ./eventdetail.php?item=$3 [L]
+
+###################################
+
+## Classified ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/classified|classified)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/classified|classified)/?(.*)\.html$ ./classifieddetail.php?item=$3 [L]
+
+###################################
+
+## Article ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/article|article)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/article|article)/?(.*)\.html$ ./articledetail.php?item=$3 [L]
+
+###################################
+
+## Blog ########################
+
+RewriteCond %{REQUEST_URI} ^(.*/blog|blog)/?(.*)\.html$ [NC]
+RewriteRule ^(.*(mobile)/blog|blog)/?(.*)\.html$ ./blogdetail.php?item=$3 [L]
+
+###################################

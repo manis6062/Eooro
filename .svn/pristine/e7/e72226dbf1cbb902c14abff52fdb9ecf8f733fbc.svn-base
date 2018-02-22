@@ -1,0 +1,43 @@
+<?php
+include("./conf/loadconfig.inc.php");
+# ----------------------------------------------------------------------------------------------------
+# SESSION
+# ----------------------------------------------------------------------------------------------------
+sess_validateSessionFront();
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL ^ E_NOTICE);
+# ----------------------------------------------------------------------------------------------------
+# VALIDATION
+# ----------------------------------------------------------------------------------------------------
+if ($loadValidation) {
+    include(EDIRECTORY_ROOT."/includes/code/validate_frontrequest.php");
+} else {
+    include(EDIRECTORY_ROOT."/includes/code/validate_querystring.php");
+}
+
+$theme_file = THEMEFILE_DIR."/".EDIR_THEME."/body/reviewcollector.php";
+if ($theme_file && file_exists($theme_file)) {
+    
+    ob_start();
+    include($theme_file);
+    $contents = ob_get_contents();
+    ob_end_clean();
+    
+    include(system_getFrontendPath("header.php", "layout"));
+    include(system_getFrontendPath("review_banner.php"));
+    # ----------------------------------------------------------------------------------------------------
+    # BODY
+    # ----------------------------------------------------------------------------------------------------
+
+    echo $contents;   
+}
+else {
+    header("Location: ".DEFAULT_URL);
+    echo 'elese';
+}
+
+
+# ----------------------------------------------------------------------------------------------------
+# FOOTER
+# ----------------------------------------------------------------------------------------------------
+include(system_getFrontendPath("footer.php", "layout"));

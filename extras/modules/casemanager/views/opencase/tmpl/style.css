@@ -1,0 +1,31 @@
+
+.agree-btn{
+    margin: 15px 5px 10px 5px;
+    background-color: #FF004F;
+	color: #fff;
+}
+.popup-opencase .left{
+    float: left;
+    margin: 2%;
+    width: 44%;
+}
+.popup-opencase .right{
+    float: left;
+    margin: 2%;
+    width: 44%;
+}
+.popup-opencase .center{
+    clear: both;
+}
+.right textarea{
+	width:266px;
+    height:152px;
+}
+
+@media screen and (max-width: 600px){
+.right textarea{
+   width:auto;
+
+}
+
+}

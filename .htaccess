@@ -1,0 +1,73 @@
+# BEGIN Compress text files
+<ifModule mod_deflate.c>
+  <filesMatch "\.(css|js|x?html?|php)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</ifModule>
+# END Compress text files
+
+## Sponsors #########################
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*/members|members)/?(.*)?$ /sponsors/$2 [L,R=301]
+###################################
+
+######## eDirectory without subfolder #
+ErrorDocument 400 /10300/errorpage.php
+ErrorDocument 401 /10300/errorpage.php
+ErrorDocument 403 /10300/errorpage.php
+ErrorDocument 404 /10300/error_page/index.php
+ErrorDocument 500 /10300/errorpage.php
+
+######## eDirectory with subfolder. Change "edirectory" for your folder name ##
+######## Do not forget to remove the lines above ##############################
+#ErrorDocument 400 /edirectory/errorpage.php
+#ErrorDocument 401 /edirectory/errorpage.php
+#ErrorDocument 403 /edirectory/errorpage.php
+#ErrorDocument 404 /edirectory/error_page/index.php
+#ErrorDocument 500 /edirectory/errorpage.php
+
+RewriteEngine On
+
+#Add trailing slash
+#RewriteCond %{REQUEST_URI} !(/$|\.) 
+#RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+
+#Change http to https
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://localhost/10300/$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*/sugar|sugar)/(.*)?$ ./10300/sugarCRM.php?url_full=%{REQUEST_URI} [L]
+
+######## eDirectory with subfolder. Change "edirectory" for your folder name ##
+######## Do not forget to remove the line above ###############################
+#RewriteRule ^(.*/sugar|sugar)/(.*)?$ ./edirectory/sugarCRM.php?url_full=%{REQUEST_URI} [L]
+
+RewriteCond %{REQUEST_URI} ^(.*/sitemap|sitemap)\.xml$ [NC]
+RewriteRule ^(.*/sitemap|sitemap)\.xml$ ./10300/sitemap_generate.php [L]
+
+######## eDirectory with subfolder. Change "edirectory" for your folder name ##
+######## Do not forget to remove the line above ###############################
+#RewriteRule ^(.*/sitemap|sitemap)\.xml$ ./edirectory/sitemap_generate.php [L]
+
+RewriteCond %{REQUEST_URI} ^(.*/sitemapnews|sitemapnews)\.xml$ [NC]
+RewriteRule ^(.*/sitemapnews|sitemapnews)\.xml$ ./10300/sitemap_generate.php?news [L]
+
+######## eDirectory with subfolder. Change "edirectory" for your folder name ##
+######## Do not forget to remove the line above ###############################
+#RewriteRule ^(.*/sitemapnews|sitemapnews)\.xml$ ./edirectory/sitemap_generate.php?news [L]
+
+######## Allow all URL to open ################################################
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /10300/index.php [L]
+
+######## eDirectory with subfolder. Change "edirectory" for your folder name ##
+######## Do not forget to remove the line above ###############################
+#RewriteRule . /edirectory/index.php [L]
+
+###############################################################################
+
+

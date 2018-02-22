@@ -1,0 +1,168 @@
+/**
+* eDirectory - Detail Page ( Modules )
+*
+* @package			layout
+* @filesource		detail.css
+* @author			Arca Solutions
+*/
+
+
+@import "variables.less";
+@import "mixins.less";
+
+/* #Detail Elements
+    
+*/
+
+.top-info {
+	border-bottom:1px solid @gray; 
+	h3 {
+		line-height: 1.8em;
+	}
+	&.top-review {
+		padding-bottom:15px;
+		margin-bottom:10px;
+		.rate-stars{
+			width:70%;
+			float:left;
+		}
+		.review-count {
+			vertical-align: super;
+		}
+		.rate > small {
+			float:right;
+			width:30%;
+			a {
+				color:white;
+				background-color: @brand-success;
+				padding:5px 0;
+				width:100%;
+				float:left;
+				text-align:center;
+				.transition(0.5s);
+				&:hover {
+					background-color:@brand-success-hover;
+				}
+			}
+		}
+	}
+}
+
+
+/* #Horizontal Description*/
+.dialog-list {margin-bottom:-10px;}
+
+dl {
+	margin:10px 0 20px 0;
+	&.dl-horizontal {
+		dd, dt { 
+		text-transform: uppercase; 
+		text-align: center; 
+		line-height:12px;
+		padding:13px 10px; 
+		font-size:@font-size-small;
+		}
+		dt {
+			width:80px;
+		}
+		dd {
+			width:178px;
+		}
+
+	}
+	dd {
+		background-color: mix(@brand-primary, white, 95%); 
+		color: white;
+		}
+	dt {
+		background-color:mix(@brand-primary, white, 70%); 
+		color:white;
+	}
+}
+
+
+.list-categories {
+	.list {
+		margin:0;
+		padding:8px 0 2px 2px;
+		li {
+			font-size:0.9em;
+			span {color:@gray-text;}
+		}
+	}
+}
+
+.extra-fields {
+	margin-bottom:10px;
+	p {
+		font-size:0.9em;
+		strong {font-size:1em;}
+	}
+}
+
+.claimthis {
+	clear:both;
+	border-top:1px solid @gray;
+	padding:10px 3px 5px;
+	a {
+		color:@brand-primary;
+		&:hover {
+			color:@brand-primary-hover;
+		}
+	}
+}
+
+.span8.big-rating {
+	a.review-count  {
+		vertical-align:super;
+	}
+}
+
+
+/* #Detail Deal
+	
+*/
+.detail-deal{
+	.description {
+		margin:20px 0;
+	}
+	h3 a {color:@text-color;}
+	p {
+		line-height:1.6em;
+		font-size:.9em;
+		}
+	.image img {
+		width:100%;
+	}
+	address {
+		font-size:90%;
+	}
+	
+}
+
+
+
+
+.deal-dealsleft, .deal-timeleft {text-align:center; padding-bottom: 10px;border-bottom: 1px solid #EEEEEE;}
+.deal-dealsleft  {float:left; width:100%; margin:15px 0;}
+.deal-dealsleft i{font-style:normal;}
+.deal-dealsleft span {width:100%;float:left;}
+.deal-timeleft h4 {font-weight:bold;}
+
+h6 {color:@brand-info;}
+.overview h6 {color:@gray-text;}
+
+.button-facebook h2 a, a.btn-facebook, a.btn-facebook:focus, a.btn-facebook:active {padding:10px 30px;}
+
+.button.button-facebook { float:left; width:100%; margin:15px 0;}
+
+
+/* #Listing Details
+
+*/
+
+
+
+
+/* Related Listings*/
+.related-listings {border-bottom:1px solid #dedede; font-size: 24px;margin-bottom:20px;}

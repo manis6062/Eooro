@@ -1,0 +1,108 @@
+/**
+* eDirectory - Result Pages ( Modules )
+*
+* @package			layout
+* @filesource		results.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+
+
+/* #Map
+*/
+	div.map {border: 1px solid #cccccc; background-color:#fff!important;}	
+	div.map .map-loading {background:url(images/iconography/icon-loading-content.gif) no-repeat 80% center transparent;font-size:11px;text-align:center; padding:10px 0;}
+    
+    .map-info-view {overflow:hidden!important;}
+    .map-info-view p, .map-info-view a {font-size:12px;line-height:15px;padding:0;}
+    .map-info-view img {width:13px;}
+    
+#list_rating label  {font-size:0px;}
+
+
+/* #Summary View Structure */
+
+.summary {border:1px solid #dedede; background-color:#fff;}
+.summary-backlink {border:1px solid #b95514; }
+
+.summary .title {border-bottom:1px solid #dedede;padding-bottom:12px;}
+.summary .title p {padding-top: 1px; font-size: 11px;}
+.summary .title h3 {line-height:1; font-weight:600; font-size:22px;}
+.summary .title h4 {color:#2980b9; font-size: 13px}
+.summary .title em {color:#7f8c8d; font-style: normal; font-weight: normal; font-size:11px;}
+.summary .title h3 a {color:#555;}
+.summary .title h3 a:hover{color:#999;}
+
+.summary .line-footer {background-color:#f5f5f4; color:#5e5e5e;}
+.summary-small .line-footer .review > a {
+    line-height: 30px;
+}
+
+.summary .map-link {padding:0 2px 0 20px; background: url(images/iconography/pin-map.png) no-repeat 1px 1px}
+
+.summary-small .row-fluid > p { margin-top: 10px; font-size:11px;}
+.summary-small .info, .summary-small p, .summary-small .info p,  .summary-small .info a, .summary-small .rate p a, .summary-small .line-footer a, .show-inline  { font-size: 11px; }
+.summary-small .map-link {padding: 2px 0 0 20px;}
+.summary-small .info p small {color:#353535; font-size:11px;}
+
+.summary b.divisor {border-color:#fff;}
+
+
+
+/* #Summary Specifics 
+	
+	Differences between modules. 
+	
+	* Deals
+	* Listings
+	* Articles
+ */
+	
+.listing-tag-deal, .deal-tag-small  {background-color:#d35400;}
+.name-tag-deal {font-size:14px; font-weight:500; text-transform: uppercase;}
+.name-tag-deal, .name-tag-deal a {color:#fff;}
+.name-tag-deal a:hover {color:#f9f9f9;}
+
+.name-tag-deal small { color: #DDDDDD;}
+
+
+
+.summary .deal-tag, .summary .title .price {color: #555555; font-size: 30px;font-weight: bold;line-height: 30px;text-align: right;text-rendering: optimizelegibility;text-shadow: 1px 1px 2px #CCCCCC;}
+.info, .info p, .info a {font-size:12px;}
+
+/**/
+.sidebar-filters > ul {
+    border-top:2px solid #2980B9;
+}
+.sidebar-filters > ul .item-filter:first-child h3 {
+    border-top:none;
+}
+
+.sidebar-filters div > h2 {
+    border:1px solid #2980B9;
+    border-left:0;
+}
+/*#Tab View*/
+
+.tabs .listView a, .tabs .mapView a { background-repeat: no-repeat; background-position: 5px center;padding-left: 30px;} 
+
+.tabs .listView a {background-image:url(images/iconography/icon-listview.png);}
+.tabs .mapView a {background-image:url(images/iconography/icon-mapview.png) }
+
+.tabs .listView.active a, .tabs .listView a:hover {background-image:url(images/iconography/icon-listview-white.png) }
+.tabs .mapView.active a, .tabs .mapView a:hover {background-image:url(images/iconography/icon-mapview-white.png) }
+
+.tabs .mapView.disableMapTab a, .tabs .mapView.disableMapTab a:hover {background-image:url(images/iconography/icon-mapview.png); background-color:#eee; color:#2C3E50; cursor:default;}
+.tabs .mapView.disableMapTab {opacity:0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";}
+
+.results-info-listing p {font-size:13px;}
+
+.results-info-listing p strong:after, 
+.results-info-listing p strong:before, 
+.search-info p strong:after, 
+.search-info p strong:before 
+{content:"\0022";}

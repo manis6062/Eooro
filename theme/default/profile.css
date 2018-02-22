@@ -1,0 +1,98 @@
+.profile-sidebar .user-info {
+  padding: 15px;
+  margin: 0 0 20px 0;
+  clear: both;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.profile-sidebar .user-info img {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin: 0 10px 10px 0;
+}
+.profile-sidebar .basic-info {
+  clear: right;
+}
+.profile-sidebar .extra-info {
+  float: left;
+  clear: both;
+}
+.profile-sidebar .social-network {
+  clear: both;
+  float: left;
+  margin: 12px 0 10px;
+}
+.list-favorites .item-favorite {
+  margin: 0 0 20px 0;
+  clear: both;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.list-favorites .item-favorite .item-info {
+  padding: 10px;
+}
+.list-favorites .item-favorite .item-options {
+  padding: 5px 10px;
+  height: 20px;
+}
+.search-box {
+  padding: 0.4em 1em 1.4em 1em;
+  margin: 0 0 40px;
+}
+.search-box .btn-success {
+  line-height: 16px;
+}
+.viewmore {
+  padding: 15px 0;
+  text-align: center;
+}
+.activity-box .item-activity {
+  margin-bottom: -1px;
+  padding: 15px;
+}
+.activity-box .item-activity .activity-detail {
+  margin: 15px 0;
+}
+.ie .search-box .btn-success {
+  height: 28px;
+  padding: 1px 10px;
+}
+@media (max-width: 979px) {
+  .profile-sidebar .user-info {
+    padding: 7px;
+  }
+  .profile-sidebar .socialicon {
+    margin: 1px 6px;
+    float: left;
+  }
+  .search-box .form-inline div .btn {
+    padding: 5px 0;
+  }
+  .item-activity .pull-right {
+    float: none;
+  }
+  .item-activity .activity-detail {
+    display: block !important;
+    margin: 5px 0 !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .item-activity a.pull-right {
+    float: none;
+  }
+  .search-box .form-inline div {
+    margin: 10px 0;
+  }
+  .container-fluid > .row-fluid.profile-page {
+    margin: 0 auto 0 2%;
+    width: 96%;
+  }
+}

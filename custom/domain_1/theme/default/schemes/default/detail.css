@@ -1,0 +1,123 @@
+/**
+* eDirectory - Detail Page ( Modules )
+*
+* @package			layout
+* @filesource		detail.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+/* #Map*/
+
+
+/* #Detail Tabs
+*/
+
+
+
+/* #Detail Elements
+    
+*/
+
+.tab-container .stars-rating [class*="rate-"], .detail-deal .stars-rating [class*="rate-"]{background-color:#ccc;}
+p {line-height:19px;}
+
+
+
+.top-info {border-bottom:1px solid #dbdbdb; font-size:12px;}
+
+.overview {color:#999899;}
+
+.span6 strong {  float: left;    text-transform: capitalize;    width: 100%;}
+
+.image-caption {color:#fff; background-image:url("images/structure/bg-dark-ie.png"); padding:5px; position:absolute; margin-top:-42px; width: 284px;}
+
+.rate > p, .rate .rate-stars {display:inline;}
+
+.mgt-10 {margin-top:10px;}
+
+/* #Horizontal Description*/
+.dialog-list {margin-bottom:-10px;}
+dl {margin:20px 0;}
+dl.dl-horizontal dt, dl dd { text-transform: uppercase; text-align: center; line-height:12px; padding:13px 10px; font-size:10px;}
+dl dd {background-color: #4d95c7; color: #fff;}
+dl dt {background-color:#d7eaf8; color:#555;}
+
+
+/* #Detail Deal
+	
+*/
+
+.description {margin:3% 0.8%;}
+
+.detail-deal h3 a {color:#353535;}
+
+.review-count {	font-size: 12px;}
+
+.deal-dealsleft, .deal-timeleft {text-align:center; padding-bottom: 10px;border-bottom: 1px solid #EEEEEE;}
+.deal-dealsleft  {float:left; width:100%; margin:15px 0;}
+.deal-dealsleft i{font-style:normal;}
+.deal-dealsleft span {width:100%;float:left;}
+.deal-timeleft h4 {font-weight:bold;}
+
+h6 {color:#2980b9;}
+.overview h6 {color:#333;}
+
+.button-facebook h2 a, a.btn-facebook, a.btn-facebook:focus, a.btn-facebook:active {padding:10px 30px;}
+
+.button.button-facebook { float:left; width:100%; margin:15px 0;}
+/* #Listing Details
+
+*/
+.well-top {  background-color: #FFFFFF;  border: 1px solid #EEEEEE;  border-radius: 4px 4px 0 0;}
+.well-small {  background-color: #F5F9E8;    border: 1px solid #EEEEED;    border-radius: 0 0 4px 4px;    display: inline-block;    margin-top: -1px;}
+.well-small ol {color: #2980b9;   float: left;   margin: 0 3%;    text-align: right;    width: auto;}
+.well-small li {text-align:left;font-size:12px; color:#828282;}
+
+.downloadmenu {text-align:center; padding:20px 0;}
+.content-full .tab-container .row-fluid.downloadmenu p {text-align:center;font-size:16px; color:#2980b9;margin: 20px 0}
+.tab-container .downloadmenu a {color:#2980b9; text-decoration:underline;}
+.tab-container .downloadmenu a:hover {color:#749116;}
+
+#content_video h2 { padding:0 0 10px;}
+#content_video p {margin:20px 1px;}
+
+/*.helpful-reviews h2 {font-size:;}
+.helpful-reviews h2 a{color:#fff; text-shadow:-1px -1px 1px #b46a2f; font-size:14px; text-transform:lowercase; text-decoration:underline; }
+.helpful-reviews h2 a.pull-right{font-size:12px ;}
+.ie7 .helpful-reviews h2 a.pull-right{margin-top:-47px;margin-right:10px;}
+.helpful-reviews h2 a:hover{text-decoration:none; }
+/* #Reviews
+
+*/
+.content-reviews .line-top ul, .content-reviews .line-top li {display:inline;}
+.content-reviews .line-top a, .content-reviews .line-top {color:#2980b9;height: 30px;text-align: right; padding: 10px 2px 0;}
+.content-reviews .line-top .disabled a, .content-reviews .line-top .disabled a:hover {color:#ccc; cursor:default;}
+.content-reviews .line-top a.active {color:#fff;}
+.content-reviews .line-top a:hover, content-reviews .line-top a:active {color:#fff;}
+
+/*#Images effect*/
+
+.image-shadow img{transition:opacity 0.5s ease;}
+.image-shadow:hover img{opacity:0.6; cursor:pointer;}
+.image-shadow {transition: background-color 0.5s ease;}
+.image-shadow:hover { background:url("images/iconography/magnifierplus.png") no-repeat scroll center center #000000;}
+
+.ie .image-shadow img:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50);}
+.ie .image-shadow:hover { background:url("images/iconography/magnifierplus.png") no-repeat scroll center 35% #000000;}
+
+.middle-info .ad-gallery .ad-image-wrapper .ad-loader {background-color:rgba(255, 255, 255, 0.8); padding:55px 138px; top:0; left:0; border:none;}
+
+.ie .ad-gallery .ad-image-wrapper .ad-loader {background-color:#fff;}
+
+/*Extra Fields*/
+.extra-fields h2 {font-size:17px; line-height:30px;}
+.extra-fields p {margin:10px 0;}
+
+
+.related-listings {border-bottom:1px solid #dedede; font-size: 24px;margin-bottom:20px;}
+
+.rel-listings .span4 .image .no-image {width:100%;}

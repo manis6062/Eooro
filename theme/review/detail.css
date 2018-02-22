@@ -1,0 +1,317 @@
+/**
+* eDirectory - Detail Page ( Modules )
+*
+* @package			layout
+* @filesource		detail.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+
+/* #Map
+*/
+    div.map > div { margin:1.5%; width: 97% !important; height: 96% !important;}
+    
+
+/* Detail Elements
+	
+	* Share
+	* Top Info
+	* Image
+	* Gallery
+	* Content Box
+    * Rate
+*/
+.top-info .stars-rating {margin-right:10px;}
+.top-info {padding:5px 0;}
+.top-info .share-middle {margin-top:10px}
+
+.tab-container [class*="span"] {min-height:0;}
+
+.share-social li{display:inline;margin-left:9px;font-size:10px;}
+
+.button-send, .button-call {display:inline-block;}
+.button-call { margin:3px 0 0 0}
+.button-send { padding: 3px 2px 0;}
+
+.tab-content h2 {line-height:24px;}
+.top-info h2 {line-height:1;}
+.tab-content > h2 {margin-bottom:5px;}
+
+.top-info .span4.text-left {margin-left:-7px;}
+
+.image img{width:100%;}
+
+.content-box {border-top: 1px solid #DBDBDB; margin-top: 15px; padding: 15px 0;}
+
+.middle-info {margin-top:15px;}
+.middle-info , .middle-info p {font-size:12px;}
+.middle-info strong { font-size:14px; text-transform: capitalize; font-weight:normal;}
+.middle-info address {padding-bottom:10px; font-size:12px; }
+.middle-info a {text-overflow:ellipsis;}
+
+.overview .image {margin-right:10px;}
+
+.long {padding:10px 0;}
+
+.share  img {  margin: 3px 0 0;}
+
+.share-social { display:inline; margin-left: -5px;}
+
+.review-item {clear:both;}
+
+.btn-review {float:right;margin-top:10px;width:90%;}
+a.btn-review-small{padding: 0px 10px; margin: 2px 0px; line-height: 1.7 }
+#loading-container{ margin: 0 auto; width: 30px;}
+
+ address.website {word-wrap:break-word;}
+
+ .galleria-thumbnails {margin:0 auto;}
+
+ .span4 .galleria-info {top: 27px;}
+
+ .span4 .image .no-image {margin:20px auto; width:94%;}
+ 
+ .rel-listings .span4 .image .no-image {margin:0 auto; width:94%;}
+
+#___plusone_0 { width: 65px !important; }
+.ie #___plusone_0 { width: 65px !important; margin-left:5px!important;}
+    
+ .content-box ol {list-style: decimal }
+ .content-box ul {list-style: disc}
+ .content-box ol,  .content-box ul {line-height:17px; margin:10px 0 10px 20px;}
+ 
+ 
+ .badges {margin:10px 0; text-align:center;}
+ .badges > img {margin: 5px 0; clear:both; float:left;}
+ 
+ 
+ .btn-large {max-width:227px; width:100%;}
+.span4 .btn-large { margin-left: 9px; max-width: 258px;}
+
+
+.row-fluid a {word-wrap: break-word; }
+
+
+/* Detail no Image*/
+.image.img-polaroid .no-link .no-image {width:100%; height:266px;}
+
+/* #Detail Sidebar
+	* Map
+*/
+
+.sidebar .map , .minimap .map{width: 98%; height:217px; background-color:#fff !important; padding:2px; border:1px solid #ebebeb; }
+.minimap {width:40%; float:left;}
+
+/* #Detail Tabs
+*/
+
+.tab-container .description {margin:3% 0.8% 3% 4%;}
+
+/*Sidebar*/
+.sidebar h2 {margin-top:10px;}
+.sidebar .flex-box-group h2 {margin-top:0;}
+
+/* #Detail Deal
+
+*/
+
+.map {width:95%;}
+
+.inverse-row .map { float: left; height: 170px; margin: 0 -20px 20px -21px; width: 104.2%;padding-right:1.5px;}
+
+.inverse-row .map > div {
+    height: 100% !important;
+    margin: 0;
+    width: 100% !important;
+}
+
+.review-stars {margin:7px 0;}
+.review-stars p, .line-footer p, .top-info .rate p {font-size: 12px}
+.action > div {border-bottom: 1px solid #EEEEEE;}
+
+.deal-value { border-top: 1px solid #EEEEEE; float: left; margin: 15px 0; width: 100%;}
+.deal-value span{width:33%;float:left;text-align: center; padding: 6px 0; font-size:12px;}
+.deal-value span strong{float: left; width: 100%; font-size:20px;word-wrap:break-word; font-weight:normal;}
+
+.deal-soldout {font-size:24px; font-weight:600; color:#777;}
+
+.detail-deal-tag {position:absolute; width:625px; margin-top:20px;}
+
+.tab-content .detail-deal-tag {position:absolute; width:594px; margin-top:20px;}
+.deal-tag { float: right; text-align: right;  height: 57px;  padding-left: 22px; }
+
+/* Article */
+.overview .gallery-overview {padding:0;}
+.middle-info.overview {margin-bottom:20px;}
+.middle-info.overview p {margin-bottom:10px;}
+
+/*Listing Detail*/
+.well-top { padding: 5px 0 5px 10px;}
+.well-small {margin-bottom:15px;width:95%; padding:8px 2%;}
+.well-small ol, .well-small ul {list-style:none;}
+.span7 .well-small {width:95.5%;}
+.span5 .well-small {width:95%;}
+
+/*Classified*/
+
+.span4 address {margin-top:10px;}
+
+/* #Responsive
+
+*/
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    /*No-image*/
+    .detail-deal .no-image {height:220px;}
+    .gallery-overview .no-image {height:151px;}
+    .rel-listings .span4 .image .no-image {height:107px;}
+	
+    /*Elements*/
+
+	.middle-info .span6 { width: 100%; margin-top:10px;}
+	
+    .nav-tabs > li > a, .nav-pills > li > a {padding-right: 10px;padding-left: 10px;margin-right: 3px;font-size: 11px;}
+    .share li {float: right!important;margin-left: 5px;font-size: 10px;}
+    .button-send, .button-call {padding: 2px 0px 0;}
+    .button-call {width: 19px; margin:0;}
+    
+    
+    .detail-deal-tag {width:457px; }
+    .tab-content .detail-deal-tag {width:427px;}
+
+    .top-info .span4 {width:24%; float:left;}
+    
+    .well-small {max-width: 374px}
+    .span5 .well-small {max-width:100%;}
+    .btn-large.btn.btn-success {max-width:92%;}
+
+    div.map > div { height: 100% !important; margin: 0; width: 100% !important;}    
+    .sidebar .map, .minimap .map {margin-bottom:20px;}
+
+    .inverse-row .map { float: left; height: 170px; margin: 0 -20px 20px -21px; width: 105.5%;border:1px solid #dedede;}
+
+
+    .deal-value span strong {font-size:16px;}
+
+
+    .galleria-info {top:34px !important;}
+    .galleria-lightbox-next {height:38px;}
+
+    .button-send {margin-top:2px;}
+    .button-call {margin-top:4px;}
+
+     /*Tablet full*/
+     .tablet-full .span8, .tablet-full .span4 { width:100%; clear:both; margin-left:0;}
+     .tablet-full > .span4 {margin-top:20px;}
+     .tablet-full .top-info .span8 { width:70%; clear:none; margin-left:0;}
+     .tablet-full .top-info .span4 { width:30%; clear:none; margin-left:0;}
+
+     .tablet-full .top-info .span8 h3{
+          white-space:nowrap; text-overflow:ellipsis; width:100%; overflow:hidden;
+      }
+
+     .tablet-full .btn-review {float:right; margin:10px auto; width:42%;}
+     .tablet-full [class*="flex-box"] h2, .sidebar h2 { width: 96.3%;}
+     .tablet-full .calendar > h2 { width: 100%;}
+     .tablet-full .calendar {  clear: both;  float: left;  width: 99.6%;}
+     .tablet-full .helpful-reviews h2 { width: 96.6%;}
+     .tablet-full .item-preview { max-width: 320px;}
+
+    .button.button-redeem a{ white-space:nowrap; padding:10px;}
+    .button.button-facebook a{ white-space:nowrap;}
+
+
+    .featured.featured-checkin {width:94%;}
+
+}
+
+
+
+@media (max-width: 767px) {
+    /* TABS*/
+        .tabs.nav-tabs > li {
+            text-indent:-999px;
+            max-width:38px;
+        }
+
+        .tabs.nav-tabs > li > a {
+            background-image:url("images/iconography/icons-detail-responsive.png");
+            background-repeat: no-repeat;
+            padding:8px 18px;
+        }
+
+        .tabs .tab-overview a {
+            background-position:-204px 7px;
+        }
+        .tabs .tab-menu a {
+            background-position:-100px 7px;
+        }
+        .tabs .tab-video a {
+            background-position:-47px 5px;
+        }
+        .tabs .tab-deal a {
+            background-position:-151px 6px;
+        }
+        .tabs .tab-review a {
+            background-position:5px 7px;
+        }
+
+
+    /**/
+     .gallery-overview .no-image {display:none;}
+
+    .responsive-detail {width:96%; margin:0 auto;}
+
+
+   .badges > img {   clear:none;   float:none;    margin:5px 3px;   text-align:center; }
+
+    .inverse-row .map {  height: 120px; margin: 0 auto 10px auto;  width: 99%;  float:none;}
+
+    div.map > div { height: 99% !important; margin: 0.25%; width: 99% !important;}
+
+    .sidebar .map {margin-bottom: 20px;}
+
+    .top-info {  padding: 5px 0;}
+
+    .tab-container {width:98%;margin:0 auto;}
+
+    .image-caption {width: 87.59584545%!important;}
+
+	.deal-tag {display:none;}
+	.middle-info .span6 { width: 100%;margin-left:0;}
+    
+    .nav-tabs {margin-top:10px;}
+    
+    .well-small ,
+    .span7 .well-small ,
+    .well-top {width:98%; padding:10px 1%;}
+    
+    .sidebar .map {margin-top:20px;}
+         
+
+        
+   
+    .featured.featured-checkin {border:none;border-bottom:1px solid #dedede;}
+}
+
+@media (max-width: 480px) {
+
+    .minimap {width:100%;}
+
+    
+    .image-caption {width: 85.59584545%!important;}
+    
+    .ad-image.image img {width: 269px;}
+    
+    .fancy_window_login.star-rating {pointer-events:none;}
+
+    
+     .deal-value span strong {font-size:16px;}
+    
+}

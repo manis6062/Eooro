@@ -1,0 +1,152 @@
+/**
+* eDirectory - Home Page ( Modules )
+*
+* @package			layout
+* @filesource		front.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+
+/* #Featured Structure
+
+*/
+
+.featured .left {width: 100%;}
+
+.featured-body {padding-top: 5px;}
+.featured-body p { font-size: 11px;    line-height: 14px;}
+.featured-body address{margin:10px 0 ;}
+.featured-body .rate-stars {  float: left;}
+.featured-body  .fancy_window_login.rate-it {  font-size: 12px;  line-height: 22px;  padding: 8px;}
+
+
+/* #Featured Item*/
+.featured-item {float: left; padding: 2px; margin: 1% 0 1% 3%;width: 46%;}
+ .image img {width:100%;}
+ .featured-item h3 {width: 285.5px; height: 34px; margin-top: -36px;    position: absolute; padding: 1px 4px;}
+  
+
+/* #Feature Item Special*/
+.content-featured  .featured-item-special {float: left;padding: 2px;margin: 1% 3% 2% 0%;width: 45.7%;}
+
+
+/* #Featured Reviews and Checkin
+
+*/
+
+.featured-review {margin:10px 0; display:block; clear:both;}
+.featured-review .featured-item-review{ margin: 10px;  min-height: 10px; padding: 10px 0; }
+.featured-item-review .image{width: 70px;margin: 4px 16px 8px 0;float: left;}
+
+
+
+/* #Featured Deals
+
+*/
+.featured-deal {width: 105.5%;margin: 20px 0% 0 0%;}
+.featured-deal .featured-item  h3, .featured-review .featured-item  h3 {position:relative; margin-top: 0; background-color:transparent; }
+.featured-deal .image img{width:100%;margin-bottom:10px;}
+.featured-deal .image .no-image { height: 128px; width: 293px;margin-bottom:10px;}
+.featured-deal .featured-item h3 {height:auto;}
+.featured-deal .featured-item h3 a { font-weight:600;}
+
+.ie .featured-deal .image img{width:293px;}
+
+.special-deal-tag {position:absolute; width:612px; margin-top:20px;}
+.ie7 .special-deal-tag {width:619px; }
+.special-deal-tag .name-tag-deal { padding: 19px;}
+.featured-deal-tag {position:absolute; width:296px;margin-top:13px;}
+.deal-tag, .deal-tag-small { float: right; text-align: right; }
+.deal-tag { height: 57px;  padding-left: 22px; }
+.deal-tag-small {  height: 44px;  padding-left: 17px;}
+.name-tag-deal { padding: 12px;}
+
+
+/* #Special Item
+    The biggest item on the page. shown on top.
+*/
+.special-item {width:99%;}
+.special-item, .special-deal {margin-bottom:20px; float: left; padding: 3px; clear:both;}
+.special-item h3 {position: absolute;margin-top: -57px;width: 596px;height: 32px;padding: 10px 5px 5px 10px;}
+.special-item .image {margin-bottom:10px;}
+.special-item p {margin:5px 10px 10px }
+.special-deal .left {width:100%; position:relative;} 
+
+/* #Special Deal
+
+*/
+
+.special-deal h2 {font-size:18px; line-height: 30px;}
+.special-deal .right {padding:10px;}
+.ie .special-deal .right {padding:10px 10px 10px 0;}
+.ie .special-deal .deal-tag span {margin-top:20px;}
+
+
+/* #Responsive
+
+*/
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.special-deal-tag { width: 456px;}
+    
+	.special-deal {padding: 1%; width: 100%;}
+	.special-deal img{max-width:455px;}
+	.featured-deal .deal-tag {width: 215px;  margin-top: -4px; }
+                     .featured-deal .deal-tag .discount {margin-left: 157px;}
+	.featured-item { margin-right: 10px; padding: 2px; width: 224px;}
+	.featured-deal {width:480px;}
+        
+    .special-listing .listing-info { height: 201px;    margin-left: 253px;    width: 224px;}
+	.featured-item-special .image .no-image {height: 127px;width: 100%;}
+     
+    .featured-deal-tag {width: 222px;}   
+
+    .featured-listing .thumbnail .image h3 {   height: 33px;   margin-top: -40px;   width: 218px;}
+    .featured-listing .thumbnail {  min-height: 320px;}
+    
+    .featured-deal .featured-item h3 { width: auto;} 
+    .content-featured .featured-deal .featured-item-special { margin: 1% 2% 2% 0; width: 46.7%;}
+	
+}
+
+@media (max-width: 767px) {
+    /*No Images*/
+    .special-deal .image .no-image {height: 115px;width: 100%;}
+    
+    .special-deal-tag { width: 100%;}
+    .featured-deal-tag { width: 45%;}
+    
+    .content, .sidebar {margin: 0 auto; width: 98%;float: none;}
+    .content .content-featured .featured { margin: 20px 0 0 0;  padding: 0; width: 100%;}
+    .content-featured .featured-item-special {  margin: 10px 1.3%;  width: 46%;}
+    .special-item, .special-deal { margin-left: 1.6%; padding: 3px;  width: 95.3%;}
+    
+	.featured-item {width:99%}
+	.featured-deal {width:100%;}
+	.featured-deal .left { width: 100%;}
+        
+    .special-listing .listing-info { position:absolute; width:95%;margin-left: 0;  height:auto;}
+        
+	.featured-deal .image .no-image { width: 100%;}
+        
+    .featured-listing .thumbnail .image h3 {  width: 94%;}
+    .content.side-right, .sidebar.bestof  {clear: both;float: left;margin: 0 1%;padding: 0;width: 97.8%;}    
+   
+    .featured-deal .featured-item h3 { width: auto;}   
+}
+
+
+@media (max-width: 480px) {	  
+    .featured-deal-tag { width: 100%;}
+    
+    .content-featured .featured-item-special {  margin: 10px auto;  width: 98%;position:relative;}
+    
+    .special-item, .special-deal { margin-left: 0;padding: 2%;width: 95.3%; border: 1px solid #DDDDDD; background-color: #333;  color: #fff;    }
+    .special-deal h2 a, .special-deal p {color: #fff!important;}
+    
+}

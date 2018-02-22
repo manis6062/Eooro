@@ -1,0 +1,1400 @@
+.well > .container-fluid {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.order > div.blockcontinue {
+  margin: 20px 0 0;
+  width: 95%;
+}
+.select-country {
+  width: 55% !important;
+}
+.order .standard-table th {
+  width: 25%;
+}
+.profile-tabs {
+  margin-top: 10px;
+  clear: both;
+}
+select.payment-cardtype,
+select.payment-state {
+  width: 309px;
+}
+select.payment-datemonth,
+select.payment-dateyear {
+  width: 153px;
+}
+.standard-table[class*="payment-"] input {
+  max-width: 300px;
+  width: 55%;
+}
+.standard-table[class*="payment-"] select {
+  max-width: 300px;
+  width: 55%;
+}
+#check_out_payment label {
+  display: inline-block;
+  margin-left: 10px;
+}
+form {
+  clear: both;
+  margin: 10px 0;
+}
+table {
+  clear: both;
+  margin: 0 auto;
+}
+.table-pricing {
+  margin: 0;
+}
+[class*="standard-table"] input.httpInput {
+  width: 43.8%;
+}
+.input-dd-form-banner {
+  width: 55% !important;
+}
+.content-full [class*="standard-table"] input.httpInput {
+  width: 41%;
+}
+[class*="standard-table"] .inputCheckBulk {
+  width: 20px;
+}
+.httpSelect {
+  width: 80px;
+}
+.member-form .cont_100 > input.input-httpSelect {
+  width: 81.7%;
+}
+.select {
+  width: 63.5%;
+}
+.content-full .select {
+  width: 60%;
+}
+.width100 .input-button-form + span {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 10px;
+}
+.width100 .input-button-form {
+  margin: 10px auto;
+  float: left;
+}
+.member-form .btAdd {
+  margin: 30px auto;
+  text-align: center;
+}
+.member-form #image_fb img {
+  width: 130px;
+  height: 130px;
+  float: right;
+  border: 1px solid #ddd;
+}
+.Full ul li {
+  float: left;
+  margin: 0 0 20px 5.2%;
+  padding: 10px 1%;
+  width: 40%;
+}
+.Full ul li a {
+  float: right;
+  padding: 1px 5px;
+  margin: 8px 0 0 15px;
+  font-size: 9px;
+}
+.content-full .Full ul li a {
+  clear: right;
+  font-size: 10px;
+}
+.Full .galleryImgThumb {
+  float: left;
+  max-width: 256px;
+}
+.ie .Full .galleryImgThumb {
+  width: 248px;
+}
+.standard-table .galleryImgThumb {
+  margin: 0;
+  padding: 0;
+}
+.previewmember .well-small {
+  width: 94%;
+}
+.summary-image .no-link img {
+  display: block;
+  float: left;
+  margin: 10px 10px 0 0;
+}
+.review-item .review-top img {
+  margin: 0 10px 10px 0;
+}
+.baseButtons {
+  width: 100%;
+  clear: both;
+  text-align: center;
+}
+.baseButtons.floatButtons  .standardButton {
+  width: 100%;
+  float: none;
+}
+#reportChart {
+  max-width: 610px;
+}
+[class*="standard-table"] {
+  width: 100%;
+  margin: 10px 0 20px;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+[class*="standard-table"] th {
+  padding: 7px 1px;
+}
+[class*="standard-table"] th.Full {
+  border-bottom: 1px solid transparent;
+}
+[class*="standard-table"] td {
+  padding: 5px 3px;
+}
+.standard-table span {
+  color: #999;
+  clear: both;
+  display: block;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.standard-table span.categorySuccessMessage {
+  color: #2980B9;
+  clear: none;
+  display: inline;
+}
+.standard-table .banner-section-type span {
+  color: #333;
+}
+.standard-table .center-line span {
+  clear: none;
+  display: inline;
+}
+.ie .packageEditor {
+  max-width: 620px;
+  width: 620px;
+  overflow: auto;
+}
+[class*="standard-table"] input,
+[class*="standard-table"] select,
+.standardSIGNUPTable select {
+  margin: 0;
+  font-size: 13px;
+}
+[class*="standard-table"] textarea {
+  width: 55%;
+  clear: both;
+  margin: 0;
+  height: 100px;
+}
+.help-page [class*="standard-table"] textarea {
+  margin: 0;
+}
+.ie [class*="standard-table"] select {
+  padding: 4px;
+}
+[class*="standard-table"] a {
+  cursor: pointer;
+}
+[class*="standard-table"] i span,
+[class*="standard-table"] .standard-tabletitle i span {
+  display: none !important;
+}
+[class*="standard-table"] .width100 {
+  padding: 10px 4% 10px;
+}
+[class*="standard-table"] .columnFile span {
+  display: block;
+  clear: both;
+}
+[class*="standard-table"] .videoSnippetInput + span {
+  float: left;
+  width: 100%;
+}
+[class*="standard-table"] .textcounter {
+  background-color: transparent;
+  border: medium none;
+  box-shadow: none;
+  margin: 7px 2px 0 7px;
+  padding: 0;
+  width: 31px;
+  vertical-align: baseline;
+}
+.standard-table th {
+  width: 20%;
+  text-align: right;
+}
+.standard-table td {
+  max-width: 400px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: left;
+  white-space: inherit;
+}
+.standard-table td.sample {
+  width: 300px;
+}
+.standard-table.tableTOPBLUECheck th {
+  text-align: center;
+  width: 30px;
+}
+.standard-table.center-line {
+  text-align: center;
+}
+.standard-table .bigger th,
+.standard-table .bigger th {
+  padding: 10px 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.standard-table .bigger td span {
+  font-size: 11px;
+  font-weight: normal;
+}
+.standard-table .bigger input {
+  font-size: 14px;
+  width: 55%;
+}
+.standard-table input[type="radio"],
+.standard-table input[type="checkbox"] {
+  margin: 0 3px 3px;
+  vertical-align: middle;
+  width: auto;
+}
+.standard-table th.standard-tabletitle {
+  width: 100%;
+}
+.standard-table input {
+  width: 55%;
+  margin-right: 2%;
+}
+.standard-table input[type="file"] {
+  width: 53.5%;
+  margin-right: 2%;
+  clear: both;
+  padding: 5px;
+  height: 22px;
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+}
+.standard-table table span {
+  clear: both;
+  margin-left: 5px;
+  display: block;
+}
+.standard-table table td {
+  display: inline-block;
+}
+.standard-table table td.mceToolbar,
+.standard-table .mceToolbar td {
+  display: table-cell;
+}
+.standard-table table th {
+  width: auto;
+}
+.standard-table .tableCategoriesADDED td {
+  max-width: none;
+}
+.standard-table th input[type="checkbox"],
+.order .standard-table th input[type="checkbox"] {
+  clear: none;
+  float: none;
+  margin: 2px 0 0;
+  width: 15px;
+}
+.standard-table.nomargin .banner-section-type span {
+  font-size: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  display: inline;
+}
+.standard-table.nomargin  span {
+  display: block;
+}
+.tableCategoriesADDED th,
+.standard-table th.table-subtitle {
+  text-align: left;
+  text-indent: 10px;
+}
+.table-column .table-box-small table {
+  width: 100%;
+}
+.table-column .table-box-small th {
+  width: 35%;
+}
+.table-column .table-box-small td {
+  width: 65%;
+}
+.table-column .table-box-small td label {
+  float: left;
+  width: 80px;
+}
+.table-column .table-box-small input,
+.table-column .table-box-small td strong {
+  float: left;
+}
+.table-column .table-box-small strong {
+  margin: 3px 5px 0 0;
+}
+.table-column .table-box-small .center-info {
+  width: 100%;
+  margin: 0 0 0 100%;
+}
+.table-column .table-box-small .center-info .inputCheck {
+  margin: 3px 10px 0 0;
+}
+.table-column .table-box-small .center-info label {
+  width: auto;
+  display: block;
+  vertical-align: middle;
+  clear: both;
+  margin-bottom: 10px;
+}
+.table-column .table-box select {
+  min-width: 80px;
+}
+.ie .table-column .table-box-small .center-info input {
+  margin-left: 200px;
+}
+.standard-tableTOPBLUE .table-report {
+  text-align: left;
+  font-weight: normal;
+  padding-left: 10px;
+  line-height: 22px;
+}
+.standard-table .tableOption {
+  text-align: left;
+  text-indent: 14px;
+}
+.eventRec table {
+  margin: 0;
+}
+.standard-table.nomargin .banner-section-type span {
+  clear: both;
+  display: block;
+}
+table .defaultSkin table.mceToolbar {
+  margin-left: 0;
+}
+table .defaultSkin .mceButton {
+  margin-right: 0;
+}
+td.mceToolbar {
+  max-width: none;
+  overflow: visible;
+}
+td.mceToolbar span {
+  font-size: 10px;
+  clear: none;
+  display: block;
+  margin-left: 0;
+}
+td.mceToolbar .mceToolbar tr {
+  white-space: normal;
+  background-color: transparent;
+}
+table .defaultSkin table.mceLayout tr.mceFirst td {
+  border-top: none;
+}
+table .defaultSkin table.mceLayout {
+  border-top: 1px solid #ccc;
+}
+.mceLast {
+  border: none;
+}
+td.mceIframeContainer {
+  border: 1px solid #ddd;
+  max-width: none;
+}
+.mceIframeContainer.mceFirst.mceLast {
+  width: 100%;
+}
+table .defaultSkin iframe {
+  height: 300px !important;
+}
+.levelTable {
+  margin-top: 20px;
+  width: 100%;
+}
+.levelTable th,
+.levelTable td {
+  padding: 8px;
+}
+.paymentMethods tr {
+  float: left;
+  max-width: 900px;
+  height: 60px;
+  overflow: auto;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+.ie .paymentMethods tr {
+  white-space: normal;
+}
+.order .standard-table i {
+  font-style: normal;
+  font-size: 14px;
+}
+.standardChooseLevel input[type="radio"] {
+  width: auto;
+}
+.levelTable th.listingLevel {
+  text-align: right;
+}
+.levelTable .standardChooseLevel td {
+  text-align: left;
+}
+table.standard-table.members-table {
+  margin: 0 0 -6px;
+}
+.alignTop.width100 input {
+  width: auto !important;
+  padding: 0 20px !important;
+}
+.customInvoice .standard-tableTOPBLUE {
+  font-size: 11px;
+  width: 96%;
+  margin: 10px auto;
+}
+.customInvoice .standard-tableTOPBLUE th,
+.customInvoice .standard-tableTOPBLUE td {
+  text-align: left;
+}
+.customInvoice h3 {
+  margin-left: 10px;
+}
+.featured.featured-review {
+  padding-top: 20px;
+}
+img {
+  display: inline-block;
+}
+h2 span.complementaryInfo {
+  float: right;
+}
+.noPadding {
+  padding: 0 !important;
+}
+.noMargin {
+  margin: 0 !important;
+}
+table.noMargin {
+  margin: 0 auto !important;
+}
+#reccuring_ends table.noMargin td {
+  width: 100%;
+}
+.eventRec > label,
+#amount_monetary {
+  display: inline;
+}
+.table-column,
+.columnFile,
+.center-line {
+  border-right: 1px solid #ddd;
+}
+.noBackground {
+  background: none !important;
+}
+.noBorder {
+  border: none !important;
+}
+.content-faq .search button {
+  margin-bottom: 10px;
+}
+table.standard-table td span.required {
+  color: #F00;
+}
+.baseForm {
+  clear: both;
+  text-align: center;
+}
+.baseForm form {
+  display: inline;
+}
+a.standardLINK,
+a.standardLINK:visited {
+  line-height: 50px;
+}
+a.standardLINK:hover {
+  text-decoration: underline;
+}
+#main-right .list-view li span.ratings {
+  background: url(../../images/img_rateMiniStarOn.png) 187px 0 no-repeat;
+}
+.standard-iconDESCRIPTION li.rating-icon {
+  background: url(../../images/img_rateMiniStarOn.png) no-repeat 0 50%;
+}
+.progressBar {
+  float: inherit;
+  padding: 10px 100px 10px 220px;
+}
+.browserMessage {
+  background: #FBF1BB;
+  border-bottom: 1px solid #CEC48D;
+}
+.browserMessage .wrapper {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+}
+.featured-review .info .reply {
+  background: url(images/structure/bg-reply.gif) no-repeat left bottom;
+  border-left: 1px solid #C8CED2;
+  margin: 15px 0 0;
+  padding: 0 0 0 20px;
+}
+.featured-review .info .reply p {
+  font-style: italic;
+}
+#navbar-wrapper,
+.wrapper .holderFixes #navbar-wrapper {
+  position: relative;
+}
+div.googleBase {
+  background: #E5E3DF;
+  border: 1px solid #BAB5A9 !important;
+  height: 400px;
+  margin: auto;
+  width: 491px;
+  z-index: 1;
+}
+.tip-base {
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  color: #c09853;
+  padding: 20px 20px 10px;
+  text-align: center;
+  text-align: left;
+}
+.tip-base p {
+  color: #c09853;
+}
+.tip-base h1 {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+p.standardButton.paymentButton,
+.claimButton {
+  margin: 30px auto 0;
+  width: 100%;
+  float: left;
+}
+p.mapTunningButton {
+  float: left;
+  margin: 0 auto 0 5px;
+  width: 32%;
+}
+p.mapTunningButton button {
+  font-size: 12px;
+  width: 100%;
+}
+.standardForm {
+  padding: 0 !important;
+}
+.standardForm tr {
+  margin-bottom: 15px;
+}
+.standardForm th.wrapcaption {
+  color: #636363;
+  font-weight: normal;
+  padding: 15px 0 0 10px;
+  text-align: right;
+  width: 165px;
+}
+.standardForm td {
+  text-align: center;
+}
+.standardForm td.TaddImagetxt {
+  color: #636363;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: left;
+  width: 510px;
+}
+.standardForm td.TaddPreviewtxt {
+  width: 190px;
+}
+.standardForm td.TimageFile {
+  color: #636363;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  padding-right: 5px;
+  text-align: left;
+}
+.standardForm td.IimageFile {
+  text-align: left;
+}
+input[type="hidden"] {
+  display: none;
+  opacity: 0;
+}
+.standardForm td.IimageFile  .inputExplode {
+  background-color: #fcfcfc;
+  padding: 0 7px 0 3px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+}
+.standardForm td.TaddImage {
+  text-align: left;
+  width: 330px;
+}
+.standardForm td.wrapcaption {
+  padding: 15px 0 0 10px;
+  text-align: left;
+  width: 410px;
+}
+.standardForm td.wrapcaption .inputExplode {
+  border: 1px solid #AAA;
+  border-bottom: 1px solid #DDD;
+  border-right: 1px solid #DDD;
+  color: #636363;
+  padding: 2px;
+  width: 392px !important;
+}
+.standardForm td.TaddPreview {
+  vertical-align: top;
+  width: 345px;
+}
+.standardForm td.TaddPreview div {
+  border: 3px solid #D0D5D8 !important;
+}
+.standardForm td .input-button-form {
+  margin: 10px 0 0 0;
+}
+.standardForm td #imgThumb {
+  float: none;
+  margin: 0 0 15px;
+  padding: 0;
+}
+.faq-search input.span5 {
+  width: 46%;
+}
+.faq-search h4.span5 {
+  width: 36%;
+}
+table.standard-table .mceToolbar td {
+  width: auto;
+}
+#dinamic_facebooked .facebookRedeem,
+#dinamic_facebooked .twitterRedeem {
+  text-align: center;
+  width: 10px;
+}
+table.standard-table td table.mceToolbar {
+  float: none;
+}
+.arrow-manage th a {
+  margin-left: 5px;
+}
+.member-form {
+  float: left;
+  clear: both;
+}
+.member-form form > div {
+  clear: both;
+}
+.member-form form > div > div {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+.member-form .right {
+  padding: 45px 1% 0 2%;
+  width: 67%;
+  min-height: 75px;
+  float: right;
+}
+.member-form .left {
+  padding: 0 2% 5px 2%;
+  width: 25%;
+  border: none;
+  float: left;
+}
+.member-form .left a {
+  vertical-align: top;
+  line-height: 20px;
+}
+.member-form .left h2 {
+  margin-bottom: 7px;
+  border: none;
+  text-transform: capitalize;
+}
+.member-form label {
+  width: 100%;
+  float: left;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.member-form label > a {
+  display: none;
+}
+.member-form label > em {
+  margin-left: 10px;
+}
+.member-form textarea {
+  width: 98%;
+  height: 100px;
+}
+.member-form .cont_50 > input {
+  width: 90%;
+}
+.member-form .cont_100 > input {
+  width: 95%;
+}
+.member-form .cont_100 input[type="radio"] {
+  width: 15px;
+}
+.member-form .cont_30 {
+  width: 33%;
+}
+.member-form .cont_30 input {
+  width: 88%;
+}
+.member-form .cont_checkbox {
+  width: 100%;
+  margin: 5px 0;
+  clear: both;
+}
+.member-form .cont_checkbox input {
+  clear: left;
+  float: left;
+  margin: 1px 8px 0 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+}
+.member-form .cont_checkbox label {
+  width: auto;
+  clear: right;
+}
+.member-form .checking input {
+  width: 45%;
+  vertical-align: inherit;
+}
+.member-form .alignIMGtxt {
+  margin-left: 3px;
+}
+.checking label {
+  float: right;
+  margin-top: 4px;
+}
+.checking img {
+  margin: -4px 5px 0 0;
+}
+.checking .positive {
+  color: #27ae60;
+}
+.checking .negative {
+  color: #c0392b;
+}
+#loadingEmail {
+  width: 15px;
+  height: 15px;
+}
+#personal-info div.right {
+  min-height: 280px;
+}
+#change-email div.right {
+  min-height: 40px;
+}
+#locationPrefs div.right {
+  min-height: 110px;
+}
+#form-action p.standardButton button {
+  margin-left: 10px;
+}
+.hiddenFile-box span.hiddenFile button {
+  width: 130px;
+}
+a.remove {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.members .standard-tableTOPBLUE .review-status {
+  padding: 0 !important;
+}
+.webitem {
+  margin-bottom: 10px;
+}
+.webitem .title b {
+  max-width: 210px;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+.webitem .desc {
+  padding: 10px 20px 10px 10px;
+}
+.webitem .desc .status {
+  float: right;
+  height: 35px;
+  margin-right: -6px;
+  width: 50px;
+  white-space: nowrap;
+}
+.webitem .action {
+  padding: 2px 10px;
+}
+.webitem .action a {
+  margin-right: 10px;
+}
+.addcontent {
+  margin: 20px 0;
+}
+.addcontent > p {
+  padding: 20px;
+}
+.addcontent > ul {
+  padding: 10px 20px;
+}
+.addcontent > ul li {
+  padding: 0 0 5px 0;
+}
+.dashboard header {
+  padding: 20px 20px 15px 25px;
+  clear: both;
+  min-height: 45px;
+}
+.dashboard header .btn {
+  float: right;
+  line-height: 30px;
+}
+.dashboard header p {
+  display: inline-block;
+}
+.dashboard section {
+  padding: 15px 20px 15px 25px;
+}
+.dashboard section:last-child {
+  padding-bottom: 25px;
+}
+.dashboard section.stats-summary .row-fluid {
+  margin: 32px 0 20px 0;
+}
+.dashboard section.stats-summary .row-fluid > div {
+  padding-left: 15px;
+}
+.dashboard section.stats-summary .row-fluid > div:first-child {
+  padding-left: 0;
+}
+.dashboard section.stats-summary .row-fluid > div p .alert-new {
+  margin-left: 5px;
+  min-width: 11px;
+  padding: 4px 3px;
+  position: absolute;
+  text-align: center;
+}
+.dashboard section.reviews-list .head {
+  margin: 22px 0 0 0;
+}
+.dashboard .item-review {
+  margin-bottom: 5px;
+}
+.dashboard .item-review .review-summary {
+  padding: 13px;
+}
+.dashboard .item-review .review-summary b,
+.dashboard .item-review .review-summary span {
+  display: inline-block;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-right: 5px;
+}
+.dashboard .item-review .review-detail {
+  padding: 13px;
+}
+.dashboard .item-review .review-detail img {
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  margin-right: 13px;
+  float: left;
+}
+.dashboard .item-review .review-detail q {
+  clear: both;
+  display: block;
+}
+.dashboard .item-review .review-detail .review-text {
+  margin: 15px 0 7px 0;
+}
+.dashboard .item-review .review-detail .review-reply {
+  margin: 10px 20px 10px 40px;
+}
+.dashboard .item-review .review-detail .review-reply span {
+  display: block;
+}
+.dashboard .item-review .review-detail .replythis textarea {
+  width: 98%;
+  height: 100px;
+}
+.dashboard .item-review .review-detail .replythis label p {
+  margin-bottom: 10px;
+}
+.dashboard .game-completion .completion-chart {
+  float: left;
+  width: 25%;
+  margin-left: 40px;
+}
+.dashboard .game-completion .completion-chart span {
+  position: absolute;
+  right: 23px;
+  top: 24px;
+}
+.dashboard .game-completion .large-step {
+  float: right;
+  padding: 5px 0;
+  width: 50%;
+}
+.dashboard .game-completion .large-step span {
+  display: block;
+}
+.dashboard .stats-complete h2 {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.dashboard .stats-complete canvas {
+  margin-left: -12px;
+}
+.chart-legends > ul {
+  display: inline-block;
+}
+.chart-legends > ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.chart-legends b {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 5px;
+}
+.chart-legends i.checked {
+  height: 15px;
+  left: 5px;
+  position: absolute;
+  top: 6px;
+  width: 15px;
+}
+.chart-legends span {
+  margin: 0 10px 10px;
+  display: inline-block;
+}
+.chart-legends span:hover {
+  cursor: pointer;
+}
+.chart-legends .hidden-legends {
+  display: inline-block;
+}
+.chart-legends .hidden-legends:hover ul {
+  display: block;
+  z-index: 1000;
+}
+.chart-legends .hidden-legends ul {
+  position: absolute;
+  z-index: -1;
+}
+.chart-legends .hidden-legends ul li {
+  padding: 2px 40px 2px 20px;
+  position: relative;
+}
+#controlLegend i.checked {
+  display: none;
+}
+.minor-nav ul {
+  text-align: center;
+}
+.minor-nav ul li {
+  display: inline;
+}
+.table-itemlist {
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0 0 10px 0;
+  width: 100%;
+  float: left;
+  clear: both;
+  text-align: left;
+}
+.table-itemlist th {
+  padding: 8px;
+  white-space: nowrap;
+  text-align: left;
+}
+.table-itemlist td {
+  padding: 9px;
+}
+.package .membersExtendedContent > img {
+  float: left;
+  margin-right: 30px;
+}
+.package .content-custom {
+  clear: right;
+}
+.package .standardSubTitle {
+  padding-top: 20px;
+}
+.backlink img {
+  margin-right: 30px;
+}
+.general-item strong {
+  width: 170px;
+  padding: 6px 10px;
+  display: inline-block;
+  text-align: right;
+}
+.payment-options {
+  width: 100%;
+  clear: both;
+}
+.payment-options div {
+  float: left;
+  vertical-align: middle;
+  padding: 10px;
+  margin-right: 10px;
+  min-width: 200px;
+}
+.payment-options input[type="radio"] {
+  float: left;
+  margin: 2px 10px -3px 0;
+}
+.members .content-custom {
+  margin: 30px auto;
+}
+.IimageFile .inputExplode {
+  width: 300px;
+  height: 30px;
+  padding: 4px;
+}
+@media (min-width: 979px) {
+  .chart-legends .hidden-legends {
+    float: right;
+  }
+}
+@media (max-width: 979px) {
+  .nav-collapse-members .notify {
+    right: auto;
+    margin-left: 7px;
+    top: auto;
+  }
+  input,
+  textarea,
+  .uneditable-input {
+    width: 157px;
+  }
+  .nav-collapse-members {
+    display: none;
+  }
+  .nav-collapse-members.in {
+    display: block;
+  }
+  .nav-collapse-members,
+  .nav-collapse-members.collapse {
+    overflow: inherit;
+  }
+  .nav-collapse-members.in  .nav .dropdown-menu {
+    display: block !important;
+  }
+  .nav-collapse-members.in   .sign-up.dropdown-toggle {
+    border-bottom: 1px solid white;
+    height: 1px;
+  }
+  .nav-collapse-members.in   .sign-up.dropdown-toggle i {
+    display: none !important;
+  }
+  .nav-collapse-members.in {
+    overflow: inherit;
+  }
+  .nav-collapse-members.in > .nav,
+  .nav-collapse-members.in > .nav > li {
+    float: left;
+    width: 100%;
+  }
+  .nav-collapse-members.in > .nav .dropdown-menu a:hover {
+    color: #fff;
+  }
+  .nav-collapse-members.in > .nav > li > .dropdown-menu:after,
+  .nav-collapse-members.in > .nav > li > .dropdown-menu:before {
+    display: none;
+  }
+  .nav-collapse-members.in .dropdown-menu .divider {
+    background-color: #333;
+    border: none;
+  }
+  .standard-table input,
+  .standard-table textarea {
+    width: 98%;
+  }
+  .standard-table .bigger input,
+  .standard-table .bigger textarea {
+    width: 98%;
+  }
+  .standard-table input[type="radio"],
+  .standard-table input[type="checkbox"] {
+    width: auto;
+  }
+  .standard-table input[type="file"] {
+    width: auto;
+    max-width: 98%;
+  }
+  .standard-table input.httpInput {
+    width: 70%;
+  }
+  .standard-table .galleryImgThumb img {
+    width: 100%;
+  }
+  .responsive .responsive-scrollmenu {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-bottom: 1px solid #E8E9EB;
+    padding: 0 0 10px 0;
+  }
+  .responsive .responsive-scrollmenu .scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .responsive .responsive-menu {
+    width: 100%;
+  }
+  .responsive .responsive-menu .webitem {
+    width: 250px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    white-space: normal;
+  }
+  .responsive .responsive-menu .webitem b {
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    padding-bottom: 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .responsive .responsive-dashboard {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .dashboard .game-completion .completion-chart {
+    width: 97px;
+  }
+  .dashboard .game-completion .completion-chart span {
+    right: 38px;
+  }
+  .chart-legends > ul {
+    display: none;
+  }
+  .chart-legends .hidden-legends span {
+    display: none;
+  }
+  .chart-legends .hidden-legends ul {
+    z-index: 1000;
+    opacity: 1 !important;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .chart-legends .hidden-legends ul li {
+    display: inline-block;
+    border: none !important;
+    padding: 2px 0 2px 20px;
+  }
+  .chart-legends .hidden-legends ul li:hover {
+    background: transparent !important;
+  }
+  .member-form #image_fb img {
+    float: none;
+  }
+  .member-form .left,
+  .member-form .right {
+    border: medium none !important;
+    float: left;
+    padding: 0 2% 20px;
+    text-align: left;
+    width: 96%;
+  }
+  .member-form .left span,
+  .member-form .right span {
+    line-height: 120% !important;
+    font-size: 100% !important;
+  }
+  .member-form .left h2,
+  .member-form .right h2 {
+    margin-left: 0;
+    font-size: 140% !important;
+    line-height: 200% !important;
+  }
+  .member-form .left .checking,
+  .member-form .right .checking {
+    font-size: 100% !important;
+  }
+  .member-form .left p.standardButton,
+  .member-form .right p.standardButton {
+    margin: 15px 20%;
+  }
+  .member-form .left label,
+  .member-form .right label {
+    font-size: 100%;
+  }
+  .member-form .left label em,
+  .member-form .right label em {
+    font-size: 100%;
+  }
+  .profile-tabs {
+    border: none;
+    padding: 10px;
+    background-color: #f3f3f3;
+  }
+  .profile-tabs li > a {
+    padding: 5px 10px;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .dashboard .stats-complete canvas {
+    margin-left: -10px;
+    width: 600px !important;
+    height: 200px !important;
+  }
+  #personal-info div.right {
+    width: 64%;
+    margin-top: 34px;
+  }
+  #personal-info div.left {
+    width: 28%;
+  }
+}
+@media (max-width: 767px) {
+  .responsive .responsive-scrollmenu {
+    padding: 0 0 10px 0;
+  }
+  .dashboard header {
+    font-size: 105% !important;
+  }
+  .dashboard header .btn {
+    font-size: 80% !important;
+    font-weight: normal !important;
+    line-height: 1.8em;
+    padding: 5px 10px;
+  }
+  .dashboard header h1 {
+    line-height: 1.1em !important;
+  }
+  .dashboard section,
+  .dashboard header {
+    padding: 15px 10px;
+  }
+  .dashboard .game-completion .completion-chart {
+    width: 97px;
+    margin-right: 0;
+  }
+  .dashboard .game-completion .completion-chart span {
+    right: 38px;
+  }
+  .dashboard .game-completion .span7 {
+    margin-top: 20px;
+  }
+  .dashboard .game-completion .large-step {
+    padding: 12px 5px;
+  }
+  .dashboard .stats-complete canvas {
+    margin-left: -10px;
+    width: 100% !important;
+    height: 210px !important;
+  }
+  .dashboard section.stats-summary {
+    font-size: 120% !important;
+  }
+  .dashboard section.stats-summary h1,
+  .dashboard section.stats-summary h5 {
+    margin-right: 20px;
+    font-size: 2.6em !important;
+    font-weight: 600 !important;
+    line-height: 0.8em !important;
+  }
+  .dashboard section.stats-summary .row-fluid > div {
+    border: none !important;
+    padding: 10px 0;
+    width: 50%;
+    text-align: center;
+  }
+  .dashboard section.stats-summary .row-fluid > div:nth-child(2n+1) {
+    clear: left;
+  }
+  .dashboard section.stats-summary .large-rating {
+    margin-top: 5px;
+  }
+  .minor-nav ul {
+    background-color: #eee;
+    padding: 10px;
+  }
+  .minor-nav ul li a {
+    white-space: nowrap;
+    padding: 7px 15px !important;
+  }
+  .standardChooseLevel select {
+    width: 100px;
+  }
+}
+@media (max-width: 640px) {
+  .dashboard .stats-complete canvas {
+    margin-left: -10px;
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .responsive .responsive-scrollmenu {
+    margin: 0 0 0 2%;
+    width: 96%;
+  }
+  .member-form .checking span {
+    display: block;
+  }
+  .table-itemlist th {
+    widht: auto !important;
+  }
+  .table-itemlist th:last-child {
+    display: none;
+  }
+  .table-itemlist td {
+    padding: 3px !important;
+    word-break: break-all;
+  }
+  .table-itemlist td:last-child {
+    display: none;
+  }
+  .table-itemlist .main-options {
+    white-space: normal !important;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard .stats-complete canvas {
+    margin-left: -10px;
+    width: 100% !important;
+    height: 160px !important;
+  }
+}
+@media (max-width: 320px) {
+  .dashboard .stats-complete canvas {
+    margin-left: -10px;
+    width: 100% !important;
+    height: 120px !important;
+  }
+  body {
+    min-width: 300px;
+  }
+}

@@ -1,0 +1,75 @@
+<?php
+
+	/*==================================================================*\
+	######################################################################
+	#                                                                    #
+	# Copyright 2005 Arca Solutions, Inc. All Rights Reserved.           #
+	#                                                                    #
+	# This file may not be redistributed in whole or part.               #
+	# eDirectory is licensed on a per-domain basis.                      #
+	#                                                                    #
+	# ---------------- eDirectory IS NOT FREE SOFTWARE ----------------- #
+	#                                                                    #
+	# http://www.edirectory.com | http://www.edirectory.com/license.html #
+	######################################################################
+	\*==================================================================*/
+
+	# ----------------------------------------------------------------------------------------------------
+	# * FILE: /profile/login.php
+	# ----------------------------------------------------------------------------------------------------
+
+	# ----------------------------------------------------------------------------------------------------
+	# LOAD CONFIG
+	# ----------------------------------------------------------------------------------------------------
+
+	include("../conf/loadconfig.inc.php");
+
+	# ----------------------------------------------------------------------------------------------------
+	# MAINTENANCE MODE
+	# ----------------------------------------------------------------------------------------------------
+	verify_maintenanceMode();
+    
+    # ----------------------------------------------------------------------------------------------------
+	# VALIDATION
+	# ----------------------------------------------------------------------------------------------------  
+	include(EDIRECTORY_ROOT."/includes/code/validate_querystring.php");
+
+	include(EDIRECTORY_ROOT."/includes/code/profile_login.php");
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST" || $_GET["facebookerror"] || $_GET["googleerror"] || $_GET["key"] || $_GET["activation_key"]) {
+        include(EDIRECTORY_ROOT."/includes/code/login.php");
+    }
+    
+    # ----------------------------------------------------------------------------------------------------
+	# HEADER
+	# ----------------------------------------------------------------------------------------------------
+	$hide_search = true;
+	include(system_getFrontendPath("header.php", "layout"));?>
+	
+	<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="hidden">
+		  <li itemprop="itemListElement" itemscope
+		      itemtype="http://schema.org/ListItem">
+		    <a itemprop="item" href="<?=NON_SECURE_URL?>/profile/login.php">
+		        <span itemprop="name">Login</span></a>
+		    <meta itemprop="position" content="1" />
+		  </li>
+	</ol>
+		  
+    <?php
+    # ----------------------------------------------------------------------------------------------------
+	# AUX
+	# ----------------------------------------------------------------------------------------------------
+	require(EDIRECTORY_ROOT."/frontend/checkregbin.php");
+    
+    //initially (which is /custom/domain_1/theme/review/frontend/socialnetwork/login.php)
+    include(system_getFrontendPath("login.php", "frontend/socialnetwork")); 
+
+    //include(EDIRECTORY_ROOT."/custom/domain_1/theme/review/frontend/claim.php"); //added later to make same as claim login
+    
+    # ----------------------------------------------------------------------------------------------------
+	# FOOTER
+	# ----------------------------------------------------------------------------------------------------
+	include(system_getFrontendPath("footer.php", "layout"));
+	
+
+?>

@@ -1,0 +1,508 @@
+<?
+
+/*
+ * Tables Used : ReviewCollector | ReviewCollectorEmailTemplate |  ReviewCollectorSettings | ReviewCollectorCampaign
+ *
+ */
+
+
+class ReviewCollector extends Handle {
+
+	public $id;
+	public $account_id;
+	public $listing_id;
+	public $salutation;
+	public $firstname;
+	public $lastname;
+	public $email;
+	public $subject;
+	public $body;
+
+    /**
+     * Insert the data user enters into table ReviewCollector
+     */
+    public static function RegisterReviewCollector($account_id, $listing_id, $salutation, $firstname, $lastname, $email){
+        $main = DBConnection::getInstance()->getDomain();
+        return DBQuery::execute(function() use ($main,$account_id, $listing_id, $salutation, $firstname, $lastname, $email){
+            $stmt = $main->prepare("INSERT INTO ReviewCollector"
+                . " (account_id,
+                    listing_id,
+                    salutation,
+                    firstname, "
+                ." lastname,
+                    email)"
+                . " VALUES"
+                . " (:account_id,:listing_id,:salutation,:firstname,"
+                .":lastname,:email)");
+            $parameters = array(
+                    ':account_id'    => $account_id,
+                    ':listing_id'    => $listing_id,
+                    ':salutation'    => $salutation,
+                    ':firstname'     => $firstname,
+                    ':lastname'      => $lastname,
+                    ':email'         => $email);
+            $result = $stmt->execute($parameters);
+            
+            return $result;
+        });
+    }
+    /**
+     * Insert the data from CSV file into table ReviewCollector
+     */
+    public static function RegisterReviewCollectorCSV($account_id, $listing_id, $salutation, $firstname, $lastname, $email){
+        DBQuery::execute(function() use ($account_id, $listing_id, $salutation, $firstname, $lastname, $email){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare("INSERT INTO ReviewCollector"
+                . " (account_id,
+                    listing_id,
+                    salutation,
+                    firstname, "
+                ."lastname,
+                    email)"
+                . " VALUES"
+                . " (:account_id, :listing_id, :salutation, :firstname, "
+                . ":lastname, :email)");
+            $parameters = array(
+                ':account_id'   => $account_id,
+                ':listing_id'   => $listing_id,
+                ':salutation'   => $salutation,
+                ':firstname'    => $firstname,
+                ':lastname'     => $lastname,
+                ':email'        => $email
+            );
+            $stmt->execute($parameters);
+        });
+    }	
+    
+    /**
+     * @todo \PDO is not implemented
+     */
+    public static function checkUnsubscribed($listing_id, $account_id){
+        $return = DBQuery::execute(function() use ($listing_id, $account_id){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare("SELECT 
+                        CASE
+                            WHEN received_on is null then 0
+                            ELSE 1
+                                end AS new_to_add,
+                                a . email
+                        FROM ReviewCollector a
+                        WHERE account_id = $account_id
+                        AND listing_id = $listing_id");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        });
+        
+        foreach ($return as $key => $value){
+                if($value['new_to_add'] == 1){
+                        unset($return[$key]);
+                }
+        }
+
+        return $return;
+    }
+
+    /**
+     * Email Template used/set by sponsor. We take in the account id of the sponsor
+     * Save his template. 
+     */
+    public static function SaveEmailTemplate($account_id, $listing_id, $subject, $body){
+        return DBQuery::execute(function() use ($account_id, $listing_id, $subject, $body){
+            $domain = DBConnection::getInstance()->getDomain();
+            $now = date("Y-m-d H:i:s");
+            $stmt = $domain->prepare('SELECT count(*) as count '
+                    . 'FROM ReviewCollectorEmailTemplate '
+                    . 'WHERE account_id = :account_id	 AND listing_id = :listing_id');
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            if ($row['count'] > 0){
+                $stmt = $domain->prepare("UPDATE ReviewCollectorEmailTemplate SET"
+                            . " subject =:subject,"
+                            . " body =:body,"
+                            . " updated_time =:updated_time "
+                            
+                            . " WHERE account_id = :account_id "
+                            . " AND listing_id =:listing_id");
+                $parameters = array(
+
+                    ':subject' => $subject,
+                    ':body'  => $body,
+                    ':updated_time'   => $now,
+                    ':account_id'   => $account_id,
+                    ':listing_id'  => $listing_id
+                    );
+                $stmt->execute($parameters);			
+            } 
+            else {
+                $stmt = $domain->prepare("INSERT INTO ReviewCollectorEmailTemplate"
+                    . " (account_id,
+                        listing_id,
+                        subject,
+                        body, 
+                        created_time,
+                        updated_time)"
+                    . " VALUES"
+                    . " (:account_id, :listing_id, :subject, :body, :created_time, :updated_time)");
+
+                $parameters = array(
+                    ':account_id'    => $account_id,
+                    ':listing_id'    => $listing_id,
+                    ':subject'     => $subject,
+                    ':body'      => $body,
+                    ':created_time'      => $now,
+                    ':updated_time'          => $now
+                            
+                );
+                $stmt->execute($parameters);
+            }
+        });
+    }	
+
+    public static function ExtractUserTemplate($account_id, $listing_id){
+        return DBQuery::execute(function() use ($account_id,$listing_id){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare('SELECT subject,body FROM ReviewCollectorEmailTemplate WHERE account_id=:account_id AND listing_id = :listing_id');
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            return $row;
+        });
+    }
+
+    public static function getDefaultEmailTemplate(){
+	return DBQuery::execute(function(){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare("SELECT subject,body FROM Email_Notification where email = 'review_reminder'");
+            $stmt->execute();
+            
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        });
+    }
+
+
+    /**
+     * Simply Counts the number of requests the user has sent and returns back to show
+     * In the Overview section of Review Collector Page
+     */
+    public static function GetTotalRequestedReviews($account_id, $listing_id){
+        return DBQuery::execute(function() use ($account_id, $listing_id){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare("SELECT count(*) as totalrequestreviews "
+                    . "FROM ReviewCollector "
+                    . "WHERE account_id = :account_id AND listing_id=:listing_id");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            if($row){
+                return $row['totalrequestreviews'];
+            } 
+            else {
+                return false;
+            }
+        });
+
+    }
+
+    /**
+     * Return back the User Data that the sponsor had submitted
+     * to be populated in the overview section
+     */
+    public static function GetRequestedReviewsList($account_id, $listing_id,$page,$number_of_results_per_page){
+        return DBQuery::execute(function() use ($account_id, $listing_id,$page,$number_of_results_per_page){
+            $main = DBConnection::getInstance()->getDomain();
+            $stmt = $main->prepare("SELECT id,salutation,firstname,lastname,email "
+                    . "FROM ReviewCollector "
+                    . "WHERE account_id = :account_id AND listing_id = :listing_id "
+                    . "LIMIT :page,:no_of_res");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->bindValue(':page', (int)$page, \PDO::PARAM_INT);
+            $stmt->bindValue(':no_of_res', (int)$number_of_results_per_page, \PDO::PARAM_INT);
+
+            $stmt->execute();
+            
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        });
+    }
+
+    public static function GetCustomerDetailsByID($account_id, $listing_id, $customer_id){
+        return DBQuery::execute(function() use ($account_id, $listing_id, $customer_id){
+            $main = DBConnection::getInstance()->getDomain();
+            $stmt = $main->prepare("SELECT salutation,firstname,lastname,email "
+                    . "FROM ReviewCollector "
+                    . "WHERE account_id = :account_id AND listing_id = :listing_id "
+                    . "and id = :customer_id");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->bindParam(':customer_id', $customer_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            return $row;
+        });
+    }
+	
+    public static function GetRequestedReviewsInfoSort($account_id, $listing_id, $page, $number_of_results_per_page, $sort, $sort_order){
+        return DBQuery::execute(function() use ($account_id, $listing_id, $page, $number_of_results_per_page, $sort, $sort_order){
+            $domain = DBConnection::getInstance()->getDomain();
+            // whitelisting allowed order for sort
+            $allowed = array('id', 'firstname', 'lastname', 'email', 'status');
+            $orderType = array('ASC', 'asc', 'DESC', 'desc');
+            if(in_array($sort, $allowed) && in_array($sort_order, $orderType)){
+            
+                $stmt = $domain->prepare("SELECT id, firstname,lastname, email, 
+                    case when unsubscribed_on is null then ' - ' else 'Unsubscribed'
+                    end as `status`
+                    ,first_request_sent_on, last_request_sent_on , unsubscribed_on
+                    FROM ReviewCollector WHERE account_id = :account_id AND listing_id = :listing_id 
+                    ORDER BY `".$sort."` ".$sort_order
+                . " LIMIT :page,:no_of_res");
+                $stmt->bindParam(':account_id', $account_id);
+                $stmt->bindParam(':listing_id', $listing_id);
+                $stmt->bindValue(':page', (int)$page, \PDO::PARAM_INT);
+                $stmt->bindValue(':no_of_res', (int)$number_of_results_per_page, \PDO::PARAM_INT);
+                $stmt->execute();
+
+                return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            }
+            else {
+                return false;
+            }
+        });
+    }
+
+
+    public static function GetRequestedReviewsInfoNoSort($account_id, $listing_id,$page,$number_of_results_per_page){
+        return DBQuery::execute(function() use ($account_id, $listing_id, $page, $number_of_results_per_page){
+            $main = DBConnection::getInstance()->getDomain();
+            $stmt = $main->prepare("SELECT id, firstname,lastname, email, 
+                    case when unsubscribed_on is null then ' - ' else 'Unsubscribed'
+                    end as `status`
+                    ,first_request_sent_on, last_request_sent_on , unsubscribed_on
+                    FROM ReviewCollector 
+                    WHERE account_id = :account_id AND listing_id = :listing_id 
+                    ORDER BY id desc LIMIT :page,:no_of_res");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->bindValue(':page', (int)$page, \PDO::PARAM_INT);
+            $stmt->bindValue(':no_of_res', (int)$number_of_results_per_page, \PDO::PARAM_INT);
+
+            $stmt->execute();
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        });
+    }
+
+    /**
+     * @todo status field is not present in database
+     */
+    public static function GetOutstandingRequests($account_id, $listing_id){
+        return DBQuery::execute(function() use ($account_id, $listing_id){
+            $domain = DBConnection::getInstance()->getDomain();
+            
+            $stmt = $domain->prepare("SELECT count(*) as count "
+                    . "FROM ReviewCollector "
+                    . "WHERE account_id = :account_id "
+                    . "and listing_id = :listing_id "
+                    . "and (received_on < current_timestamp() or received_on is null)");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            return $row['count'];
+        });
+    }
+
+
+    public static function CheckIfBelongsToUser($customer_id, $account_id, $listing_id){
+        return DBQuery::execute(function() use ($account_id, $listing_id,$customer_id){
+            $main = DBConnection::getInstance()->getDomain();
+            $stmt = $main->prepare("SELECT count(*) as count "
+                    . "FROM ReviewCollector "
+                    . "WHERE account_id = :account_id and listing_id = :listing_id "
+                    . "and id=:customer_id");
+            $stmt->bindParam(':account_id', $account_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->bindParam(':customer_id', $customer_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            return $row['count'];
+        });
+    }
+
+    /**
+     * @todo status field is not present in the database
+     */
+    public static function UpdateRequestSentTime($time, $account_id, $listing_id, $id){
+	DBQuery::execute(function() use ($time, $account_id, $listing_id, $id){
+            $es='email successfully sent.';
+            $main = DBConnection::getInstance()->getDomain();
+             $stmt = $main->prepare("UPDATE ReviewCollector SET"
+                 . " first_request_sent_on = :first_request_sent_on,"
+                 . "  WHERE account_id = :account_id"
+                 . " AND listing_id = :listing_id "
+                 . " AND id = :id "
+                    );
+             $parameters = array(
+                 ':first_request_sent_on' => $time,
+                 ':account_id'   => $account_id,
+                 ':listing_id'  => $listing_id,
+                 ':id'      => $id
+                 );
+             $stmt->execute($parameters);
+        });
+
+    }
+	
+	
+    # -----------------------------------
+    #
+    # Table : ReviewCollectorUserLog
+    #
+    # -----------------------------------	
+
+    public static function CheckSession($session_id, $listing_id){
+        return DBQuery::execute(function() use ($session_id, $listing_id){
+            $main = DBConnection::getInstance()->getDomain();
+            $stmt = $main->prepare("SELECT count(*) as total "
+                    . "FROM ReviewCollectorEmailUserLog "
+                    . "WHERE session_id=:session_id AND listing_id =:listing_id");
+            $stmt->bindParam(':session_id', $session_id);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->execute();
+            $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+            
+            return $row['total'];
+        });
+    }
+
+    public static function LogThisUser($session_id, $listing_id, $ip){
+        $domain = DBConnection::getInstance()->getDomain();
+        DBQuery::execute(function() use ($domain,$session_id, $listing_id, $ip){
+            $stmt = $domain->prepare("INSERT INTO ReviewCollectorEmailUserLog"
+                .  " (session_id,listing_id,ip)"
+                . " VALUES"
+                . " (:session_id, :listing_id, :ip)");
+            $parameters = array(
+                    ':session_id'   => $session_id,
+                    ':listing_id'   => $listing_id,
+                    ':ip'           => $ip
+                );
+            $stmt->execute($parameters);
+        });
+    }
+    
+    /**
+     * @todo not implemented
+     */
+    public static function UpdateRecievedOn($listing_id, $account_id, $date){
+        return DBQuery::execute(function() use($listing_id, $account_id, $date){
+            $domain = DBConnection::getInstance()->getDomain();
+            $stmt = $domain->prepare("UPDATE ReviewCollector as rc
+                            SET received_on = :received
+                            where rc.listing_id = :listing_id
+                            and rc.account_id = :account_id");
+            $stmt->bindParam(':received', $date);
+            $stmt->bindParam(':listing_id', $listing_id);
+            $stmt->bindParam(':account_id', $account_id);
+            
+            return $stmt->execute();
+        });
+    }
+        
+    /**
+     * To check if the user with the email exists. If it does, then fetch
+     * the user's details.
+     * @todo pdo not implemented
+     * @todo remove hardcoded database names from the query
+     * @param string $email
+     */
+    public static function getUsersFromEmail($email){
+        $result = DBQuery::execute(function() use ($email){
+            $domain = DBConnection::getInstance()->getDomain();
+            $mainDb = DBConnection::getInstance()->getMainDatabaseName();
+            $domainDb = DBConnection::getInstance()->getDomainDatabaseName();
+            
+            $stmt = $domain->prepare("SELECT a.id, a.username, c.email, p.nickname, a.active FROM $mainDb.Account a "
+                ."INNER JOIN $mainDb.Contact c ON a.id = c.account_id
+                INNER JOIN $domainDb.AccountProfileContact p ON a.id = p.account_id
+                WHERE c.email = :email");
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+            
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        });
+        return self::setForeignAccountField($result);
+    }
+        
+        
+    protected static function setForeignAccountField( $users )
+    {
+        foreach( $users as $key => $user ){
+            if( strpos($user['username'], '::') !== false ){
+                preg_match('/([a-z]+)::/', $user['username'], $matches);
+                $users[$key]['foreignaccount'] = $matches[1];
+            }
+            else {
+                $users[$key]['foreignaccount'] = 'email';
+            }
+        }
+        return $users;
+    }
+        
+    public static function getKeyFromForeignAccount($account, $users)
+    {
+        foreach ($users as $userkey => $user){
+            $key = array_search($account, $user); 
+            if( $key !== false ) {
+                return $userkey;
+            }
+        }
+        return false;
+    }
+    public static function checkUsername($accountType,$users){
+        foreach ($users as $userkey => $user){
+            $index=strpos($user['username'] , $accountType);
+            if(is_numeric($index)){
+                return $userkey;
+            }
+        }
+        return false;
+    }
+     public static function getAccountFromAccount($users)
+    {
+         $google=  self::checkUsername("google::",$users);
+         if(is_numeric($google)){
+             return $google;
+         }
+         $facebook=self::checkUsername("facebook::",$users);
+         if(is_numeric($facebook)){
+             return $facebook;
+         }
+         return 0;
+    }
+    
+        
+    public static function addEmailAccountToDatabaseFromCollectedReview($email, $campaign_id, $item_id, $item)
+    {
+        $accountActivationByReview = new Account_ActivationByReview(array(
+            'email'         => $email,
+            'campaign_id'   => $campaign_id,
+            'item_id'       => $item_id,
+            'item'          => $item
+        ));
+        $accountActivationByReview->save($campaign_id, $email, $item_id, $item);
+    }
+
+}

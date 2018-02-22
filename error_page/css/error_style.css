@@ -1,0 +1,129 @@
+
+body {
+	background:url(../images/bg.jpg) no-repeat 100%;
+	background-size: 100%;
+/*	font-family: 'open_sanslight';*/
+	font-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.wrap
+{
+	width:70%;
+	margin:5.2% auto 4% auto;
+  
+}
+
+
+.custom-h1{
+	font-size: 150px;
+	margin: 0px;
+	padding: 0px;
+	color: #ff004f;
+        font-family: fantasy;
+        text-align: center;
+}
+
+
+.icon-logo{
+	width: 100%;
+    
+}
+.buttom{
+    padding-top: 15px;
+}
+.h2{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.transparent-bg{
+    padding: 1px 25px 25px;
+}
+.icon-logo img{
+	width: 250px;
+}
+
+.error-text{
+    width: 100%;
+    text-align: center;
+}
+
+.error-message{
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/*********Media Queries************/
+@media only screen and (max-width: 768px)
+{
+.wrap {
+	width: 85%;
+        
+}
+.custom-h1{
+	font-size: 72px;
+	
+}
+}
+@media only screen and (max-width: 640px)
+{
+.wrap {
+	width: 80%;
+}
+.search-text{
+    font-size: 16px;
+}
+.icon-logo{
+    padding-bottom: 15px;
+}
+.icon-logo img{
+	width: 171px;
+}
+.error-message{
+    font-size: 16px;
+  
+}
+
+}
+@media only screen and (max-width: 480px)
+{
+.wrap {
+	width: 85%;
+}
+
+}
+@media only screen and (max-width: 320px)
+{
+.wrap {
+	width: 95%;
+}
+.custom-h1{
+    font-size: 50px;
+}
+.icon-logo{
+    display: none;
+}
+.transparent-bg {
+    padding: 1px 8px 25px;
+}
+}
+@media  screen and (min-width: 801px) and (max-width: 1520px)
+{
+.wrap {
+	width: 80%;
+        padding-top: 50px;
+}	
+}
+
+
+
+@media screen and (max-width: 800px) and (min-width: 769px) {
+    .icon-logo img {
+    width: 250px;
+    padding-bottom: 147px;
+    }   
+}

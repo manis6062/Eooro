@@ -1,0 +1,23 @@
+#sagepay-selected:before {
+    clear: both;
+}
+#sagepay-selected {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/*.. overriding inherited styles...*/
+#sagepay-selected > label {
+    display: block !important;
+    margin: 0px !important;
+    float: none;
+    height: 20px;
+}
+#sagepay-selected:after {
+    margin-bottom: 20px;
+}
+.right #sagepay-selected{
+    clear: both;
+}

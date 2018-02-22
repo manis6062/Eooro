@@ -1,0 +1,221 @@
+/**
+* eDirectory - Advertise Page
+*
+* @package			layout
+* @filesource		advertise.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+/* #Contents*/
+.content.content-full { border: 1px solid #dddddb;background-color:#fff; }
+
+
+/* #Tabs*/
+.tabs {border-bottom: 1px solid #ddd; font-size:12px;}
+
+.tabs > .active > a, .tabs > .active > a:hover { color: #555555; text-shadow:0 0 0 #858585;  background-color: #ffffff; border: 1px solid #ddd; border-bottom-color: transparent;}
+
+.tabs > li > a {border-radius: 4px 4px 0 0; border-color:#c2c3c3; background-color:#c2c3c3; color:#fff; font-weight:600; text-shadow: 0px 1px 1px #858585;}
+.tabs > li > a:hover{background-color:#afb0b0;border-color:#afb0b0;}
+
+.nav > .active > a:focus, .nav > li > a:focus  {background-color:#fff;}
+
+.tabs > .active > a:hover, .nav > .active > a:focus {background-color:#ddd;}
+
+
+.ie .tabs > li > a {min-width:120px;}
+.ie .tabs.nav-tabs > li > a {min-width:20px;}
+/* #Tabs Levels */
+
+.tabsLevels {   text-align: center;}
+
+.tabsLevels h2{padding:0 10px; text-transform: uppercase; color:#749116; font-weight: 600;}
+.tabsLevels .active h2, .tabsLevels .active h2:hover{color:#000; cursor: default;}
+.tabsLevels h2:hover{color:#999; cursor:pointer;}
+.level-info {padding:10px;}
+.level-info p { font-size:11px;line-height:20px;}
+.level-info .price{font-weight:600; font-size:14px;padding:15px 0;}
+
+.preview-desc {border-bottom:1px solid #dedede; font-style: italic; margin: 0 0 17px; padding: 10px 0;}
+
+.level-summary .summary-small .name-tag-deal, .level-summary .summary-deal.summary-small .name-tag-deal.soldout {padding:12px; font-size:16px;background: url(images/iconography/listing-tag-deal-slice.png) repeat-x 0 0;}
+.level-summary .summary-deal.summary-small .name-tag-deal {padding:6px 12px;}
+
+.ie .summary-small .rate-stars {margin-top:-1px; width:105px;}
+
+
+/*Preview*/
+.modal-preview {
+	height:370px;
+}
+.modal-content h2 {
+  text-align:left;
+}
+.modal-preview .preview-desc{
+ margin:10px 0;
+ font-size:13px;
+ font-weight:normal;
+}
+.modal-preview .preview-desc span{
+  display:block;
+  font-weight:normal;
+  font-size:90%;
+}
+
+.modal-preview .level-summary {
+  width: 650px;
+  float: left;  
+  margin-left: 10px;
+}
+.modal-preview .level-summary .summary .line-footer .review {
+    padding: 5px 0 0;
+}
+.modal-preview .level-summary .summary .rate p {
+    padding-left: 0;
+}
+
+.modal-preview .level-summary .summary .share-social {
+    float: none;
+    margin-left: -5px;
+}
+
+.modal-preview .level-summary .button-call {
+    margin: 5.5px -5px 0 -1px;
+} 
+.modal-preview .level-summary .button-send {
+    padding: 8px 11px 0 4px;
+} 
+
+.modal-preview .summary-small .media .summary-image .no-image {
+	width:200px;
+	height:86px !important;
+}
+
+.modal-preview .listing-tag-deal,.modal-preview  .deal-tag-small,.modal-preview  .deal-tag {
+    margin-right: -1.4%;
+}
+
+.modal-preview .level-detail  .nav-tabs{
+	padding-bottom:0;
+  border-bottom: 1px solid #DDDDDD;
+  font-size: 12px;
+  margin-left: 13px;
+  width: 618px;
+}
+.modal-preview .level-detail {
+  float: left;
+  width: 950px;
+}
+.modal-preview .level-detail .tab-container {
+  background-color:#fff;
+}
+.modal-preview .level-detail .well-top {
+   width: 282px;
+}
+.modal-preview .level-detail .image .no-image {
+    height: 131px;
+    width: 284px;
+} 
+.modal-preview .level-detail .featured.featured-checkin .image .no-image {
+    height: 72px;
+    width: 72px;
+} 
+.modal-preview .level-detail .content{
+  border: medium none;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  width: 645px;
+}
+.modal-preview .level-detail .ad-thumb-list {
+	height:50px;
+	overflow:hidden;
+}
+.modal-preview .level-detail .ad-thumb-list .no-image,
+.modal-preview .level-detail .ad-thumb-list li {
+	height:40px;
+	width:91px;
+}
+.modal-preview .level-detail .ad-thumb-list li {
+  margin:5px 5px 0 0;
+  float:left;
+}
+.modal-preview .level-detail .review-bottom.row-fluid p{
+ float:left;
+}
+.modal-preview .level-detail .review-bottom.row-fluid p.pull-right{
+ float:right;
+}
+
+.modal-preview .level-detail .helpful-reviews .btn {
+    background-image: -moz-linear-gradient(center top , #FEFEFE, #C2C3C3);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#C2C3C3', GradientType=0);
+    color: #6E6E6E;
+    border-color: #eee;
+}
+
+.modal-preview .sidebar .map, .modal-preview .minimap .map {
+    height: 216px;
+    width: 299px;
+}
+
+.modal-preview .photo-gallery li {
+  margin-right: 7px;
+  margin-bottom: 7px;
+  float: left;
+}
+.modal-preview .photo-gallery li .no-image {
+  width: 185px;
+  height: 75px;
+}
+
+.level.level-preview .level-summary .no-image {
+  width: 209px;
+  height:88px !important;
+}
+
+.level-preview .content-main{ width:100%; margin:0;}
+
+.level.level-preview .content {
+    width: 66%;
+    border:none;
+}
+
+.level-preview .nav-tabs > li, .profile-tabs > li {
+    margin-bottom: 1px;
+}
+
+.level-preview  .line-footer .navicons{
+    display: inline-block;
+    vertical-align: text-top;
+    white-space: nowrap;
+}
+
+.level-preview .share-social li{
+    padding:0;
+}
+
+.level-preview .share-social li{
+    margin: 0 4px;
+}
+
+/* #Fix for Sitemgr Preview*/
+.level.level-preview {background-color: #fff; width: 99.3%; float: left;}
+
+
+.level-detail,.level-summary {width: 100%; max-width:1020px; margin:0 auto;}
+.level-detail .sidebar {padding:0 0 2% 0}
+
+.row-fluid.detail-deal { width: 136.8%;}
+.detail-deal .content-social-box {margin: 0% 0 8%;}
+.detail-deal .map {margin:0;}
+
+
+
+/* #Preview */
+
+.level-preview .content {width: 69%;}
+.level-preview .sidebar {width: 27%;margin-right:4%;}

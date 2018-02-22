@@ -1,0 +1,65 @@
+/**
+* eDirectory - Blog Module
+*
+* @package			layout
+* @filesource		blog.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+.results-info {border-top: 1px solid #2980B9;}
+
+/*Popular topics*/
+.blog-item .item h3 {  font-size: 12px; line-height: 16px;}
+
+
+/* #Post Summary
+    
+*/
+
+.post-summary {border-bottom: 1px solid #dedede;}
+.post-summary h3  {font-size: 18px; font-weight: bold;line-height: 24px;}
+.post-summary h3 a, .blog-comments a {color:#333;}
+.post-summary h3 a:hover, .blog-comments a:hover {color:#2980B9;}
+.post-summary time {color:#999899; }
+
+/* #Paragraph
+      <p class="posts">This is a sample paragraph</p>
+*/
+p.posts {margin:10px 0 0;}
+
+/* #Sidebar 
+
+*/
+.sidebar .search-box label{font-size:15px; font-weight:bold;}
+
+.sidebar .blog-item h3 {font-size: 14px; font-weight:bold; line-height: 20px; border-bottom: none;}
+.sidebar .blog-item h3 a{color:#000;} .sidebar .blog-item h3 a:hover{color:#999;}
+.sidebar .blog-item .item p{color:#333; font-size:12px; line-height: 1;}
+.sidebar .blog-item .item .image img { border:1px solid #dedede; }
+
+.sidebar h2 span{float:none;}
+
+
+/** Accordion */
+
+#accordion { margin: 10px 0 30px 2px;}
+.accordion-item {float:left; clear:both; width:100%;}
+.accordion-item h3 a{background:none}
+.accordion-item h3 { background: url("images/structure/accordion-list.png") no-repeat scroll 0 -24px #fff;  clear: both;   display: block; line-height: 27px;  margin: 5px 8%; padding: 0;  width: 84%;}
+.accordion-item.active h3 {background-position: 0 12px;}
+.accordion-item .list li {  float: left;  margin-left: 8%;  width: 90%;}
+.accordion-item .list {margin-left:5%; padding:0;}
+
+
+/*Contact form*/
+.button.button-contact h2 {background:transparent;}
+.button.button-contact h2 a:hover {color:#fff;}
+
+
+/* #Comments*/
+.comment {border-bottom:1px solid #dedede;}
+.comment  p {font-size:10.5px;}

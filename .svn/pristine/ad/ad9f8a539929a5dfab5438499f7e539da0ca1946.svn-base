@@ -1,0 +1,120 @@
+.ad-gallery 
+{ width:300px !important; }
+
+	.ad-gallery, .ad-gallery * 
+	{ margin:0; padding:0; }
+	
+	.ad-gallery .ad-image-wrapper 
+	{ height:130px  !important; margin-bottom:10px; position:relative; overflow:hidden; width:300px !important; }
+	
+		.ad-gallery .ad-image-wrapper .ad-loader 
+		{ position:absolute; z-index:10; top:48%; left:48%; border:1px solid #CCC; }
+		
+		.ad-gallery .ad-image-wrapper .ad-next 
+		{ position:absolute; right:0; top:0; width:25%; height:100%; cursor:pointer; display:block; z-index:100; }
+		
+		.ad-gallery .ad-image-wrapper .ad-prev 
+		{ position:absolute; left:0; top:0; width:25%; height:100%; cursor:pointer; display:block; z-index:100; }
+		
+			.ad-gallery .ad-image-wrapper .ad-prev, .ad-gallery .ad-image-wrapper .ad-next 
+			{ /* Or else IE will hide it */ background:url(non-existing.jpg)\9 }
+			
+			.ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .ad-gallery .ad-image-wrapper .ad-next .ad-next-image 
+			{ background:url(images/iconography/ad_prev.png); width:30px; height:30px; display:none; position:absolute; top:47%; left:0; z-index:101; }
+			
+		.ad-gallery .ad-image-wrapper .ad-next .ad-next-image 
+		{ background:url(images/iconography/ad_next.png); width:30px; height:30px; right:0; left:auto; }
+		
+		.ad-gallery .ad-image-wrapper .ad-image 
+		{ height:171px !important; overflow:hidden; width:301px !important; z-index:9; }
+		
+		.ad-gallery .ad-image-wrapper .ad-image a img 
+		{ border:0; }
+		
+        .ad-image-description {cursor:pointer;}
+        
+		.ad-gallery .ad-image-wrapper .ad-image .ad-image-description, .detail .image-shadow p.image-caption
+		{ position:absolute; bottom:0px!important; padding:7px; text-align:left; width:100%; z-index:2; background:url(images/structure/bg-dark.png); color:#fff; }
+		        
+		* html .ad-gallery .ad-image-wrapper .ad-image .ad-image-description 
+		{ background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=scale, src='images/structure/bg-dark.png'); }
+		
+	.ad-gallery .ad-image-wrapper .ad-image .ad-image-description .ad-description-title 
+	{ display:block; }
+	
+	.ad-gallery .ad-controls 
+	{ height:20px; }
+	
+	.ad-gallery .ad-info 
+	{ float:left; }
+	
+	.ad-gallery .ad-slideshow-controls 
+	{ float:right; }
+	
+	.ad-gallery .ad-slideshow-controls .ad-slideshow-start, .ad-gallery .ad-slideshow-controls .ad-slideshow-stop 
+	{ padding-left:5px; cursor:pointer; }
+	
+	.ad-gallery .ad-slideshow-controls .ad-slideshow-countdown 
+	{ padding-left:5px; font-size:0.9em; }
+	
+	.ad-gallery .ad-slideshow-running .ad-slideshow-start 
+	{ cursor:default; font-style:italic; }
+	
+	.ad-gallery .ad-nav 
+	{ width:250px; padding:0 25px; position:relative; }
+	
+	.ad-gallery .ad-forward, .ad-gallery .ad-back 
+	{ position:absolute; top:0; height:100%; z-index:10; }
+	
+	/* IE 6 doesn't like height: 100% */
+	* html .ad-gallery .ad-forward, .ad-gallery .ad-back 
+	{ height:57px; }
+	
+	.ad-gallery .ad-back 
+	{ cursor:pointer; left:0; width:13px; display:block; background:url(images/iconography/icon-gallery-arrow-prev.png) 0px 4px no-repeat; }
+	
+	.ad-gallery .ad-forward 
+	{ cursor:pointer; display:block; right:0; width:13px; height:41px;background:url(images/iconography/icon-gallery-arrow-next.png) 0px 4px no-repeat; }
+	
+	.ad-gallery .ad-nav .ad-thumbs 
+	{ overflow:hidden; width:100%; }
+	
+	.ad-gallery .ad-thumbs .ad-thumb-list 
+	{ float:left; list-style:none; min-width:250px;}
+	
+	.ad-gallery .ad-thumbs li 
+	{ float:left; margin-right:2px; }
+	
+	.ad-gallery .ad-thumbs li a 
+	{ display:block; }
+
+	.ad-gallery .ad-thumbs .ad-thumb-list li a 
+	{  }
+	
+/* Can't do display none, since Opera won't load the images then */
+.ad-preloads 
+{ position:absolute; left:-9000px; top:-9000px; }
+
+@media (max-width: 767px){
+    
+.ad-gallery, .ad-gallery * {margin: 0 auto;}
+
+}
+
+
+@media (max-width: 480px) {	 
+    .ad-gallery {}
+    .ad-gallery .ad-image-wrapper { height:105px !important; margin-bottom:10px; position:relative; overflow:hidden; width:100% !important; }
+    .ad-gallery .ad-image-wrapper .ad-image { height:auto !important; overflow:hidden; width:250px !important; z-index:9; }
+    .ad-gallery .ad-nav {width: 256px;}
+    .ad-gallery .ad-thumbs .ad-thumb-list{ float:left; width:100% !important; list-style:none; }
+    
+    .ad-nav .ad-forward, .ad-nav .ad-back {display:none;}
+    .ad-thumb-list img {width: 111px;padding: 2px;height: auto; border:1px solid #ddd; margin:4px;}
+    
+    .ad-gallery .ad-image-wrapper .ad-image .ad-image-description, .detail .image-shadow p.image-caption {width: 255px!important;font-size: 10px;}
+    .ad-gallery .ad-image-wrapper {height: 105px !important;width: 250px !important;}
+    
+    
+    
+}

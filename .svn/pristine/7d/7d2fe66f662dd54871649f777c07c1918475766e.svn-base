@@ -1,0 +1,190 @@
+/**
+* eDirectory - Profile Pages
+*
+* @package			layout
+* @filesource		profile.css
+* @author			Arca Solutions
+*/
+
+
+@import "variables.less";
+@import "mixins.less";
+
+
+/*Profile Page 2014*/
+
+
+
+.profile-sidebar {
+	> h2 {
+		font-weight: normal;
+		text-transform: uppercase;
+		padding-bottom:15px;		
+	}
+	.user-info {
+		background-color:@gray-extralighter;
+		border:1px solid @gray;
+		p {
+				font-size:0.9em;
+				line-height:1.46em;
+				color:@gray-text;
+				a {
+					word-break: break-word;
+				}
+			}		
+	}
+	.basic-info {
+			h5 {
+				font-weight: 600;
+				line-height:1em;
+				font-size:1em;
+				padding-bottom:5px;
+			}			
+		}
+	.extra-info {
+		p {
+			margin:5px 0;
+		}
+		h4 {
+			margin:13px 0 5px;
+			font-size:1.1em;
+		}
+	}
+	.social-network {
+		p {
+			font-size:0.9em;
+			line-height:1.8em;
+			padding:5px 0 10px;
+		}
+	}
+}
+
+
+.list-favorites {
+	.item-favorite {
+		border:1px solid @gray;
+		.item-info {
+			background-color:@gray-extralighter;
+		}
+		.item-options {
+			background-color:@gray-light;
+		}
+		span, p {
+			color:@gray-text;
+			font-size:0.95em;
+			line-height:1.4em;
+		}
+		h4 {
+			color:@gray-dark;
+			font-size:1em;
+			line-height: 2em;
+			a {
+				color:@gray-dark;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		abbr {
+			font-size:0.8em;
+			a {
+				color:@gray-text;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.welcome-box {
+	h1 {
+		font-size:18px;
+		text-transform: uppercase;
+		line-height:18px;
+		font-weight: normal;
+		padding-bottom:15px;
+	}
+	> h2 {
+		-moz-box-sizing: border-box;
+	    clear: both;
+	    font-size: 18px;
+	    font-weight: bold;
+	    line-height: 18px;
+	    padding: 0;
+	    width: 100%;
+	    font-weight: normal;
+	    padding-bottom: 15px;
+	    text-transform: uppercase;
+	}
+	p {
+		line-height:2em;
+	}	
+}
+
+.search-box {
+		background-color: @gray-extralight;
+		border: 1px solid @gray;
+		h3 {
+			font-size:1.1em;
+			line-height: 1.4em;
+			font-weight: normal;
+			padding:10px 0;
+		}
+		p {
+			font-size:0.9em;
+			font-weight:600;
+			line-height:3em;
+		}
+	}
+
+.ie {
+	.search-box input {
+		line-height: 30px;
+	}
+}
+
+.activity-box {	
+	h2 {
+		font-size:18px;
+		line-height:18px;
+		text-transform: uppercase;
+		font-weight: normal;
+		padding-bottom: 15px;
+	}
+	.item-activity {
+		border: 1px solid @gray;
+		.transition(0.3s);
+		p{
+			vertical-align: middle;
+			line-height: 1.4em;
+		}
+		.stars-rating {
+			margin:3px 5px 0 2px;
+		}
+		&.opened {
+			background-color:@gray-extralighter;
+		}
+		&:hover{
+			cursor: pointer;
+			background-color:@gray-extralight;
+		}
+		.activity-detail {
+			p {color:@gray-text;}
+			.reply {
+				.opacity(0.6);
+				padding-left:50px;
+			}
+		}
+	}
+}
+
+/* Twitter*/
+.last-tweets {
+	h2 {
+		margin:20px 0;
+	}
+	ul li span {
+		color:@gray-text;
+	}
+}

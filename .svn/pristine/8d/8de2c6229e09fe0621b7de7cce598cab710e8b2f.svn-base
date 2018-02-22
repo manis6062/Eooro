@@ -1,0 +1,144 @@
+/**
+* eDirectory - Profile Pages
+*			
+*/
+
+
+@import "variables.less";
+@import "mixins.less";
+
+
+
+/*Profile Page 2014*/
+
+.profile-sidebar {
+	
+	.user-info {
+		padding:15px;
+		margin:0 0 20px 0;
+		clear:both;
+		float:left;
+		width:100%;
+		.box-sizing(border-box);
+		img {
+			float:left;
+			width:70px;
+			height:70px;
+			margin:0 10px 10px 0;
+		}		
+	}
+	.basic-info {
+			clear:right;
+		}
+	.extra-info {
+		float:left;
+		clear:both;
+	}
+	.social-network {
+		clear: both;
+	    float: left;
+	    margin: 12px 0 10px;
+	}
+}
+
+.list-favorites {
+	.item-favorite {
+		margin:0 0 20px 0;
+		clear:both;
+		float:left;
+		width:100%;
+		.item-info {
+			padding:10px;
+		}
+		.item-options {
+			padding:5px 10px;
+			height:20px;
+		}
+	}
+}
+
+.search-box {
+	padding:0.4em 1em 1.4em 1em;
+	margin:0 0 40px;
+}
+
+.viewmore {
+	padding:15px 0;
+	text-align: center;
+}
+
+.activity-box {
+	.item-activity {
+		margin-bottom:-1px;	
+		padding: 15px;
+		.activity-detail {
+			margin:15px 0;
+		}
+	}
+}
+
+
+
+/* #Media queries
+
+	All changes when you want a responsive website
+	
+*/
+
+@media (max-width: 979px) {
+
+	.profile-sidebar {
+		.user-info {
+		    padding: 7px;
+		}
+		.socialicon {
+			margin: 2px 6px;
+			float: left;
+		}
+	}
+	.search-box {
+		.form-inline div {
+			.btn {
+				padding:5px 0;
+			}
+		}
+	}
+	.item-activity {
+		.pull-right {
+			float:none;
+		}
+		.activity-detail {
+			display: block !important; 
+			margin: 5px 0 !important;
+			height: auto !important;
+		}
+	}
+
+}
+
+@media (max-width: 767px) {
+	.item-activity {
+		a.pull-right{
+			float:none;
+		}
+	}
+	.search-box {
+		.form-inline div {
+			margin:10px 0;
+		}
+	}
+	.container-fluid > .row-fluid.profile-page {
+		margin: 0 auto 0 2%;
+		width:96%;
+	}
+
+}
+
+@media (max-width: 480px) {	 
+	
+    
+}
+
+@media (max-width: 320px) {
+ 
+}

@@ -1,0 +1,88 @@
+
+
+ERROR: http://localhost/10300/sponsors/popup/popup.php
+
+Query: UPDATE Gallery_Image SET
+								image_caption = "",
+								thumb_caption = ""
+							WHERE image_id=
+
+ Errno: 1064
+ Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+_SERVER data
+    REMOTE_ADDR : 127.0.0.1
+    REMOTE_PORT : 37814
+SCRIPT_FILENAME : /var/www/10300/sponsors/popup/popup.php
+ REQUEST_METHOD : POST
+   QUERY_STRING : 
+    REQUEST_URI : /10300/sponsors/popup/popup.php
+\n\n#0 /var/www/10300/classes/class_Mysql.php(99): mysql->_handle_error('UPDATE Gallery_...', 0)
+#1 /var/www/10300/includes/code/uploadimage.php(398): mysql->query('UPDATE Gallery_...')
+#2 /var/www/10300/sponsors/popup/popup.php(78): include('/var/www/10300/...')
+#3 {main}
+
+
+ERROR: http://localhost/10300/sponsors/popup/popup.php
+
+Query: UPDATE Gallery_Image SET
+								image_caption = "",
+								thumb_caption = ""
+							WHERE image_id=
+
+ Errno: 1064
+ Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+_SERVER data
+    REMOTE_ADDR : 127.0.0.1
+    REMOTE_PORT : 37859
+SCRIPT_FILENAME : /var/www/10300/sponsors/popup/popup.php
+ REQUEST_METHOD : POST
+   QUERY_STRING : 
+    REQUEST_URI : /10300/sponsors/popup/popup.php
+\n\n#0 /var/www/10300/classes/class_Mysql.php(99): mysql->_handle_error('UPDATE Gallery_...', 0)
+#1 /var/www/10300/includes/code/uploadimage.php(398): mysql->query('UPDATE Gallery_...')
+#2 /var/www/10300/sponsors/popup/popup.php(78): include('/var/www/10300/...')
+#3 {main}
+
+
+ERROR: http://localhost/10300/sponsors/popup/popup.php
+
+Query: UPDATE Gallery_Image SET
+								image_caption = "",
+								thumb_caption = ""
+							WHERE image_id=
+
+ Errno: 1064
+ Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+_SERVER data
+    REMOTE_ADDR : 127.0.0.1
+    REMOTE_PORT : 37988
+SCRIPT_FILENAME : /var/www/10300/sponsors/popup/popup.php
+ REQUEST_METHOD : POST
+   QUERY_STRING : 
+    REQUEST_URI : /10300/sponsors/popup/popup.php
+\n\n#0 /var/www/10300/classes/class_Mysql.php(99): mysql->_handle_error('UPDATE Gallery_...', 0)
+#1 /var/www/10300/includes/code/uploadimage.php(398): mysql->query('UPDATE Gallery_...')
+#2 /var/www/10300/sponsors/popup/popup.php(78): include('/var/www/10300/...')
+#3 {main}
+
+
+ERROR: http://localhost/10300/sponsors/popup/popup.php
+
+Query: UPDATE Gallery_Image SET
+								image_caption = "",
+								thumb_caption = ""
+							WHERE image_id=
+
+ Errno: 1064
+ Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+_SERVER data
+    REMOTE_ADDR : 127.0.0.1
+    REMOTE_PORT : 37998
+SCRIPT_FILENAME : /var/www/10300/sponsors/popup/popup.php
+ REQUEST_METHOD : POST
+   QUERY_STRING : 
+    REQUEST_URI : /10300/sponsors/popup/popup.php
+\n\n#0 /var/www/10300/classes/class_Mysql.php(99): mysql->_handle_error('UPDATE Gallery_...', 0)
+#1 /var/www/10300/includes/code/uploadimage.php(398): mysql->query('UPDATE Gallery_...')
+#2 /var/www/10300/sponsors/popup/popup.php(78): include('/var/www/10300/...')
+#3 {main}

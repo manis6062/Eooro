@@ -1,0 +1,147 @@
+.level-info p {
+  font-size: .9em;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+}
+.level-info p.price {
+  font-weight: bold;
+  font-size: 1em;
+}
+.modal-preview {
+  padding-top: 70px;
+}
+.modal-preview .preview-desc {
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: normal;
+}
+.modal-preview .preview-desc span {
+  display: block;
+  font-weight: normal;
+  font-size: 90%;
+}
+.modal-preview > h2 {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DEE1E3;
+  box-shadow: -1px -1px 12px #dedede;
+  clear: both;
+  color: #3D3D3D;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 1.7em;
+  margin: 0;
+  padding: 10px 2% 0;
+  position: fixed;
+  text-align: left;
+  top: 0;
+  width: 96%;
+  z-index: 99999;
+}
+.modal-preview .level-summary {
+  width: 690px;
+  float: left;
+  margin-left: 10px;
+}
+.modal-preview .level-summary .info {
+  padding: 0;
+}
+.modal-preview .level-detail {
+  float: left;
+  width: 950px;
+  margin-left: 10px;
+}
+.modal-preview .level-detail dl.dl-horizontal dd {
+  width: 155px;
+}
+.modal-preview .level-detail .top-review .rate {
+  margin: -15px auto;
+}
+.modal-preview .level-detail .inverse-row .map {
+  float: left;
+  height: 172px;
+  margin: 0 0 0 -10px;
+  padding-right: 1.5px;
+  width: 960px;
+}
+.modal-preview .level-detail .top-info.top-review .rate > small a {
+  margin-top: 10px;
+}
+.modal-preview .level-detail .facebookButton img {
+  margin-right: 1px !important;
+}
+.modal-preview .level-detail .stars-rate .btn {
+  background-color: #EEEEEE;
+  color: #333333;
+  float: left;
+  height: 24px;
+  width: 40px;
+  font-size: 14px;
+  margin: 0 5px;
+  padding: 4px;
+}
+.modal-preview .sidebar .map,
+.modal-preview .minimap .map {
+  height: 232px;
+  width: 272px;
+}
+.modal-preview .photo-gallery li {
+  margin-right: 7px;
+  margin-bottom: 7px;
+  float: left;
+}
+.modal-preview .photo-gallery li .no-image {
+  width: 185px;
+  height: 75px;
+}
+.level.level-preview {
+  background-color: white;
+  padding: 10px 0 20px 2%;
+}
+.level.level-preview .content {
+  width: 69%;
+}
+.level.level-preview .sidebar {
+  width: 27%;
+  margin-right: 4%;
+}
+.level.level-preview.blog-preview .level-detail {
+  width: 83%;
+}
+.level.level-preview .summary-small,
+.level.level-preview .summary-article {
+  width: 65%;
+}
+.level.level-preview .summary span.no-image {
+  height: 94px;
+  margin: 5px 0 0 0;
+}
+.level.level-preview .inverse-row .map {
+  width: 102.6%;
+}
+.level.level-preview .level-detail .row-fluid.detail-deal {
+  width: 150%;
+}
+.level.level-preview .level-detail .review-count {
+  display: block;
+}
+.level.level-preview .level-detail .map {
+  margin-top: 0;
+}
+.level.level-preview .level-summary .no-image {
+  width: 188px;
+}
+.level.level-preview .level-summary .summary-image .no-link img {
+  margin: 0;
+}
+.previewmember .advertisement > h2 {
+  margin-bottom: 20px;
+  text-align: right;
+}
+.previewmember .advertisement > h2 > span a {
+  margin-right: 10px;
+}
+.previewmember .advertisement > h2 > span a:hover {
+  text-decoration: underline;
+}

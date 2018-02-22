@@ -1,0 +1,166 @@
+/**
+* eDirectory - Popups ( Modal boxes )
+*
+* This style sheet describes the structure and the main components
+* about eDirectory's interface
+*
+* @package			layout
+* @filesource		popup.css
+* @author			Arca Solutions
+*			
+*/
+
+/* Popups > modal content */
+
+/*.modal-content
+{ height: 100%;width: 100%;margin:0 auto;}
+
+.modal-content-small
+{ min-height:250px; text-align:center; height:250px; }
+
+
+.modal-deal-redeem
+{height:550px;}
+
+		.modal-content form span.comment
+		{ display: block; font-family: Arial,Verdana,sans-serif; font-size: 9px; font-weight: normal; line-height: 20px; }
+        
+	
+.modal-content .info {padding:10px;}
+.modal-content-small .info {padding:0;}
+
+
+.modal-content .customInvoice h3
+{font-family:Arial, Helvetica, sans-serif; }
+	
+.modal-content .form {text-align:center;}
+
+.modal-content .form div label 	{ color:#636363;font-size:11px; text-align:left; padding-left:10px; }
+.modal-content-small .form div label 	{ text-align:center;}
+
+
+.modal-content .customInvoice {
+    min-height: 300px;
+}
+
+Alerts
+.informationMessage, .errorMessage, .successMessage, .warningMessage {margin-top:-10px;}
+
+
+ #Reviews
+
+.popup-review {
+	height: 550px;
+}
+.popup-review > .info,
+.send-email > .info {
+	padding: 0;
+}
+.popup-review .left,
+.popup-review .right,
+.send-email .left,
+.send-email .right {
+	width: 46%;
+	float: left;
+	margin-left: 3%;
+}
+.popup-review .left input,
+.popup-review .right textarea,
+.send-email .left input,
+.send-email .right textarea {
+	width: 86%;
+}
+.popup-review .action,
+.send-email .action {
+	float: left;
+	width: 96%;
+	margin: 10px 2%;
+}
+.popup-review .action .captcha,
+.send-email .action .captcha {
+	margin: 10px auto;
+}
+.popup-review .action .captcha input,
+.send-email .action .captcha input {
+	width: 138px;
+}
+.send-email {
+	height: 500px;
+}
+Redeem Deal
+.redeem-deal {text-align:center;}
+
+.redeem-deal .comp-info, .redeem-deal .terms{text-align:left;padding:10px;}
+    
+
+
+
+
+ Popups > modal content upload 
+	
+.modal-content.modal-content-upload {margin:0 auto;}
+
+.modal-content.modal-content-upload  form > p {padding:10px;}
+
+	.modal-content-upload h3 	{ text-align:left; }
+	
+
+
+* Popups > deal 
+
+.modal-content .deal {width:100%; clear:both; padding:10px 0;height:500px;}
+.modal-content .deal h1{width:200px; margin:0 auto;}
+.modal-content .deal h2{line-height:40px; margin:0;}
+.modal-content .deal .terms, .modal-content .deal .comp-info, .modal-content .deal .deal-info, .modal-content .deal .listing-info {margin:10px 0; clear:both; }
+
+.modal-content .deal .text-center {display:block;}
+
+
+* Popups > rate 
+
+.modal-content .rate { height: auto; margin:0 auto 15px auto; width:100%; }	
+
+	.modal-content .rate img {display:inline; margin: 0 0 0 2px; width: 25px; }
+	
+	.modal-content .rate h3 	{padding-bottom:10px; text-align:center; font-size: 16px;}
+
+ #Popup Forms 	
+
+input[type="password"] {font-family: Arial, Helvetica, sans-serif!important;}
+
+.modal-content-small form .left {margin-bottom:10px;}
+
+ *PopUp Login 
+.modal-content.login  {height:550px; width:100%;}
+
+.modal-login {width: 264px;margin: 0 auto;}
+
+.modal-login .btn-group.bootstrap-select { width:251px; margin-left:-5px;}
+
+.modal-login input {width:92%;padding: 4px 0 4px 2%;}
+
+.modal-login select {width:95%;}
+.modal-login .formcheckbox,.modal-login .loginopenid {margin:5px 0 15px 0;}
+.modal-login .formcheckbox label {line-height:23px;}
+.modal-login input.checkbox{margin: 3px 10px 0;display: inline;width: 13px;min-height: 13px;height: 13px; padding-left:0; border:none;}
+
+
+
+.modal-content .button-facebook, .modal-content .button-google {margin-top:20px;}
+
+
+* Contact form > form > captcha 
+			
+		.modal-content .form p
+		{ padding:0 0 10px 0; }
+		
+			.modal-content .form .captcha img
+			{ border:1px solid #B7C0C7; }
+			
+			.modal-content .form .captcha .text
+			{ width:135px; margin-top:2px; padding:5px;height: 20px;}
+
+
+
+ #Content Custom
+.content-custom p {padding:5px 10px;}*/

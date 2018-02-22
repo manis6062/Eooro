@@ -1,0 +1,2 @@
+city,country,hash_user_id,ip,page,session_id,state,timestamp,user_id,useragent
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/,8363504525e9f52b07c9df7beb9c5d40,,20161220040241,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"

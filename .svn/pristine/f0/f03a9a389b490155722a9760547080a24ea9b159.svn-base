@@ -1,0 +1,215 @@
+/**
+* eDirectory - Advertise Page
+*
+* @package			layout
+* @filesource		advertise.css
+* @author			Arca Solutions
+*			
+*/
+
+.modal-preview {
+  min-height:370px;
+  padding-top:50px;
+}
+
+.modal-preview .preview-desc{
+ margin:10px 0;
+ font-size:13px;
+ font-weight:normal;
+}
+.modal-preview .preview-desc span{
+  display:block;
+  font-weight:normal;
+  font-size:90%;
+}
+
+.modal-preview > h2{
+	position:fixed;
+  top:0;
+  z-index:9999;
+}
+
+.modal-preview .level-summary {
+  width: 690px;
+  float: left;
+  clear:both;
+  margin-left: 10px;
+}
+
+.modal-preview .level-summary .info {
+    padding: 0;
+}
+
+
+.modal-preview .level-summary .no-image, .level-preview .level-summary .no-image  {
+    border: medium none;
+    height: 94px;
+    width: 200px;
+    margin-bottom:20px;
+}
+.modal-preview .level-detail .no-image  {
+    width: 294px;
+
+}
+.level-preview .level-detail .no-image {
+    height: 190px;
+    width: 413px;
+}
+.level-preview .level-detail .gallery-overview .no-image {    
+    width: 100%;
+}
+.level-preview .level-detail .detail-deal .no-image  {
+    width: 100%;
+}
+.modal-preview .level-summary .summary-article .line-footer .review {
+    padding: 6px 0 0 5px;
+}
+
+.modal-preview .summary-contact > div {
+	padding-right: 17px;
+}
+
+.modal-preview .summary .line-footer .rate {
+    display:inline;
+}
+
+.modal-preview .level-detail {
+  float: left;
+  width: 950px;
+  margin-left: 10px;
+  clear:both;  
+  margin-bottom:20px;
+}
+
+.modal-preview .level-detail .ad-thumb-list {
+	list-style: none;
+	float:left;
+	clear:both;
+	margin-bottom:20px;
+}
+
+.modal-preview .level-detail .ad-thumb-list li{
+	height: 35px;
+    margin: 10px 5px 0 0;
+    float:left;
+}
+
+.modal-preview .level-detail .ad-thumb-list li .no-image{
+	width:70px;
+	height:35px;
+	min-height:35px;
+}
+
+.modal-preview .level-detail .well-top {
+    float: left;
+    width: 350px;
+}
+.modal-preview .level-detail .well-small {
+    float: left;
+    width: 345px;
+}
+.modal-preview .level-detail .inverse-row .map {   
+    width: 987px;
+}
+
+.modal-preview .level-detail .span4 .image .no-image {
+    width: 100%;
+}
+
+.modal-preview .level-detail .span4 .btn-large {
+    margin-left: 0;
+    max-width: 280px;
+}
+.modal-preview .level-detail dl.dl-horizontal dd {
+    width: 155px;
+}
+
+
+.modal-preview .level-detail .rate {
+    margin:0;
+}
+
+
+.modal-preview .photo-gallery li {
+  margin-right: 7px;
+  margin-bottom: 7px;
+  float: left;
+}
+
+.modal-preview .photo-gallery li .no-image {
+  width: 185px;
+  height: 75px;
+}
+
+
+.modal-preview .sidebar .map, .modal-preview .minimap .map {
+    height: 220px;
+    margin-top:0;
+}
+
+
+.modal-preview .level-detail button.btn, .modal-preview .level-detail input.btn[type="submit"] {
+  	width:30px;
+  	background: none repeat scroll 0 0 #ECF0F1;
+	border: medium none;
+	color: #3498DB;
+	line-height: 22px;
+	padding: 7px 5px;
+	float:left;
+	margin-right:10px;
+	font-size: 14px;
+}
+
+
+
+/* #Preview*/
+
+.level-preview .content {width: 69%;}
+.level-preview .sidebar {width: 27%;margin-right:4%;}
+
+.level-preview .galleria-info { left: 19px; top: 0; width: 90%; z-index: 2;}
+.level-preview .span4 .galleria-info { left: 10px; top: 10px;}
+
+.level-preview {
+	background-color:#fff;
+}
+
+.level-preview.blog-preview .level-detail {
+	width:83%;
+}
+
+.level-preview .level-detail, 
+.level-preview .level-summary {
+	padding:10px;
+}
+
+.level-preview .summary-small .listing-tag-deal,
+.level-preview .summary-small .deal-tag-small {
+    margin-right: -2.5%;
+}
+
+.level-preview .summary-small,
+.level-preview .summary-article {
+	width:65%;
+}
+
+.level-preview .summary span.no-image {height:94px; margin:5px 0 0 0;}
+
+.level-preview .inverse-row .map {width:102.6%;}
+
+.level-preview .level-detail .row-fluid.detail-deal {
+    width: 150%;
+}
+
+.level-preview .level-detail .detail-deal .content-social-box > div {
+    float:none!important; display:inline-block;
+}
+
+.previewmember .advertisement > h2 {margin-bottom:20px; text-align:right;}
+.previewmember .advertisement > h2 > span a {color:#fff;margin-right:10px;}
+.previewmember .advertisement > h2 > span a:hover {text-decoration: underline;}
+
+.level-preview .span4 .btn-large { max-width: 300px;}
+
+
+.level-preview .span7 .well-small {width:95.7% }

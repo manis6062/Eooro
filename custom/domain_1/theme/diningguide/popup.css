@@ -1,0 +1,136 @@
+/**
+* eDirectory - Popups ( Modal boxes )
+*
+* This style sheet describes the structure and the main components
+* about eDirectory's interface
+*
+* @package			layout
+* @filesource		popup.css
+* @author			Arca Solutions
+*			
+*/
+
+/* Popups > modal content */
+
+
+.close {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+.modal-content
+{ width: 98%;margin:0 auto;}
+
+		.modal-content form span.comment
+		{ display: block; font-family: Arial,Verdana,sans-serif; font-size: 9px; font-weight: normal; line-height: 20px; }
+        
+	
+.modal-content-small
+{ width:300px; margin: 0 auto; height:250px;}
+
+.modal-content-small input.text {width:99%;}
+.modal-content-small .left {width:100%;}
+
+.modal-content .customInvoice h3
+{font-family:Arial, Helvetica, sans-serif; }
+	
+.modal-content .form {text-align:center;}
+
+.modal-content .form div label 	{ color:#636363;font-size:11px; text-align:left; padding-left:10px; }
+
+/* Popups > modal content upload */
+	
+.modal-content.modal-content-upload {margin:0 auto;}
+
+.modal-content-upload h2 { margin:20px auto; }
+
+	.modal-content-upload h3 	{ text-align:left; }
+	
+    .modal-content form {margin:20px 0;}
+
+
+/** Popups > deal */
+
+.modal-content .deal {width:100%; clear:both; padding:10px 0;height:500px;}
+.modal-content .deal h1{width:200px; margin:0 auto;}
+.modal-content .deal h2{line-height:40px; margin:0;}
+.modal-content .deal .terms, .modal-content .deal .comp-info, .modal-content .deal .deal-info, .modal-content .deal .listing-info {margin:10px 0; clear:both; }
+
+.modal-content .deal .text-center {display:block;}
+
+
+/** Popups > rate */
+
+.modal-content .rate { height: auto; margin:0 auto 15px auto; width:100%; }	
+
+	.modal-content .rate img {display:inline; margin: 0 0 0 2px; width: 25px; }
+	
+	.modal-content .rate h3 	{padding-bottom:10px; text-align:center; font-size: 16px;}
+
+/* #Popup Forms */	
+
+input[type="password"] {font-family: Arial, Helvetica, sans-serif!important;}
+
+/* *PopUp Login */
+.modal-content.login {width: 400px;margin: 0 auto;height:600px;}
+.modal-content.login div {margin: 5px 0 5px;}
+.modal-content.login button {margin:10px auto;}
+.modal-content.login input {width:96%;}
+
+
+.modal-content.login select {width:95%;}
+.modal-content.login input.checkbox{margin: 3px 10px 0;display: inline;width: 13px;min-height: 13px;height: 13px; padding-left:0;}
+
+.modal-content .button-facebook, .modal-content .button-google {margin-top:20px;}
+
+.modal-content button[type="submit"] {
+	width:200px;
+}
+/** Contact form > form > captcha */
+			
+		.modal-content .form p
+		{ padding:0 0 10px 0; }
+		
+		.modal-content .form .captcha
+		{ float:left; padding:0 15px 0 0; width:230px; }
+			
+			.modal-content .form .captcha img
+			{ border:1px solid #B7C0C7; }
+			
+			.modal-content .form .captcha .text
+			{ width:96px; }
+		
+/** Contact form > form > structure */
+	
+	.modal-content .form .action
+	{clear:both; display:inline-block; height:auto; overflow:hidden;  }
+	
+			
+		.modal-content-small .form .action
+		{ text-align:center; }
+	
+		.modal-content .form .action p
+		{ padding-top:0; }
+	
+	.modal-content .form .left,
+	.modal-content .form .right
+	{ padding:0 0 20px 0; }
+	
+
+/** Click to call > structure */
+
+	.modal-content-small .info img
+	{ float:left; margin-right:5px; }
+	
+	.modal-content-small .info p
+	{ padding-top:3px; }
+
+/* #Reviews and Send Email*/
+
+.popup-review {    height: 500px;}
+
+.send-email {height:400px;}
+    
+
+

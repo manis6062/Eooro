@@ -1,0 +1,325 @@
+// /*
+// * eDirectory - Advertise Page
+// *
+// * author			Arca Solutions
+// */
+
+.text-underline {
+    text-decoration: underline;
+}
+
+
+/*Pricing Table*/
+
+.pricing-table {
+    float: left;
+    margin: 28px 0 40px 1.5%;
+    width: 97%;
+    text-align: center;
+
+    blockquote {
+        text-align:left;
+         max-width: 98%;
+    }
+
+    .pricinglevel {
+        width:180px;
+        padding:15px;
+        display:inline-table;
+        text-align: center;
+        background-color:#f3f7f8;
+        border:1px solid #d9e3e8;
+        margin:0 5px 20px;
+        font-size:12px;
+        word-wrap: break-word;
+
+        .btn {
+            display:block;
+            width:auto;
+            margin: 10px auto;
+        }
+        hgroup {
+            display:inline-block;
+        }
+        h1, h2 {
+            font-size:38px;
+            font-weight:400;
+            border-bottom:1px solid #d9e3e9;
+            margin-bottom:20px;
+           small {
+                font-size:80%;
+            }
+            span {
+                font-size:12px;
+                white-space:nowrap;
+            }
+        }   
+        h2 {
+            margin-bottom:-5px;
+            border:none;
+        }
+
+        h3 {
+            font-size:34px;
+            font-weight:normal;
+            small {
+                font-size:30px;
+            }
+             span {
+                font-size:12px;
+            }
+        }
+        
+        h4 {
+            font-size:14px;
+            font-weight:400;
+            color:#333;
+            line-height:30px;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }       
+        h6 {
+            font-size:12px;
+            font-weight:400;
+            color:#a3abb0;
+        }
+
+        em {
+            background-color: #d9e3e9;
+            display: block;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            height: 1px;
+            line-height: 0;
+            margin: 25px 25px 15px;
+            text-transform: uppercase;
+
+            span {
+              background-color:#f3f7f8;
+              padding:0 0 0 7px;
+            }
+
+        }
+
+        ul li {
+            font-size:13px;
+            line-height:22px;
+            &.disabled {
+                color:#9cb4bf;
+                text-decoration:line-through; 
+            }
+        }
+    &.most-popular {
+            box-shadow:0 1px 8px #CDCDCD;
+            padding:10px 30px 20px;
+            margin:0 -10px;
+            background-color:#fff;
+            position:relative;
+            z-index:99;
+            h5 {
+                font-size:16px;
+                line-height:30px;
+                text-transform: uppercase;
+                font-weight:400;
+                color:#2980b9;
+            }
+            em span {
+              background-color:#fff;
+              padding:0 0 0 7px;
+            }
+        } 
+}
+
+.lower-level  {
+    float:right;
+    margin:25px 0;
+    width: 217px;
+    .pricinglevel {
+        margin-top:0;
+    }
+    &.up {
+        margin-top:0 ;
+    }
+}
+
+.contact-info {
+    float:right;
+    width:180px;
+    padding:15px;
+    margin:5px 0 20px 10px;
+    border:1px solid #d9e3e8;
+    h2, p {
+        font-size:14px;
+        font-weight:400;
+        text-align: center;
+        word-wrap: break-word;
+        }
+    h2 {
+        line-height: 26px;
+        margin: 4px 0 15px;
+        text-transform: uppercase;
+        }
+
+    p { 
+        color:#2980b9;
+        }
+
+    hr {
+        margin:10px 0;
+        }
+
+    }
+}
+
+
+/* #Media queries   
+*/
+
+@media (max-width: 979px) {
+
+    .tabs-advertise > li {    
+        max-width:20%;
+        > a {
+            padding-left: 10px;
+            padding-right: 10px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            font-size:12px;
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+   
+.pricing-table {
+    width:100%;
+    padding-right:0;
+    margin-left:0;
+    .pricinglevel {
+        width:140px;
+        padding:8px;
+        margin-left:0;
+        hgroup {
+            max-width:140px;
+            h1, h2 {
+                font-size:2em;
+            }
+        }
+        &.most-popular {
+            padding:5px 12px;
+        }
+        .text-underline {
+            display:none;
+        }
+    }
+    .lower-level {
+        width: 157px;
+        margin-top:33px;
+        .pricinglevel, .contact-info {
+            width:135px;
+            padding:10px;
+        }
+    }
+}
+
+
+}
+
+@media (max-width: 767px) {
+
+
+.tabs-advertise > li {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 100%;
+    a {
+        font-size: 12px;
+        overflow: hidden;
+        padding-left: 2%;
+        padding-right: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 98%;
+    }
+}
+
+ .pricing-table {
+        margin: 28px 0 40px;
+        width: 100%;
+        .pricinglevel {
+            width:96%;
+            text-align: left;
+            padding:10px 1%; 
+            margin-bottom:20px;
+            hgroup, &.lower-level hgroup {
+                float:none;
+                display:block;
+                width:auto;
+                padding:0 10px;                    
+                margin-right:0;                    
+                text-align: center;
+                border-right:none;
+                h1 {
+                    border-bottom:1px solid #ccc;
+                    line-height:1em;
+                    span {
+                        white-space: nowrap;
+                    }
+                }
+            }
+             .text-underline {
+                display:none;
+            }
+            .btn, &.lower-level .btn  {
+                float:none;
+                dsplay:block;
+                width:auto;
+            }           
+            ul li {
+                float: left;
+                font-size: 0.8em;
+                padding-right: 7px;
+                white-space: nowrap;
+                width: auto;
+                word-wrap: break-word;            
+            }
+           
+            &.most-popular  {
+                padding: 10px 1.5%;
+                margin: 0 0 20px 0;
+            }
+            
+            
+
+        }
+        .lower-level {
+            width:100%;
+            .contact-info {
+            float:left;
+            padding: 10px 1%;
+            width: 97%;
+            margin:0;
+            h2 {
+                 line-height: 1.7em;
+            }
+        }
+        }
+       
+    }
+
+
+
+}
+
+
+
+@media (max-width: 480px) {
+    
+
+   
+
+}

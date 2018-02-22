@@ -1,0 +1,131 @@
+/**
+* eDirectory - Blog Module
+*
+* @package			layout
+* @filesource		blog.css
+* @author			Arca Solutions
+*/
+
+.post-summary {
+	.box-sizing(border-box);
+	float:left;
+	width:100%;
+
+	time {
+		float:left;
+		width:11%;
+		margin-right:3%;
+		}
+
+	section {
+		float:left;
+		width:86%;
+	}
+}
+
+
+.flex-box .blog-item, .flex-box-group .blog-item {
+	.no-image {
+		height:57px;
+		min-height:10px;
+	}	
+}
+
+.captcha {
+		float:left;
+		margin-right:10px;
+		width:320px;
+		img {
+			width:auto;
+			margin:0 15px 0 0;
+			float:left;
+			clear:none;
+		}
+		input {
+			float:left;
+		}
+		
+	}
+
+
+.button.button-contact {
+	float:right;
+	h2 {
+		padding:0;
+		margin-top:5px;
+		font-weight:normal;
+		a {
+			padding:7px 20px 6px;
+		}
+	}
+}
+			
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+	.container-fluid {
+		.row-fluid {
+			> .span8, > .span4 {
+				width:100%;
+				margin-left:0;
+			}
+		}
+	}
+
+	.flex-box .blog-item, .flex-box-group .blog-item {
+		.no-image {
+			height:129px;
+		}	
+	}
+
+	.flex-box .blog-item-members .image .no-image, 
+	.flex-box-group .blog-item-members .image .no-image {
+		height:50px;
+	}
+}
+
+
+@media (max-width: 767px){
+
+	.captcha {
+		float:none;
+		width:260px;
+		margin:0 auto 10px;
+		input {
+			width:133px;
+		}
+	}
+
+	.button.button-contact {
+		float:none;
+		width:260px;
+		margin:0 auto 10px;
+		h2 a {
+			display:block;
+			width:260px;
+			max-width:100%;
+		}
+	}
+
+	.detail-blog {
+		padding-left:2%;
+		width:96%;
+	}
+	
+	.post-summary {
+		time {
+			width:98%;
+			margin:0 auto;
+			float:none;
+			em {
+				display:block;
+			}
+		}
+		section {
+			width:98%;
+			margin:0 auto;
+			float:none;
+		}
+	}
+}

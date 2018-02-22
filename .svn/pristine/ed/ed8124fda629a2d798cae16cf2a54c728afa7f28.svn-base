@@ -1,0 +1,950 @@
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<? if ($sitemgr): ?>
+    <style>
+        label,
+        span{
+            float:left;
+            margin-bottom: 5px;
+        }
+        .fullWidth{
+            margin-bottom: 5px;
+        }
+        input,
+        textarea,
+        select{
+            width: 100%;
+        }
+        .panel-body.BusinessInfopage {
+            overflow: hidden;
+        }
+        /*    span{
+                float:left;
+                margin-bottom: 5px;
+            }*/
+        .text-right.textLeft{
+            margin-bottom: 5px;
+        }
+        span.tipsSpan {
+            float: none;
+            margin-bottom: 0;
+        }
+        input.ChooseURL {
+            height: 24px!important;
+            width: 98%;
+            margin-bottom: 5px;
+        }
+        textarea.ChooseURL{
+            width: 98.5%;
+            margin-bottom: 5px!important;
+        }
+        .pushBottom{
+            overflow: hidden;
+        }
+        .textcounter{
+            width:7%;
+        }
+        strong.BillingDateRenew {
+            width: 100%;
+            display: block;
+            float: left;
+            text-align: left;
+        }
+        .imgcap > img{
+            float: left;
+            margin-bottom: 5px;
+        }
+        a.forcePointer{
+            float:left;
+        }
+        .captcha input.loginform{
+            width: 98%;
+            margin-bottom: 5px;
+        }
+    </style>
+<? else: ?>
+    <? if ($_GET['id']): ?>
+
+        <? //Edit Page stylesheet?>
+
+        <style>
+            label{
+                display:inline-block;
+            }
+            input::-webkit-input-placeholder {
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            input::-moz-placeholder {
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            input:-ms-input-placeholder { 
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            .fullWidth {
+                /*width: 100%!important;*/
+            }
+            input.form-control.input-width {
+                width: 69%;
+            }
+            .form-control.input-widthUrl {
+                width: 46%;
+            }
+            textarea.form-control.TextareaBI{
+                margin-bottom: 0;
+                display: inline-block!important;
+                width: 85.5%!important;
+            }
+            select.location_1.location_1BL {
+                width: 69%;
+                margin-bottom: 0;
+            }
+            span.rb, span.bt, span.la, span.Country {
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            label.labelChooseURL {
+                margin-bottom: 5px;
+            }
+            label.labelChooseURL {
+                width: 19%;
+            }
+            input.form-control.pull-right.ChooseURL,
+            textarea.form-control.pull-right.ChooseURL {
+                width: 80.5%;
+            }
+            input.form-control.input-width.input-widthSocial {
+                width: 59%;
+
+            }
+            span.ChCounter {
+                margin-left: 0%;
+            }
+            .col-sm-3.biCus {
+                width: 25%;
+            }
+            .panel-body.BusinessInfopage {
+                font-size: 13px;
+            }
+            .custom_drop1,
+            .custom_drop2,
+            .custom_drop3{
+                width: 100%;
+            }
+            .col-sm-3.biCus {
+                /*width: 100%;*/
+            }
+            p.maxVideo a{
+                color: #337ab7;
+            }
+            .panel-group.pushBottom {
+                margin-bottom: 2px;
+            }
+            .ac_results{
+                left:132px!important;
+            }
+            [class*="businessLocationTable"] {
+                margin: 0;
+            }
+            [class*="businessLocationTable"] th {
+                padding: 0;
+                width: 35%; 
+            }
+            [class*="businessLocationTable"] label {
+                font-size: 13px;
+                margin-right: 5px;
+            }
+            .content-full .select {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .standard-table span.asterik {
+                color: #ff004f;
+                display: inline-block;
+            }
+            .billingInformation {
+                overflow: hidden;
+                text-align: center;
+            }
+            #showSubscribeButton,
+            #showUnSubscribeButton {
+                text-align: center;
+            }
+            @media (max-width: 1199px) and (min-width: 992px){
+                .fullWidth {
+                    width: 100%!important;
+                }
+                .panel-body.BusinessInfopage {
+                    font-size: 12px;
+                }
+                .form-control.input-widthUrl {
+                    width: 46.5%;
+                }
+                textarea.form-control.TextareaBI {
+                    width: 61%!important;
+                }
+                select.location_1.location_1BL {
+                    width: 61%;
+                }
+                input.form-control.input-width {
+                    width: 61%;
+                }
+                .ac_results{
+                    left:129px!important;
+                    width: 53.5%!important;
+                }
+
+            }
+            @media (max-width: 991px) and (min-width: 768px){
+                input.form-control.input-width {
+                    width: 100%; 
+                }
+                .text-right.textLeft{
+                    text-align:left;
+                }
+                textarea.form-control.TextareaBI {
+                    width: 100%!important;
+                }
+                .fullWidth {
+                    width: 100%!important;
+                }
+                label.URL{
+                    display: block!important;
+                }
+                .form-control.input-widthUrl {
+                    width: 80%!important;
+                }
+                select.custom_drop1,
+                select.custom_drop2,
+                select.custom_drop3 {
+                    width:100%!important;
+                }
+                span.Country {
+                    display: block;
+                }
+                select.location_1 {
+                    width: 100%!important;
+                }
+                label.labelChooseURL {
+                    width: 100%; 
+                    text-align: left!important;
+                    margin-bottom: 5px;
+                }
+                input.form-control.pull-right.ChooseURL,
+                textarea.form-control.pull-right.ChooseURL {
+                    margin-bottom: 5px; 
+                    width: 100%; 
+                }
+                input.form-control.input-width.input-widthSocial {
+                    width: 100%;
+                }
+                span.ChCounter {
+                    margin-left: 1px;
+
+                }
+                .panel-group.pushBottom {
+                    margin-bottom: 2px;
+                }
+                .ac_results{
+                    left:17px!important;
+                    width: 89.5%!important;
+                }
+                [class*="businessLocationTable"] th {
+                    display: block;
+                    text-align: left;
+                }
+                [class*="businessLocationTable"] td {
+                    display: block;
+                }
+            }
+            @media (max-width: 767px){
+                input.form-control.input-width {
+                    width: 100%; 
+                }
+                .text-right.textLeft{
+                    text-align:left;
+                }
+                textarea.form-control.TextareaBI {
+                    width: 100%!important;
+                }
+                label.URL{
+                    display: block!important;
+                }
+                .form-control.input-widthUrl {
+                    width: 100%!important;
+                }
+                .btn-group.cusDropdown {
+                    margin-bottom: 5px!important;
+                }
+                select.custom_drop1,
+                select.custom_drop2,
+                select.custom_drop3 {
+                    width:100%!important;
+                }
+                span.Country {
+                    display: block;
+                }
+                select.location_1 {
+                    width: 100%!important;
+                }
+                label.labelChooseURL {
+                    width: 100%; 
+                    text-align: left!important;
+                    margin-bottom: 5px;
+                }
+                input.form-control.pull-right.ChooseURL,
+                textarea.form-control.pull-right.ChooseURL {
+                    margin-bottom: 5px; 
+                    width: 100%; 
+                }
+                input.form-control.input-width.input-widthSocial {
+                    width: 100%;
+                }
+                span.ChCounter {
+                    margin-left: 1px;
+
+                }
+                .panel-group.pushBottom {
+                    margin-bottom: 2px;
+                }
+                .ac_results{
+                    left:17px!important;
+                    width: 94.5%!important;
+                }
+                [class*="businessLocationTable"] th {
+                    display: block;
+                    text-align: left;
+                }
+                [class*="businessLocationTable"] td {
+                    display: block;
+                }
+            }
+
+        </style>
+    <? else: ?>
+
+        <? // Add/Claim Page stylesheet?>
+
+        <style>
+            input::-webkit-input-placeholder {
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            input::-moz-placeholder {
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            input:-ms-input-placeholder { 
+                font-size:16px;
+                font-weight:normal;
+
+            }
+            .panel-body.BusinessInfopage label{
+                color:#000;
+                display:inline-block;
+            }
+            select.location_1.location_1BL{
+                width:330px;
+                margin-bottom:0;
+            }
+            textarea.TextareaBI{
+                display: inline-block!important;
+                width:81%!important;
+            }
+            .custom_drop1{
+                width: 142px;
+            }
+            .custom_drop3{
+                width: 160px;
+            }
+            .ac_results{
+                left:225px!important;
+                width: 57.5%!important;
+            }
+            [class*="businessLocationTable"] {
+                margin: 0;
+            }
+            [class*="businessLocationTable"] th {
+                padding: 0;
+                width: 35%; 
+            }
+            [class*="businessLocationTable"] label {
+                font-size: 16px;
+                margin-right: 5px;
+                margin-top: -10px;
+            }
+            .content-full .select {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .standard-table span.asterik {
+                color: #ff004f;
+                display: inline-block;
+            }
+
+            @media (max-width: 1199px) and (min-width: 992px){
+                .panel-body.BusinessInfopage {
+                    font-size: 13px;
+                }
+                .form-control.input-widthUrl {
+                    width: 39%;
+                }
+                select.custom_drop1 {
+                    width: 115px!important;
+                }
+                select.custom_drop2 {
+                    width: 182px!important;
+                }
+                select.custom_drop3 {
+                    width: 138px!important;
+                }
+                select.location_1 {
+                    width: 271px !important;
+                }
+                [class*="businessLocationTable"] label {
+                    font-size: 13px;
+                }
+
+            }
+
+            @media (max-width: 991px) and (min-width: 768px){
+                .panel-body.BusinessInfopage {
+                    font-size: 13px;
+                }
+                select.location_1.location_1BL {
+                    width: 182px !important;
+                }
+                input.form-control.input-width {
+                    width: 70%;
+                }
+                input.form-control.input-width.input-widthBL {
+                    width: 65.5%;
+                }
+                input.form-control.input-width.input-widthSocial {
+                    width: 81.5%;
+                }
+                .form-control.input-widthUrl {
+                    width: 56%;
+                }
+                textarea.TextareaBI {
+                    width:70%!important;
+                }
+                .col-sm-3.biCus {
+                    width: 100%;
+                }
+                .panel-group.pushBottom {
+                    margin-bottom: 2px;
+                }
+                [class*="businessLocationTable"] label {
+                    font-size: 13px;
+                }
+            }
+            @media (max-width: 767px){
+                input.form-control.input-width {
+                    width: 100%; 
+                }
+                .text-right.textLeft{
+                    text-align:left;
+                }
+                textarea.TextareaBI {
+                    width: 100%!important;checkListingSubCategoryAndAdd
+                }
+                label.URL{
+                    display: block!important;
+                }
+                .form-control.input-widthUrl {
+                    width: 82.5%!important;
+                }
+                .btn-group.cusDropdown {
+                    margin-bottom: 5px!important;
+                }
+                .form-control.input-widthUrl {
+                    width: 100%!important;
+                }
+                select.custom_drop1,
+                select.custom_drop2,
+                select.custom_drop3 {
+                    width:100%!important;
+                }
+                span.Country {
+                    display: block;
+                }
+                select.location_1 {
+                    width: 100%!important;
+                }
+                label.labelChooseURL {
+                    width: 100%; 
+                    text-align: left!important;
+                    margin-bottom: 5px;
+                }
+                input.form-control.pull-right.ChooseURL,
+                textarea.form-control.pull-right.ChooseURL {
+                    margin-bottom: 5px; 
+                    width: 100%; 
+                }
+                input.form-control.input-width.input-widthSocial {
+                    width: 100%;
+                }
+                span.ChCounter {
+                    margin-left: 1px;
+
+                }
+                .panel-group.pushBottom {
+                    margin-bottom: 2px;
+                }
+                [class*="businessLocationTable"] th {
+                    display: block;
+                    text-align: left;
+                }
+                [class*="businessLocationTable"] td {
+                    display: block;
+                }
+            }
+        </style>
+        <style>
+    .clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+.h5-style{
+    
+}
+        </style>
+
+
+
+
+
+    <? endif; ?>
+<? endif; ?>
+
+<style>
+    .ui-menu .ui-menu-item a{
+        font-size: 14px;
+    }
+
+    .schroll{height:150px; width:100%;}
+    .schroll{overflow:hidden; overflow-y:scroll;}
+
+
+    #save_categories{
+        background-color: #ccc;
+        border: 0 none;
+        border-radius: 5px;
+        color: #fff;
+        padding: 6px;
+
+    }
+    .for-padding-p{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .margin-top-and-bottom{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+</style>
+<?
+#-------------------------------------------------------
+# Custom Parameters
+#-------------------------------------------------------
+# custom_text0      -> LegalBusinessName
+# custom_dropdown0  -> url type (http, https, ftp)
+# custom_dropdown1  -> BusinessRelation
+# custom_dropdown2  -> BusinessType
+# custom_dropdown3  -> LocationActivities
+# custom_text1      -> TwitterFeed
+# custom_text2      -> Subscription ID for braintree
+# custom_text3      -> nextBillingDate from braintree
+# custom_text4      -> customer id for braintree 
+# custom_text5      -> Payment method token from braintree 
+# custom_checkbox0  -> Business is website
+# custom_checkbox1  -> Global Brand
+# custom_checkbox2  -> Country Brand
+# custom_checkbox3  -> y -> monthly, n -> yearly
+# custom_checkbox4  -> Listing's grace period of 30 days
+#-------------------------------------------------------
+?>
+<?php
+$acctId = sess_getAccountIdFromSession();
+$contactObj = new Contact($acctId);
+$listing_array = (array) $listing;
+$listing_array = HtmlCleaner::CleanBasic($listing_array);
+$listing = new Listing($listing_array);
+?>
+<div <?= !$_SERVER['HTTP_X_REQUESTED_WITH'] ? 'class="container"' : '' ?>>
+
+    <div class="panel panel-default">
+        <div class="panel-heading BusinessInfoPage">
+            <h1 class="panel-title BusinessTitle">Business Description and Category</h1>
+        </div>
+        <div class="panel-body BusinessInfopage">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <label for="description" class="description" >Description:</label>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <textarea maxlength="5000" class="form-control" tabindex="7" rows="3" name="long_description" id="description" placeholder="Type Description" title="Type Description"><?= stripcslashes($listing->long_description) ?></textarea>
+                        </div> 
+                    </div>
+
+                   
+                    <br>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <label for="SummaryDescription" class="description " >Summary Description:<span class="asterik">*</span>
+                                    <span class="maxCh">(maximum 250 characters)</span>
+                                </label>
+                            </div>
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <textarea id="summary" tabindex="21" class="form-control " maxlength="250" rows="3" name="description" style="margin-bottom:0;" id="SummaryDescription" placeholder="To be used used for seo for page meta description tag and on social media share." title="To be used used for seo for page meta description tag and on social media share."><?= stripcslashes($listing->description) ?></textarea>
+                                <span class="ChCounter"><label style="margin-bottom:0;" id="summarydesc_remLen" class="textcounter" > 250 </label>Characters left (including spaces and line breaks)</span>
+                            </div>
+                        </div>
+                    
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <br>
+        <br>
+
+
+
+
+
+            <?php            
+            
+            $keywords = explode(',', htmlspecialchars_decode($listing->keywords));
+            //Extract Categories Details
+            $categoriesListing = Listing_Category::getCatDetailsFromSubcategory2($keywords);
+            
+            ?>
+
+            <div class="panel panel-default">
+                <div class="panel-heading BusinessInfoPage">
+                    <h1 class="panel-title BusinessTitle">Business Categories</h1>
+                </div>
+
+                <div class="panel-body BusinessInfopage">
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 5px;">
+                            <div class="col-sm-4 col-xs-12">
+                            <label for="description" class="description" >Choose Business Categories:</label>
+                            </div>
+                            <div class="col-sm-8 col-xs-12">
+                                <input style="width:100%;" type="text" id="category_name"  name="category_name" >
+                            </div>
+                            </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div id="business_categories" class="row">
+                               
+
+                                <?php
+                                foreach ($categoriesListing as $value) {
+                                    ?>
+                                    <div id="main_category" class=" col-xs-12 col-sm-12 col-md-6 col-lg-6 for-padding-p">
+                                        <div id = "categories_list">
+
+                                            <div class="row">
+                                                
+                                                <h5 class="clearfix margin-top-and-bottom h5-style " style="padding: 15px;border-radius: 5px;background-color: #1FB53B;color: #fff;box-shadow: 2px 4px 5px #B2A9A9;"><i style="float:right;cursor: pointer;margin-top: -5px;margin-right: -5px;" class="remove_cat fa fa-times" aria-hidden="true" onClick = "removeCat(this)"></i><div ><?php echo $value['cat_name'] . ',' . $value['sub_name']; ?></div>   </h5>                                                
+                                                <input name="keywords[]" type="hidden" id ="sub_categories" class="prev_selected" value="<?php echo $value['sub_name']; ?>" />
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                
+
+                                <?php } ?>
+
+
+                            </div>
+
+                        </div>
+                        
+                         <p id="cat_error">
+                                </p>
+
+
+                    </div>
+                </div> 
+            </div>
+
+
+
+
+        </div>
+    </div> <!-- panel panel-default end-->
+
+</div>
+<!-- panel panel-default end-->    
+
+<div class="panel panel-default">
+    <div class="panel-heading BusinessInfoPage">
+        <h1 class="panel-title BusinessTitle">Captcha</h1>
+    </div>
+    <div class="panel-body BusinessInfopage">
+        <div class="row">
+            <div class="col-sm-12" style="text-align: -moz-center;">
+                <div class="action" style="text-align : -webkit-center;">
+                    <div class="row reviewpara text-center ">
+                        <p><?= system_showText(LANG_CAPTCHA_HELP) ?></p>
+                    </div>
+                    <div>
+                        <!--  NEW GOOGLE Re-Captcha    -->                
+                        <div class="g-recaptcha centeringcaptcha" data-callback="imNotARobot" data-sitekey="6Ld09CgTAAAAAH4hvLsHBL-HFvoe9atQbz1IhVjZ"></div>
+                        <span id="re-captcha" style="color:red" />            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- panel panel-default end-->
+
+</div> <!-- container end-->
+<script type="text/javascript" src="<?= DEFAULT_URL ?>/scripts/common.js"></script>
+<script src="<?= DEFAULT_URL ?>/scripts/jquery/jquery-1.10.2.js"></script>
+<script src="<?= DEFAULT_URL ?>/scripts/jquery/jquery_ui/js/jquery-ui-1.10.4.js"></script> 
+
+
+<script type="text/javascript">
+                                                    var imNotARobot = function () {
+                                                        console.info("Button was clicked");
+                                                        document.getElementById('captcha').innerHTML = "";
+                                                    };</script>
+
+
+
+
+<script>
+
+    function isInt(elm) {
+        if (elm.value == "") {
+            return false;
+        }
+        for (var i = 0; i < elm.value.length; i++) {
+            if (elm.value.charAt(i) < "0" || elm.value.charAt(i) > "9") {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    function JS_submit() {
+        var cat = $('input[id=sub_categories]').val();
+        if(cat === undefined){
+             document.getElementById("cat_error").innerHTML="<h6 style = 'color:red; text-align:center;'>Please select at least one business category</h6>";
+            $('#button').css('display' , 'inline');
+            return false;
+        }else{
+            document.listing.submit();
+
+        }
+    }
+
+</script>
+
+<script>
+
+    function removeCat(element) {
+        $h(element).parent().parent().parent().parent().remove();
+    }
+
+
+    var $h = jQuery.noConflict();
+    $h(document).ready(function () {
+        SearchText();
+
+        function SearchText() {
+            $h("input#category_name").autocomplete({
+                source: function (request, response) {
+                    $h.ajax({
+                        type: "POST",
+                        url: '<? echo DEFAULT_URL . '/sponsors/ajax_load_categories.php' ?>?category_name=' + $h('#category_name').val(),
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data != null) {
+                                response(data);
+                            }
+
+                        },
+                        error: function (result) {
+                            alert("Error");
+                        }
+                    });
+                },
+                maxShowItems: 5,
+                select: function (e, ui) {
+
+                    //check the sub category already exists
+                    var user_input = [];
+                    $h(".prev_selected").each(function () {
+                        user_input.push($(this).val());
+                    });
+
+                    if ($h.inArray(ui.item.subcategory_name, user_input) > -1) {
+                        $h(this).val('');
+                        return false;
+                    }
+
+                    var select_categoryandsubcategory;
+                    var select_sub_category;
+                    select_categoryandsubcategory = ui.item.value;
+                    select_sub_category = ui.item.subcategory_name;
+                    
+                    
+                    $clone = '<div id="main_category" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 for-padding-p"><div id = "categories_list"> <div class="row"><h5 class="margin-top-and-bottom" style="padding: 15px;    border-radius: 5px;background-color: #1FB53B;color: #fff;"><i style="float:right;cursor: pointer;margin-top: -5px;margin-right: -5px;" class="remove_cat fa fa-times" aria-hidden="true" onClick = "removeCat(this)"></i><div class="container-fluid">'+select_categoryandsubcategory+'</div>   </h5><input name="keywords[]" type="hidden" id ="sub_categories" class="prev_selected" value="'+select_sub_category+'" /></div></div></div>';
+//                    $clone = $h('#main_category').clone(true);
+//                    $clone.find('h5').html(select_categoryandsubcategory + '<i style="float:right; cursor:pointer;" class="fa fa-times remove_cat" aria-hidden="true" onClick="removeCat(this)"></i>');
+//                    $clone.find('#sub_categories').val(select_sub_category);
+//                   $h('#main_category').after($clone);
+               
+                    var oldContent = $h('#business_categories').html();
+                    $h('#business_categories').html(oldContent+$clone);
+                    var $selected_categories = $h('#sub_categories').text();
+                    $h('input[id=categories]').val($selected_categories);
+                     $('#cat_error').removeClass('invalidFormData');
+                     $('#cat_error').removeClass('cat_err_msg');
+                     document.getElementById("cat_error").innerHTML="";
+                    $h(this).val('');
+                    return false;
+
+                }
+
+
+            });
+        }
+
+
+//        if ($h("#save_categories").click(function () {
+//            var $selected_sub_categories = $h('.panelbody').text();
+//            alert($selected_sub_categories);
+////          var $readytosubmit = $selected_sub_categories.replace(/[ ,]+/g, ",");
+//            $h('#categories').val($readytosubmit);
+//        }))
+//            ;
+
+
+
+        $h.ui.autocomplete.prototype._renderItem = function (ul, item) {
+            var highlighted = item.label.split(this.term).join('<strong>' + this.term + '</strong>');
+            return $h("<li></li>")
+                    .data("ui-autocomplete", item)
+                    .append("<a>" + highlighted + "</a>")
+                    .appendTo(ul);
+        }
+
+
+
+
+        // if url is active only display url field sholud be active
+        var url = $('#url').val();
+        if (url != '') {
+            $('#display_url').attr('readonly', false);
+        } else {
+            $('#display_url').attr('readonly', true);
+        }
+
+        $('#url').on('change', function () {
+            if ($('#url').val() != '') {
+                $('#display_url').attr('readonly', false);
+            } else {
+                $('#display_url').attr('readonly', true);
+            }
+        })
+
+
+// limited charecter countdown in textarea
+
+        var maxLength = 250;
+        var length = $('textarea#summary').val().length;
+        var length = maxLength - length;
+        $('#summarydesc_remLen').text(length);
+        $('textarea#summary').keyup(function () {
+            var length = $(this).val().length;
+            var length = maxLength - length;
+            $('#summarydesc_remLen').text(length);
+        });
+        // limited keyword
+
+        //var words = $("textarea#KeywordSearch").value.match(/\S+/g).length;
+        //$('#word_left').text(25-words);
+
+        $("textarea#KeywordSearch").keyup(function () {
+            var words = this.value.match(/\S+/g).length;
+            if (words > 25) {
+                // Split the string on first 20 words and rejoin on spaces
+                var trimmed = $(this).val().split(/\s+/, 25).join(" ");
+                // Add a space at the end to keep new typing making new words
+                $(this).val(trimmed + " ");
+            } else {
+
+                $('#word_left').text((25 - words) + ' keywords left');
+            }
+        });
+    });
+
+
+
+    ;
+    (function ($, undefined) {
+        'use strict';
+
+        $.widget('ui.autocomplete', $.ui.autocomplete, {
+            _resizeMenu: function () {
+                var ul, lis, ulW, barW;
+                if (isNaN(this.options.maxShowItems)) {
+                    return;
+                }
+                ul = this.menu.element
+                        .scrollLeft(0).scrollTop(0) // Reset scroll position
+                        .css({overflowX: '', overflowY: '', width: '', maxHeight: ''}); // Restore
+                lis = ul.children('li').css('whiteSpace', 'nowrap');
+
+                if (lis.length > this.options.maxShowItems) {
+                    ulW = ul.prop('clientWidth');
+                    ul.css({overflowX: 'hidden', overflowY: 'auto',
+                        maxHeight: lis.eq(0).outerHeight() * this.options.maxShowItems + 1}); // 1px for Firefox
+                    barW = ulW - ul.prop('clientWidth');
+                    ul.width('+=' + barW);
+                }
+
+                // Original code from jquery.ui.autocomplete.js _resizeMenu()
+                ul.outerWidth(Math.max(
+                        ul.outerWidth() + 1,
+                        this.element.outerWidth()
+                        ));
+            }
+        });
+
+    })(jQuery);
+
+</script>
+
+
+
+</script>

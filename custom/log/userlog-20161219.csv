@@ -1,0 +1,13 @@
+city,country,hash_user_id,ip,page,session_id,state,timestamp,user_id,useragent
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/,36886a6f36bb978aabc687e799695c24,,20161219084627,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/,36886a6f36bb978aabc687e799695c24,,20161219084634,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/profile/login.php,36886a6f36bb978aabc687e799695c24,,20161219084640,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/sponsors/,36886a6f36bb978aabc687e799695c24,,20161219084649,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/sponsors/login.php,c31b73932ae1dc419ae374e01afca841,,20161219084727,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,da9844cd64907e755ff55db82481ab8f,127.0.0.1,/10300/sponsors/login.php,615b38900415cf7841cf6a914449ee81,,20161219084753,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/,c31b73932ae1dc419ae374e01afca841,,20161219100648,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/profile/login.php,c31b73932ae1dc419ae374e01afca841,,20161219100657,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/sponsors/,c31b73932ae1dc419ae374e01afca841,,20161219100704,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/,c31b73932ae1dc419ae374e01afca841,,20161219120000,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,4a2575a3ece3a9f448a574091186937d,127.0.0.1,/10300/sponsors/,c31b73932ae1dc419ae374e01afca841,,20161219120003,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,ed6fcf6c0a4f7f1a5610fb13f142a7e2,127.0.0.1,/10300/,4996ebda82ac46b52e05d13f3febeaa5,,20161219120844,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"

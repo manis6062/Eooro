@@ -1,0 +1,10 @@
+city,country,hash_user_id,ip,page,session_id,state,timestamp,user_id,useragent
+,unknown,3d84d9b1b5567ae5a74a3dcc6e5d3aee,127.0.0.1,/10300/,92772ddfb0380a8c7f846fc6f91cf38c,,20161221040726,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,3d84d9b1b5567ae5a74a3dcc6e5d3aee,127.0.0.1,/10300/?XDEBUG_SESSION_START=netbeans-xdebug,92772ddfb0380a8c7f846fc6f91cf38c,,20161221040807,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,3d84d9b1b5567ae5a74a3dcc6e5d3aee,127.0.0.1,/10300/company-reviews/,92772ddfb0380a8c7f846fc6f91cf38c,,20161221040809,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,3d84d9b1b5567ae5a74a3dcc6e5d3aee,127.0.0.1,/10300/sitemg/,92772ddfb0380a8c7f846fc6f91cf38c,,20161221040849,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,0a962988ac2dd9046fa6aee42bf8f408,127.0.0.1,/10300/,fe5a0ef6ebfbaff19ff030b6f466647d,,20161221111118,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,0a962988ac2dd9046fa6aee42bf8f408,127.0.0.1,/10300/profile/login.php,fe5a0ef6ebfbaff19ff030b6f466647d,,20161221111124,,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,0a962988ac2dd9046fa6aee42bf8f408,127.0.0.1,/10300/sponsors/,fe5a0ef6ebfbaff19ff030b6f466647d,,20161221111137,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,0a962988ac2dd9046fa6aee42bf8f408,127.0.0.1,/10300/company-reviews/bankbusiness/,fe5a0ef6ebfbaff19ff030b6f466647d,,20161221111215,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+,unknown,0a962988ac2dd9046fa6aee42bf8f408,127.0.0.1,/10300/company-reviews/bankbusiness/,fe5a0ef6ebfbaff19ff030b6f466647d,,20161221111221,f7664060cc52bc6f3d620bcedc94a4b6,"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"

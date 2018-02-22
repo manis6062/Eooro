@@ -1,0 +1,480 @@
+<?php
+#------------------------------
+#   ReviewCollector 
+#------------------------------
+
+if ($_GET['reviewcollector'] && $_GET['reviewcollector'] == "true") {
+
+    include_once(CLASSES_DIR . '/class_ReviewCollector.php');
+
+    $log = new UserLog();
+    $details = $log->createLog();
+    $user_session = $details->session_id;
+
+    /**
+     * If the user is from ReviewCollector email, Log this user's information in a table.
+     * And when posting review check session id, listing_id from this log table
+     *
+     */
+    $check = ReviewCollector::CheckSession($details->session_id, $listing_id);
+    if (!$check) {
+        ReviewCollector::LogThisUser($details->session_id, $listing_id, $details->ip);
+    }
+}
+?>
+
+<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="hidden">
+    <li itemprop="itemListElement" itemscope
+        itemtype="http://schema.org/ListItem">
+        <a itemprop="item" rel="canonical" href="<?= NON_SECURE_URL ?>/company-reviews/">
+            <span itemprop="name">Recent Reviews</span></a>
+        <meta itemprop="position" content="1" />
+    </li>
+    ›
+    <li itemprop="itemListElement" itemscope
+        itemtype="http://schema.org/ListItem">
+        <a itemprop="item" rel="canonical" href="<?= NON_SECURE_URL ?>/company-reviews/<?= $url1 ?>">
+            <span itemprop="name"><?= ucfirst(htmlspecialchars($listing->title)) ?></span></a>
+        <meta itemprop="position" content="2" />
+        <meta itemprop="description" content="<?= $headertag_description; ?>">
+    </li>
+</ol>
+
+<?
+preg_match('/(<a[^>]+>)([^<]+)<\/a>/', $listingtemplate_url, $matches);
+$atag = $matches[1];
+$link = $matches[2];
+$len = strlen($link);
+$link = substr($link, 0, 29);
+
+if ($listingtemplate_url) {
+
+    if ($len > 29) {
+        $listingtemplate_url = $atag . $link . '...</a>';
+    } else {
+        $listingtemplate_url = $atag . $link . '</a>';
+    }
+
+    $listingtemplate_url = str_replace("<a", '<a rel="nofollow " title="'.$matches[2].'"', $listingtemplate_url);
+    //Remove www from url website.
+    $display_url = str_replace("http://www.", '', $display_url);
+    
+}
+?>
+<?
+//FOR OVERALL RATING CALC. ON lISTING RESULTS PAGE.
+
+$item_type = "Listing";
+$item_id = $_GET["id"];
+$RevObj = new Review();
+
+
+//Ratings parameters
+$reviewData = $RevObj->getRateAvgByItem($item_type, $item_id, "count");
+
+
+$counter_review = $reviewData['review_count'];
+$counter_review = ($counter_review == 1 ? $counter_review . " Review" : $counter_review . " Reviews" );
+$item_avgreview = $reviewData['rate'];
+$item_avgreview == "N/A" || $item_avgreview == null ? $item_avgreview = "0" : null;
+
+if (!isset($total_items)) {
+    $total_items = Review::getReviewsCountByListingID($item_id);
+    $total_items < 1 ? $item_total = "0" : null;
+}
+$total_items = Review::getReviewsCountByListingID($item_id);
+?>
+
+<div class="col-sm-8 fullwidth">
+    <div class="row">
+        <div class="thumbnail custhumbnail">
+            <? if (strpos($listingtemplate_image, '<img')) : ?>
+                <div class="col-sm-6">
+                    <h2 class="sabayjai"><?= $listingtemplate_title ?></h2>
+                    <? //Google share takes this time for companies with image?>
+                    <meta itemprop="name" content = "<?= ucfirst($listingtemplate_title) ?>">
+                    <meta itemprop="description" content="<?= $headertag_description ?>">
+                    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        <?= displayrating($item_avgreview, 'resstartwrapper', 'starwrapper1'); ?>
+                        
+                            <font size="2px" style="font-weight:normal;color:#000;">
+                            <?
+                            $count = $reviewData['review_count'];
+                            if ($count == 1) {
+                                echo"(" . $count . " review)";
+                            } elseif ($count == 0) {
+                                echo "(Review this business)";
+                            } else {
+                                echo "(" . $count . " reviews)";
+                            };
+                            ?>
+                            </font>
+                        
+                        
+                        <meta itemprop="ratingValue" content="<?= $item_avgreview; ?>"> 
+                        <meta itemprop="bestRating" content="<?=5; ?>"> 
+                        <meta itemprop="worstRating" content="<?=0; ?>"> 
+                        
+                        <meta itemprop="reviewCount" content="<?=$count?>">
+                        <meta itemprop="itemReviewed" content="<?= $listingtemplate_title ?>">
+                        <span class="ratin">
+                            <!-- For reviews with images -->
+                            <? echo "(" . $item_avgreview . " out of 5)"; ?>
+                        </span>
+                        
+                    </div>
+                </div> <!--/col-sm-6-->
+
+                <div class="col-sm-3">
+                    <?= $listingtemplate_share_navbar ?>
+                    <?php
+                    if ($claim_textlink) {
+                        $claim_textlink_string = $claim_textlink;
+                        $claimForReview = true;
+                    }
+                    $claim_text = isset($claimForReview) ? 'Claim This Business' : '';
+
+                    $claim_text = isset($claimForReview) ? 'Claim This Business' : '';
+                    $claim_link1 = ((SSL_ENABLED == "on" && FORCE_MEMBERS_SSL == "on" && FORCE_CLAIM_SSL == "on") ? SECURE_URL : NON_SECURE_URL) . "/" . MEMBERS_ALIAS . "/" . ALIAS_CLAIM_URL_DIVISOR . "/listing.php?claimlistingid=" . $_GET["id"];
+                    $claim_link = ((SSL_ENABLED == "on" && FORCE_MEMBERS_SSL == "on" && FORCE_CLAIM_SSL == "on") ? SECURE_URL : NON_SECURE_URL) . "/" . ALIAS_LISTING_MODULE . "/" . ALIAS_CLAIM_URL_DIVISOR . "/" . $aux["friendly_url"];
+
+                    if (sess_getAccountIdFromSession()) {
+                        $claim_link = $claim_link1;
+                    }
+                    ?>
+
+                    <a href="<?= $claim_link ?>" class="reviewThis" > <?= $claim_text; ?> </a>
+                </div><!--/col-sm-3-->
+                <div class="col-sm-3 detail-ul-style">
+                    <? if (($listingtemplate_image && !$listingtemplate_gallery && $onlyMain) || ($tPreview && $listingtemplate_image)) { ?>
+                        <figure> 
+                            <?= $listingtemplate_image ?>
+                        </figure>
+                    <? } ?>
+                    <?
+                    if ($listingtemplate_gallery) {
+                        $image = preg_replace('/.+src="([^"]+)".+/', '${1}', $listingtemplate_image);
+                        ?>
+                        <section <?= ($onlyMain && !$isNoImage ? "class=\"gallery-overview detailfeatures\"" : "") ?> >
+                            <div <?= $tPreview ? "class=\"ad-gallery gallery\"" : "" ?> >
+                                <?= $listingtemplate_gallery ?>
+                            </div>
+                            <meta itemprop="image" content = "<?= $mainImage; ?>">
+                        </section>
+
+                    <? } ?>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <?php if ($listingtemplate_phone || $listingtemplate_url) { ?>  
+                                <div class="phonefax phonefax1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <?php if ($listingtemplate_phone) { ?>  
+                                                <div class="phonenum-wrapper">
+                                                    <span class="bold bold1"><?= system_showText(LANG_LISTING_LETTERPHONE) ?></span>
+                                                    <address class="inline"><?= $listingtemplate_phone ?></address>
+                                                </div>
+                                                <? } ?>
+                                            <div>
+                                            <meta itemprop="telephone" content="<?= $listingtemplate_phone_aux; ?>" />
+                                            </div>
+
+                                        </div><!--/col-sm-6-->
+                                        <div class="col-sm-6">
+                                            <?php if ($listingtemplate_url) { ?> 
+                                                <span class="web pull-right">
+                                                    <?= system_showText(LANG_LISTING_LETTERWEBSITE) ?>: <?= $listingtemplate_url ?>
+                                                    <meta itemprop="url" content="<?= $listingtemplate_url_aux ?>" />
+                                                </span>
+                                            <? } ?>
+                                        </div><!--/col-sm-6-->
+                                    </div><!--/row-->
+                                </div><!--/phonefax phonefax1-->
+                            <? } else { ?>
+                                <hr style="border-color: rgb(212, 212, 212);">
+                            <? } ?>
+
+                        </div><!--/col-sm-12-->
+                    </div><!--/row-->
+                </div><!--/col-sm-12-->
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <? if (($listingtemplate_address) || ($listingtemplate_address2) || ($listingtemplate_location)) { ?>
+                            <div>
+                                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="lineHeight">
+                                    <p class="detailP"><?= $listingtemplate_address ?><?= $listingtemplate_location ?><br/>
+                                        <span class="fax web">
+                                            <? if ($listingtemplate_email) { ?>                                             
+                                                <a rel="nofollow" href="<?= $listingtemplate_email_link; ?>" class="<?= ($user ? "fancy_window_tofriend" : "" ) ?>" <?= (!$user ? "style=\"cursor:default;\"" : ""); ?>>
+                                                    <?= system_showText(LANG_LISTING_CONTACT); ?>
+                                                </a>
+                                            <? } ?>       
+                                        </span>   
+
+                                    </p>
+                                    <? if (is_array($snippet_address) && count($snippet_address > 0)) { ?>
+
+                                        <? if ($snippet_address["addressCountry"]) { ?>
+
+                                            <meta itemprop="addressCountry" content="<?= $snippet_address["addressCountry"] ?>" />
+                                        <? } ?>
+                                        <? if ($snippet_address["addressRegion"]) { ?>
+                                            <meta itemprop="addressRegion" content="<?= $snippet_address["addressRegion"] ?>" />
+                                        <? } ?>
+                                        <? if ($snippet_address["addressLocality"]) { ?>
+                                            <meta itemprop="addressLocality" content="<?= $snippet_address["addressLocality"] ?>" />
+                                        <? } ?>
+                                        <? if ($snippet_address["postalCode"]) { ?>
+                                            <meta itemprop="postalCode" content="<?= $snippet_address["postalCode"] ?>" />
+                                        <? } ?>
+                                        <meta itemprop="streetAddress" content="<?= $listingtemplate_address ?>"> 
+
+                                    <? } ?>
+                                </div>
+                            </div>
+                            <? } ?>  
+
+                        
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="btngrp pull-right">
+
+                                <?
+                                $linkReviewFormPopup = DEFAULT_URL . "/popup/popup.php?pop_type=reviewformpopup&amp;item_type=" . lcfirst($item_type) . "&amp;item_id=" . htmlspecialchars($aux["id"]);
+                                $klass = "reviewThis iframe fancy_window_review";
+                                if (!$_SESSION['SESS_ACCOUNT_ID']) {
+                                    $linkReviewFormPopup = EDIRECTORY_FOLDER . "/popup/popup.php?pop_type=profile_login&destiny=" . $_SERVER["REQUEST_URI"] . "&act=rate&type=listing&rate_item=" . $aux["id"];
+                                    $klass = "reviewThis fancy_window_iframe";
+                                }
+                                ?>
+
+                                <a rel="nofollow" href="<?= ($user ? $linkReviewFormPopup : "javascript:void(0);"); ?>" class="<?= $klass ?>">
+                                    <button class="btn btn-default btn-lg ctl <?= $claim_class ?>">
+                                        Write Review
+                                    </button>
+                                </a>
+
+                                <? // END WRITE REVIEW BUTTON ?>
+                            </div>                           
+                        </div>
+                    </div>  
+                </div>
+            <? else: ?>
+                <? //Google share takes this time for companies without image ?>
+                <meta itemprop="image" content = "<?= $mainImage; ?>">
+                <meta itemprop ="name" content = "<?= ucfirst($listingtemplate_title) ?>">
+                <meta itemprop="description" content="<?= $headertag_description ?>">
+                <div class="col-sm-6">
+                    <h2 class="sabayjai"><?= $listingtemplate_title ?></h2>
+                    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        <?= displayrating($item_avgreview, 'resstartwrapper', 'starwrapper1'); ?>
+                        <p class="detail-page-review-para">
+                            
+                                <font size="2px" style="font-weight:normal;color:#000;">
+                                <?
+                                $count = $reviewData['review_count'];
+                                if ($count == 1) {
+                                    echo"(" . $count . " review)";
+                                } elseif ($count == 0) {
+                                    echo"(Review this business)";
+                                } else {
+                                    echo "(" . $count . " reviews)";
+                                };
+                                ?>
+                                </font>
+                            
+                        </p>
+                        
+                        <meta itemprop="ratingValue" content="<?= $item_avgreview; ?>"> 
+                        <meta itemprop="bestRating" content="<?=5; ?>"> 
+                        <meta itemprop="worstRating" content="<?=0; ?>"> 
+                        
+                        <meta itemprop="reviewCount" content="<?=$count?>">
+                        
+                        <span class="ratin">
+                            <!-- For reviews without images -->
+                            <? echo "(" . $item_avgreview . " out of 5)"; ?>     
+                        </span>
+
+
+                    </div>
+
+                </div> <!--/col-sm-6-->
+
+                <div class="col-sm-6">
+                    <?= $listingtemplate_share_navbar ?>
+                    <!-- review this business yo ho  -->
+                    <?php
+                    if ($claim_textlink) {
+                        $claim_textlink_string = $claim_textlink;
+                        $claimForReview = true;
+                    }
+                    $claim_text = isset($claimForReview) ? 'Claim This Business' : '';
+                    $claim_link1 = ((SSL_ENABLED == "on" && FORCE_MEMBERS_SSL == "on" && FORCE_CLAIM_SSL == "on") ? SECURE_URL : NON_SECURE_URL) . "/" . MEMBERS_ALIAS . "/" . ALIAS_CLAIM_URL_DIVISOR . "/listing.php?claimlistingid=" . $_GET["id"];
+                    $claim_link = ((SSL_ENABLED == "on" && FORCE_MEMBERS_SSL == "on" && FORCE_CLAIM_SSL == "on") ? SECURE_URL : NON_SECURE_URL) . "/" . ALIAS_LISTING_MODULE . "/" . ALIAS_CLAIM_URL_DIVISOR . "/" . $aux["friendly_url"];
+
+                    if (sess_getAccountIdFromSession()) {
+                        $claim_link = $claim_link1;
+                    }
+                    ?>
+
+                    <a href="<?= $claim_link ?>" class="reviewThis"> <?= $claim_text; ?> </a>
+                </div><!--/col-sm-6-->
+                <div class="col-sm-12">          
+                    <div class="row"> 
+                        <div class="col-sm-12">
+                            <?php if ($listingtemplate_phone || $listingtemplate_url) { ?>  
+                                <div class="phonefax phonefax1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <?php if ($listingtemplate_phone) { ?>  
+                                                <div class="phonenum-wrapper">
+                                                    <span class="bold bold1"><?= system_showText(LANG_LISTING_LETTERPHONE) ?>:</span>
+                                                    <address class="inline"><?= $listingtemplate_phone ?></address>
+                                                </div>
+                                                <div>
+                                                <meta itemprop="telephone" content="<?= $listingtemplate_phone_aux; ?>" />
+                                            </div>
+                                            <? } ?>
+                                        </div><!--/col-sm-6-->
+
+
+                                        <div class="col-sm-6">
+                                            <?php if ($listingtemplate_url) { ?>  
+                                                <span class="web pull-right">
+                                                    <?= system_showText(LANG_LISTING_LETTERWEBSITE) ?>: <?= $listingtemplate_url ?>
+                                                    <meta itemprop="url" content="<?= $listingtemplate_url_aux ?>" />
+                                                </span>
+                                            <? } ?>
+                                        </div><!--/col-sm-6-->
+
+                                    </div><!--/row-->
+                                </div><!--/phonefax phonefax1-->
+                            <? } else { ?><hr style="border-color: rgb(212, 212, 212);"> <? } ?>
+                        </div><!--/col-sm-12-->
+                    </div><!--/row-->
+                </div><!--/col-sm-12-->
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <? if (($listingtemplate_address) || ($listingtemplate_address2) || ($listingtemplate_location)) { ?>
+                            <div>
+                                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="lineHeight">
+                                        <p class="detailP"><?= $listingtemplate_address ?><?= $listingtemplate_location ?><br/>
+                                            <span class="fax web">
+                                                <? if ($listingtemplate_email) { ?>                                             
+                                                    <a rel="nofollow" href="<?= $listingtemplate_email_link; ?>" class="<?= ($user ? "fancy_window_tofriend" : "" ) ?>" <?= (!$user ? "style=\"cursor:default;\"" : ""); ?>>
+                                                        <?= system_showText(LANG_LISTING_CONTACT); ?>
+                                                    </a>
+                                                <? } ?>       
+                                            </span>  
+
+
+                                        </p>
+                                        <? if (is_array($snippet_address) && count($snippet_address > 0)) { ?>
+
+                                            <? if ($snippet_address["addressCountry"]) { ?>
+                                                <meta itemprop="addressCountry" content="<?= $snippet_address["addressCountry"] ?>" />
+                                            <? } ?>
+                                            <? if ($snippet_address["addressRegion"]) { ?>
+                                                <meta itemprop="addressRegion" content="<?= $snippet_address["addressRegion"] ?>" />
+                                            <? } ?>
+                                            <? if ($snippet_address["addressLocality"]) { ?>
+                                                <meta itemprop="addressLocality" content="<?= $snippet_address["addressLocality"] ?>" />
+                                            <? } ?>
+                                            <? if ($snippet_address["postalCode"]) { ?>
+                                                <meta itemprop="postalCode" content="<?= $snippet_address["postalCode"] ?>" />
+                                            <? } ?>
+                                            <meta itemprop="streetAddress" content="<?= htmlspecialchars($listingtemplate_address) ?>"> 
+                                        <? } ?>
+                                </div>
+                            </div>
+
+
+                            <? } ?>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="btngrp pull-right">
+
+                                <? // ADDED WRITE REVIEW BUTTON  ?>       
+
+                                <?
+                                $linkReviewFormPopup = DEFAULT_URL . "/popup/popup.php?pop_type=reviewformpopup&amp;item_type=" . lcfirst($item_type) . "&amp;item_id=" . htmlspecialchars($aux["id"]);
+                                $klass = "reviewThis iframe fancy_window_review";
+                                if (!$_SESSION['SESS_ACCOUNT_ID']) {
+                                    $linkReviewFormPopup = EDIRECTORY_FOLDER . "/popup/popup.php?pop_type=profile_login&destiny=" . $_SERVER["REQUEST_URI"] . "&act=rate&type=listing&rate_item=" . $aux["id"];
+                                    $klass = "reviewThis fancy_window_iframe";
+                                }
+                                ?>
+
+                                <a rel="nofollow" href="<?= ($user ? $linkReviewFormPopup : "javascript:void(0);"); ?>" class="<?= $klass ?>">
+                                    <button class="btn btn-default btn-lg ctl <?= $claim_class ?>">
+                                        Write Review
+                                    </button>
+                                </a>
+
+
+                                <? // END WRITE REVIEW BUTTON (while no image) ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <? endif; ?>
+        </div> <!--/thumbnail-->
+    </div>
+
+    <!-- description and video  -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+            <? if ($listingtemplate_long_description || $listingtemplate_hours_work || $listingtemplate_locations) { ?>
+                <div class="descriptionWrapper">
+                    <h3><?= system_showText(LANG_LABEL_DESCRIPTION); ?></h3>
+                    <p itemprop="description"><?= (($listingtemplate_long_description)) ? ($listingtemplate_long_description) . "<br /><br />" : "" ?>
+                        <?= $listingtemplate_hours_work ? $listingtemplate_hours_work . "<br /><br />" : "" ?>
+                        <?= $listingtemplate_locations ? $listingtemplate_locations : "" ?>
+                    </p>
+                </div><!--/descriptionWrapper-->
+            <? } ?>
+            <?
+            if ($listingtemplate_video_snippet) {
+
+                $listingtemplate_video_snippet = str_replace("\"", "'", $listingtemplate_video_snippet);
+                ?>
+                <div class="videoWrapper">
+                    <script language="javascript" type="text/javascript">
+                        document.write("<?= $listingtemplate_video_snippet ?>");
+                    </script>
+                </div>
+            <? } ?>
+            <!--</video>-->
+        </div>
+        </div>
+    </div><!--/row-->
+    <br>
+    <ul class="detailReview helpful-reviews">
+        
+        <?= $listingtemplate_review ?>
+    </ul>
+</div><!--/col-sm-8-->
+
+
+
+
+<? if (!strpos($_SERVER['PHP_SELF'], "preview.php")) { ?>
+
+    <? if (strpos($_SERVER['REQUEST_URI'], ALIAS_LISTING_MODULE)) { ?>
+        <script>
+            $(document).scrollViewer({
+                itemId: <?= $item_id ?>
+            });
+        </script>
+    <? } ?>
+
+<? } ?>
+
+        

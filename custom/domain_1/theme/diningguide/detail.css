@@ -1,0 +1,232 @@
+/**
+* eDirectory - Detail Page ( Modules )
+*
+* @package			layout
+* @filesource		detail.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+
+/* #Map
+*/
+    div.map > div { margin:1.5%; width: 97% !important; height: 96% !important;}
+    
+    
+/* #Different Content
+
+	Deals Overview 
+
+*/
+.content-main {border:none; border-radius:0 0 0 0; padding: 0!important;} /*The !important here is usefull when the popup recall teh structure.css and rewrite tis code.*/
+.content-main address {font-size:12px;}
+.content {float: left; margin-bottom: 2%;   padding: 1%;  width: 98%;; border:1px solid #dddddb;}
+
+/* Detail Elements
+	
+	* Share
+	* Top Info
+	* Image
+	* Gallery
+	* Content Box
+    * Rate
+*/
+
+.share li{float: right!important;margin-left:13px;font-size:10px;}
+
+.button-send, .button-call { float: right;}
+.button-call { margin:-0.5px -10px 0 5px}
+.button-send { padding: 3px 2px 0;}
+
+.tab-content h2 {line-height:24px;}
+.top-info h2 {line-height:1;}
+.tab-content > h2 {margin-bottom:5px;}
+.image img{width:100%;}
+
+.ad-image.image img {width: 301px;}
+.ad-thumb-list img{width:71px; padding:0px;height:34px;}
+
+.ie .ad-thumb-list img{min-width:90px; padding:0px;}
+
+.content-box {border-top: 1px solid #DBDBDB; margin-top: 15px; padding: 15px 0;}
+.content-box p {
+    margin-bottom:10px;
+}
+
+.middle-info {margin-top:10px;}
+.middle-info p {padding-bottom:5px;}
+.middle-info address {padding-bottom:10px;}
+
+.rate, .rate-stars, .rate p {display:inline;font-size:11px;}
+.rate p {padding-left:20px;}
+
+
+.share  img {  margin: 3px 0 0;}
+
+.share-social { float: right;    margin-left: -5px;}
+.ie7 .share-social li, .ie7 .share-social {float:right;}
+.review-item {clear:both;}
+
+.helpful-reviews {margin-top:10px;}
+
+#___plusone_0 { width: 65px !important; }
+.ie #___plusone_0 { width: 65px !important; margin-left:5px!important;}
+    
+ .content-box ol {list-style: decimal }
+ .content-box ul {list-style: disc}
+ .content-box ol,  .content-box ul {line-height:17px; margin:10px 0 10px 20px;}
+ 
+ 
+ .badges {margin:10px 0; text-align:center;}
+ .badges > img {margin: 0 0 0 3px;}
+ 
+ 
+/* Detail no Image*/
+.image.img-polaroid .no-link .no-image {width:100%; height:200px;}
+
+/* #Detail Sidebar
+	* Map
+*/
+
+.sidebar .map , .minimap .map{width: 98%; height:217px; }
+.minimap {width:40%; float:left;}
+/* #Detail Tabs
+*/
+
+.tab-container .tab-content {padding:10px;}
+.tab-container .description {margin:3% 0.8% 3% 4%;}
+
+/* #Detail Deal
+
+*/
+
+.map {width:95%;}
+.review-stars {margin:7px 0;}
+.action > div {border-bottom: 1px solid #EEEEEE;}
+
+.deal-value { border-top: 1px solid #EEEEEE; float: left; margin: 15px 0; width: 100%;}
+.deal-value span{width:33%;float:left;text-align: center; padding: 6px 0;}
+.deal-value span strong{float: left; width: 100%; font-size:18px;}
+
+.deal-soldout {font-size:24px; font-weight:600; color:#777;}
+
+.detail-deal-tag {position:absolute; width:625px; margin-top:20px;}
+
+.tab-content .detail-deal-tag {position:absolute; width:594px; margin-top:20px;}
+.deal-tag { float: right; text-align: right;  height: 57px;  padding-left: 22px; }
+.detail-deal .name-tag-deal, level-detail .name-tag-deal, .tab-content .name-tag-deal { padding: 19px;}
+
+/*Listing Detail*/
+.well-top { padding: 5px 0 5px 10px; margin-top:20px;}
+.well-small {width: 274px;}
+.ie .well-small {width: 276px;}
+
+
+
+/* #Responsive
+
+*/
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+	
+	.middle-info .span6 { width: 100%; margin-top:10px;}
+    .well-small { width: 95.4%;}
+	
+    .nav-tabs > li > a, .nav-pills > li > a {padding-right: 10px;padding-left: 10px;margin-right: 3px;font-size: 11px;}
+    .share li {float: right!important;margin-left: 5px;font-size: 10px;}
+    .button-send, .button-call {padding: 2px 0px 0;}
+    .button-call {width: 15px; margin:0;}
+    
+    
+    .detail-deal-tag {width:457px; }
+    .tab-content .detail-deal-tag {width:427px;}
+}
+
+@media (max-width: 767px) {
+
+    /* Tabs */
+    .nav-tabs > li > a {
+        text-indent:-999px;
+        background-image:url(images/iconography/icons-detail-responsive-dg.png);
+        padding:7px 16px;
+        width:1px;
+    }
+
+    .nav-tabs .tab-review a {
+        background-position: -2px 1px;
+    }
+    
+    .nav-tabs .tab-menu a {
+        background-position: 193px 1px;
+    }
+    
+    .nav-tabs .tab-overview a {
+        background-position: 90px 1px;
+    }
+    
+    .nav-tabs .tab-deal a {
+        background-position: 142px 1px;
+    }
+    
+    .nav-tabs .tab-video a {
+        background-position: 38px 1px;
+    }
+
+    .nav-tabs .tab-review.active  a{
+        background-position: -2px -32px;
+    }
+
+    .nav-tabs .tab-menu.active a {
+        background-position: 193px -32px;
+    }
+
+    .nav-tabs .tab-overview.active a {
+        background-position: 90px -32px;
+    }
+
+    .nav-tabs .tab-deal.active a {
+        background-position: 142px -32px;
+    }
+
+    .nav-tabs .tab-video.active a {
+        background-position: 38px -32px;
+    }
+
+    
+    .image-caption {width: 87.59584545%!important;}
+
+	.deal-tag {display:none;}
+	.middle-info .span6 { width: 100%;}
+    
+    .nav-tabs {margin-top:10px;}
+    
+    .well-small {width:97.5%; padding:1%;}
+    .well-top {width:95.5%; padding:2%;}
+    
+    .sidebar .map {margin-top:20px;}
+    
+
+    .tabs.tabs-advertise > li > a {margin: 0; padding-left: 5px; padding-right: 5px; border-radius:0; background:none;}
+    .tabs.tabs-advertise > .active > a, .tabs > .active > a:hover, .nav > .active > a:focus  {background-color:#fff;}
+    .tabs li, .tabsLevels li { margin-top: 10px;}
+    .nav-tabs > li {margin-bottom:-1px;}
+    
+    .level-info .button.button-profile, .review-count, .span3.share, .rate p  {display:none;}
+        
+    .rate p .fancy_window_login, .content-social-box , .helpful-reviews h2 a.pull-right{display:none;}
+    
+}
+
+@media (max-width: 480px) {
+    
+    .image-caption {width: 85.59584545%!important;}
+    
+    .ad-image.image img {width: 269px;}
+    
+    .fancy_window_login.star-rating {pointer-events:none;}
+    
+}

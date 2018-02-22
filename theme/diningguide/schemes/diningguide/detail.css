@@ -1,0 +1,89 @@
+/**
+* eDirectory - Detail Page ( Modules )
+*
+* @package			layout
+* @filesource		detail.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+/* #Map*/
+
+
+/* #Detail Tabs
+*/
+
+.tab-container {border:1px solid #dbdbdb; border-top:1px solid transparent;}
+.tab-container p{text-align:left;}
+
+/* #Detail Elements
+    
+*/
+.tab-container .top-info {border-bottom:1px solid #dbdbdb; padding-bottom: 10px;}
+.span6 strong {  float: left;    text-transform: capitalize;    width: 100%;}
+
+.image-caption {color:#fff; background-image:url("images/structure/bg-dark-ie.png"); padding:5px; position:absolute; margin-top:-42px; width: 284px;}
+/* #Detail Deal
+	
+*/
+.detail-deal .deal-tag, .level-detail .deal-tag {background:url(images/iconography/listing-tag-deal-edge-big.png) no-repeat left 0;}
+.detail-deal .name-tag-deal, .tab-content .name-tag-deal  {color:#fff; font-size:26px; font-weight:400; background:url(images/iconography/listing-tag-deal-slice-big.png) repeat-x 0 0;}
+
+.description {margin:3% 0.8%;}
+
+h1 {font-size:28px; font-weight:600; line-height: 1.1;  margin-bottom: 10px;}
+h3 {font-weight:600;line-height:1;}
+h6, .deal-timeleft h5 {color:#749116;}
+
+.deal-dealsleft, .deal-timeleft {text-align:center; padding-bottom: 10px;border-bottom: 1px solid #EEEEEE;}
+.deal-dealsleft  {float:left; width:100%; margin:15px 0;}
+.deal-dealsleft i{font-style:normal;}
+.deal-dealsleft span {width:100%;float:left;}
+
+
+/* #Listing Details
+
+*/
+.well-top {  background-color: #FFFFFF;  border: 1px solid #EEEEEE;  border-radius: 4px 4px 0 0;}
+.well-small {  background-color: #F5F9E8;    border: 1px solid #EEEEED;    border-radius: 0 0 4px 4px;    display: inline-block;    margin-top: -1px;}
+.well-small ol {color: #749116;   float: left;   margin: 0 3%;    text-align: right;    width: auto;}
+.well-small li {text-align:left;font-size:12px; color:#828282;}
+
+.downloadmenu {text-align:center; padding:20px 0;}
+.content-full .tab-container .row-fluid.downloadmenu p {text-align:center;font-size:16px; color:#a2c81f;margin: 20px 0}
+.tab-container .downloadmenu a {color:#a2c81f; text-decoration:underline;}
+.tab-container .downloadmenu a:hover {color:#749116;}
+
+#content_video h2 { padding:0 0 10px;}
+#content_video p {margin:20px 1px;}
+
+.helpful-reviews h2 {margin-right: -2px; font-size:18px; font-weight:400; color:#fff; padding:4px 8px 6px 45px; background: url("images/iconography/icon-pencil-color2.png") no-repeat 15px center #eb8a3d; border:1px solid #9e5d29; box-shadow: 1px 1px 1px #f3b88a inset; text-shadow: 1px 1px 1px #b46a2f;}
+.helpful-reviews h2 a{color:#fff; text-shadow:-1px -1px 1px #b46a2f; font-size:14px; text-transform:lowercase; text-decoration:underline; }
+.helpful-reviews h2 a.pull-right{font-size:12px ;}
+.ie7 .helpful-reviews h2 a.pull-right{margin-top:-47px;margin-right:10px;}
+.helpful-reviews h2 a:hover{text-decoration:none; }
+/* #Reviews
+
+*/
+.content-reviews .line-top ul, .content-reviews .line-top li {display:inline;}
+.content-reviews .line-top a, .content-reviews .line-top {color:#a2c81f;height: 30px;text-align: right; padding: 10px 2px 0;}
+.content-reviews .line-top .disabled a, .content-reviews .line-top .disabled a:hover {color:#ccc; cursor:default;}
+.content-reviews .line-top a.active {color:#fff;}
+.content-reviews .line-top a:hover, content-reviews .line-top a:active {color:#fff;}
+
+/*#Images effect*/
+
+.image-shadow img{transition:opacity 0.5s ease;}
+.image-shadow:hover img{opacity:0.6; cursor:pointer;}
+.image-shadow {transition: background-color 0.5s ease;}
+.image-shadow:hover { background:url("images/iconography/magnifierplus.png") no-repeat scroll center center #000000;}
+
+.ie .image-shadow img:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50);}
+.ie .image-shadow:hover { background:url("images/iconography/magnifierplus.png") no-repeat scroll center 35% #000000;}
+
+.middle-info .ad-gallery .ad-image-wrapper .ad-loader {background-color:rgba(255, 255, 255, 0.8); padding:55px 138px; top:0; left:0; border:none;}
+
+.ie .ad-gallery .ad-image-wrapper .ad-loader {background-color:#fff;}

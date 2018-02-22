@@ -1,0 +1,68 @@
+body {
+	background-image: -moz-linear-gradient(left, #C7C7C7, #F1F1F1 54%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0.00, #C7C7C7), color-stop(0.54, #F1F1F1));
+	background-color: #DDDDDD;
+	text-rendering: optimizeLegibility;
+}
+*{ 	transition-timing-function: ease-in-out ;transition-property: all;	}
+.edir9 {background:url("../imgs/img_logo.gif") no-repeat center; width:100%; height:250px;}
+
+/*Background*/
+.box_bg {width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.7);margin: 0;top: 0;left: 0;position: absolute;}
+
+/*Box Light*/
+.box_light {width: 94%;height: 94%;background-color: #fafafa;font-family: "Open Sans", "Helvetica";overflow: hidden;position: absolute;
+left: 3%;top: 3%;bottom: 3%;right: 3%; border-radius:6px;}
+/*.box_light h1{padding-left: 3%;font-size: 130%;line-height: 120%;margin: 0 auto 1em auto;padding-top: 10px;width: 13em;}
+*/.box_light h1{font-size: 110%;line-height: 120%;margin: 0 auto 0% auto;padding-top: 4%;width: 100%;text-align: center;}
+.box_light h4{font-weight:normal; font-size: 0.8em;line-height: 1em;margin: 2% auto 6% auto;width: 100%;text-align: center;}
+.device-img {background: no-repeat top;margin: 0% 0;position: absolute;
+	height: auto;   overflow: hidden;box-sizing: border-box}
+.device-img .phone{	width: 380px; max-width: 65%;}
+/*.device-img .phone{	width: 80%; max-width: 80%;}
+*/.device-apple .userscreen {width: 100%;max-width: 54%;position: absolute;z-index: 2;margin: 20.6% auto auto -59.2%;}
+.device-google .userscreen {width: 100%;max-width: 54%;position: absolute;z-index: 2;margin: 23.6% auto auto -59.7%;}
+.device-apple, .device-google { text-align:center; }
+.device-apple { margin-top: 2%;}
+.device-google  .phone{text-align:center;margin-top:4%}
+
+/*Buttons*/
+.box_close { background: no-repeat right; background-image: url("../imgs/btn-close.png");width: 30px;height: 30px;position: absolute;right: 6px;top: 0;z-index: 2;}
+/*.buttons{width: 200px;min-height: 125px; margin: 5% auto 0 auto;padding-left: 3%}
+*/.buttons{width: 135px;min-width:135px; min-height: 80px; margin: 0 auto;}
+.btn-app {}
+ .btn-google {width:128px;}
+/*.btn-apple {background-image: url("../imgs/app-apple.png");margin-bottom: 3%;font-size: 90%;color: #ffffff;text-indent: 12px; text-decoration: none;text-align: center;padding-left: 8%;padding-top: 3%;}
+*/.btn-apple  {width:135px; }
+/*.btn-negative{text-decoration:none; border-radius: 5px;width: 91%;height: 27%;float: left;font-size: 22px;background-color: #6770EE;color: white;line-height: 44px;text-align: center;font-weight: bold;}
+*/.btn-negative{text-decoration: none;border-radius: 5px;height: 10%;float: left;font-size: 75%;background-color: #6770EE;color: white;line-height: 200%;text-align: center;font-weight: bold;padding: 5px 0; margin-top:1%}
+
+
+
+@media screen and (orientation:portrait) and (min-height: 540px) and (min-width:270px) and (max-width:420px){
+  /* portrait-specific styles */
+	.device-google {max-height: 66%;	bottom: -1%;}
+	.btn-google {margin-bottom:10%;}
+	.buttons {height:auto; margin:10% auto;  }
+}
+
+@media screen and (orientation:portrait) and (min-height: 540px) and (min-width:270px) and (max-width:420px){
+  /* portrait-specific styles */
+	.device-google {max-height: 66%;	bottom: -1%;}
+	.btn-google {margin-bottom:10%;}
+	.buttons {height:auto; margin:10% auto;  }
+}
+
+@media screen and (min-height:479px) and (min-width: 319px){
+}
+
+
+/* landscape */
+@media screen and (orientation:landscape) {
+  /* landscape-specific styles*/
+  
+  .device-img {}
+  .box_light h4 {margin: 2% auto 2% auto;}
+  .device-img {margin:0 25% 0 25%;}
+}
+

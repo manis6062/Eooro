@@ -1,0 +1,142 @@
+/**
+* eDirectory - Blog Module
+*
+* @package			layout
+* @filesource		blog.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+/* #Content for blog
+    The Results and Home page for Blog Module are both the same, with few changes. 
+*/
+.tab-content {min-height:340px;}
+.content.content-blog {margin: 0 0 1% 1%;}
+.content-blog .content-main {float: left;padding: 0 2.3%;width: 94.6%;}
+.ie .content-blog .content-main {float: left;padding: 0 2% 0 2.3%; width:96.5%;}
+
+.content-social-box {margin: 1% 0;}
+
+/* #Post Summary
+    
+*/
+.post-summary {margin-bottom: 20px;}
+
+/* #Featured Image
+    
+*/
+.content-blog .image {width:98%;margin: 1% 0 3% 0;}
+.content-blog .image img{width:100%;padding: 0.6%;border: 1px solid #dedede;box-shadow: 1px 1px 3px #eee;}
+
+.post-summary .image .no-image {height:252px;}
+.sidebar .item .no-image {height:60px;}
+
+.span6.blog-image {height:140px !important; overflow:hidden;}
+
+
+/* Pagination
+    
+*/
+
+.content-blog .top-pagination form {display:none;}
+.content-blog .line-top .search-info {   max-width: 60%;}
+.content-blog .line-top .filter-category { margin-right:0;}
+.content-blog .line-bottom .span6 > div {display:inline-block;}
+.content-blog .pagination-bottom {margin: 8px 0 5%;}
+.content-blog .pagination-bottom .goto {margin-bottom:10px;}
+.content-blog .results-per-page { float: right;}
+
+.ie7 .content-blog .pagination-bottom .goto {margin-bottom:0px;}
+.line-bottom .pagination:before {display:none;}
+
+.content-blog  .top-pagination.post-results {    margin: 0 0 0 -2.5%;    width: 102%;}
+.content-blog  .top-pagination.post-home { padding:10px 0 0 0;}
+.post-results .line-bottom { padding: 0 8px 9px;}
+
+.results-per-page label {font-size:10px;float:left;}
+.results-per-page select {padding: 2px 1px;width: 60px;height: 25px;margin: -2px 0 19px 8px;}
+
+
+
+/* #Sidebar for Blogs Pages
+    <div class="sidebar ">
+            <div class="search-box">
+                <form class="form-search row-fluid">
+                  <label for="search-input">Search the blog</label>
+                  <input type="text" class="input-big search-query span9" id="search-input">
+                  <button type="submit" class="btn btn-success span2 pull-right">OK</button>
+                </form>
+            </div>
+     </div>
+*/
+
+.sidebar .search-box {margin: 0px 0% 3% 0;padding: 2% 4% 4%;border: 1px solid #dedede;}
+.sidebar .search-box input{font-size: 11px;}
+.sidebar .search-box label {  margin-bottom: 7px;width:100%;clear:both;}
+
+.ie7 .sidebar .search-box {margin: 0px 0% 3% 0;padding: 2% 6% 4% 5%;border: 1px solid #dedede;width:100%;}
+.ie .input-big.search-query {float:left;}
+
+.sidebar .search-box .btn {padding:4px 8px;}
+.ie .sidebar .search-box .btn {padding:0px 8px;}
+
+.sidebar .blog-item {margin:6% 0 9%; padding:0 0 0 1%; clear: both;}
+.sidebar .blog-item .item {clear:both; display:block;width: 100%;margin-bottom: 47px;}
+.sidebar .blog-item h3 {margin-bottom: 5px;}
+.sidebar .blog-item .item p{padding:0; width: 56%;float: right;margin-bottom: 4%;text-align:left;}
+.sidebar .blog-item .item .image{width:40%; float:left;margin: 0 10px 8% 0;}
+.sidebar .blog-item .item .image img {padding:2px; width:100%;}
+
+.ie .sidebar {width:31%; padding-right:2%;}
+.ie7 .sidebar {width:28%; padding-right:5%;}
+.ie .goto {margin-top:0;}
+.ie .post-summary .line-footer .span6 p {float:left;}
+.ie .post-summary .line-footer .span6 p.text-right {float:right;}
+
+
+/*#Coments*/
+
+.comment {display:block; width:100%; min-height:80px; clear:both; padding:10px;overflow:hidden; white-space:pre-wrap; word-break:break-word;}
+.comment .reply {clear:both; margin-left:10%;}
+.comment .image{width:60px; height:60px; float:left; margin:0 20px 20px 0;}
+
+.contact-form .textarea {width:98%;}
+
+.post-comments .successMessage {margin:2%;}
+
+/* #Preview*/
+
+.level-summary {width: 620px;padding: 10px; border:1px solid #dedede;}
+.level-summary .image {margin: 10px 0;}
+.level-summary h2 {font-size:18px;}
+.level-summary .span6 strong {float: none;}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+    
+.post-summary .image .no-image {height: 180px}
+.sidebar .blog-item .item p {width: 55%!important;}
+.content-blog .line-top {width: 99%;}
+.post-results .line-bottom {width: 99%;}
+.post-results .pagination {margin: 0;}
+
+}
+
+/*#Media Queries*/
+@media (max-width: 767px) {
+.post-summary .image .no-image {height: 100px;} 
+
+
+.sidebar .search-box input {width:98%;}
+.content-blog .pagination-bottom .goto {width: 100%;}
+
+
+}
+
+
+@media (max-width: 480px) {	 
+   .contact-form, .post-comments {display:none;}
+}

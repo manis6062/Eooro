@@ -1,0 +1,55 @@
+/**
+* eDirectory - Blog Module
+*
+* @package			layout
+* @filesource		blog.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+/* #Post Summary
+    
+*/
+
+.post-summary {border-bottom: 1px solid #dedede;}
+
+/* #Paragraph
+      <p class="posts">This is a sample paragraph</p>
+*/
+p.posts {margin-bottom:20px;}
+.posts p{margin-bottom:15px;font-size:13px;line-height: 17px;}
+
+/* #Sidebar 
+
+*/
+.sidebar .search-box label{font-size:15px; font-weight:bold;}
+
+.sidebar .blog-item h3 {font-size: 14px; font-weight:bold; line-height: 20px; border-bottom: none;}
+.sidebar .blog-item h3 a{color:#000;} .sidebar .blog-item h3 a:hover{color:#999;}
+.sidebar .blog-item .item p{color:#333; font-size:12px; line-height: 1;}
+.sidebar .blog-item .item .image img { border:1px solid #dedede; }
+
+
+.sidebar h2 span{float:none;}
+
+/** Accordion */
+
+#accordion { margin: 10px 0 30px 2px;}
+.accordion-item h3 a{background:none}
+.accordion-item h3 {background:url("images/structure/accordion-list.png") no-repeat scroll right -28px transparent; width:60px; padding:0 0 0 5px;}
+.accordion-item.active h3 {background-position: right 8px;}
+.list li {  padding-left: 30px;}
+
+/* Comments*/
+
+.post-comments {padding: 2%;}
+.comments-list {   background-color: #FCFCFE; margin-top:10px;}
+
+.post-comments h2 {margin-right: -2px; font-size:18px; font-weight:400; color:#fff; padding:4px 8px 6px 45px; background: url("images/iconography/icon-pencil-color2.png") no-repeat 15px center #eb8a3d; border:1px solid #9e5d29; box-shadow: 1px 1px 1px #f3b88a inset; text-shadow: 1px 1px 1px #b46a2f;}
+.post-comments h2 a{color:#fff; text-shadow:-1px -1px 1px #b46a2f; font-size:14px; text-transform:lowercase; text-decoration:underline; }
+.post-comments h2 a:hover{text-decoration:none; }
+
+.comment .image img {padding:4px; background-color:#fff; border:1px solid #ddd;}

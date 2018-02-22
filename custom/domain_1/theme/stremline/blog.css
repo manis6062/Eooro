@@ -1,0 +1,115 @@
+/**
+* eDirectory - Blog Module
+*
+* @package			layout
+* @filesource		blog.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+.search-info + .content-custom  {
+  margin-top:30px;margin-bottom: -20px;
+}
+
+.tabview-results {width:100%;}
+.results-info { float: left; margin: 2px 0 20px; width: 100%;}
+
+.results-per-page {float:right;}
+
+.middle-info.overview .no-image {display:none;}
+
+section {padding:5px 10px 5px 0;}
+
+.blog-item-members  img{width:72px; height:72px; min-width:72px;}
+
+
+.blog-item .item .image .no-image {height:56px;min-height:56px; margin:0;}
+
+.flex-box .blog-item.blog-item-members .no-image {background:url("images/imagery/profile_noimage.png") no-repeat scroll center center #E7E8E8; width:72px; height:72px; min-height:72px; border:1px solid #ccc;}
+
+
+.post-summary {margin-bottom: 20px;padding-bottom:20px; clear:both; width:100%;}
+.span7.blog-image {height:160px !important; overflow:hidden;}
+
+/*Popular topics*/
+.blog-item {clear:both; padding: 0 10px;}
+.blog-item .item {clear: both; float: left; margin: 12.5px 0; width: 100%;}
+.blog-item .item .image {float:left; margin-right:10px;}
+
+
+/*Galleria*/
+.galleria  .galleria-thumbnails-container {display:none;}
+
+/*#Coments*/
+
+.comment {display:block; min-height:60px; clear:both; margin:10px 0 20px 0; padding-bottom:20px; overflow:hidden; white-space:pre-wrap; word-break:break-word;}
+
+.comment .reply {clear:both; margin-left:9%; padding-left:20px; min-height:75px;}
+
+.comment .image{width:60px; height:60px; float:left; margin:0 10px 5px 0;}
+.comment .image img {width:60px; height:60px; min-width:60px;}
+
+.contact-form .textarea {width:98%;}
+.contact-form div {margin:15px 0;}
+.contact-form .informationMessage, .contact-form  .errorMessage, .contact-form .successMessage, .contact-form .warningMessage { margin:-10px -2.1% ;}
+.contact-form input {padding:3px 0 4px;}
+.contact-form .form .captcha {float:none; margin:0 auto; width:260px;padding:0;}
+.contact-form .form .captcha input {width:149px; margin:0; height:21px;}
+.contact-form .button.button-contact {display:block; margin:0 auto; width:260px;}
+.contact-form h2 a{padding:10px 0; width:100%;display:block;}
+
+.post-comments {clear:both;}
+
+.post-comments .successMessage {margin:2%;}
+
+.captcha img {height:27px; width:103px;}
+
+/* #Preview*/
+
+.level-summary {width: 625px;padding: 10px; border:1px solid #dedede;}
+.level-summary .post-summary .span4{width:188px;margin-left:0;}
+.level-preview .blog-image .galleria-info {left:10px; top:7px;}
+.level-preview .level-detail .overview .blog-image {width:358px;}
+
+/*#Media Queries*/
+@media (min-width: 979px) { 
+	.post-summary {min-height:140px;}
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .image .no-image {min-height: 73px;height: 73px; position:inherit;}
+
+    .blog-item .item .no-image {height: 38px; min-height: 38px;}
+
+    .captcha img {height:27px; width:68px;}
+
+
+    .blog-item .item .image .no-image {height:40px; min-height:40px;}
+    .flex-box .blog-item.blog-item-members .no-image {height:72px;}
+
+    .pagination .pages {width:100%;margin:10px auto;}
+	.pagination ul > li > span, .pagination ul > li, .pagination ul > li > a, .pagination li > a.active {font-size:16px; padding:6px;}
+
+}
+
+
+@media (max-width: 767px) {
+
+.image .no-image {display:none;}
+
+.row-fluid.blog-home, .row-fluid.responsive-blog {
+  margin:10px auto;
+  width:96%;
+}
+
+
+.pagination .pages {width:100%;margin:10px auto;}
+.pagination ul > li > span, .pagination ul > li, .pagination ul > li > a, .pagination li > a.active {font-size:16px; padding:6px;}
+
+}
+

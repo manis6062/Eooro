@@ -1,0 +1,32 @@
+body{
+	font-size:16px;  
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+}
+section.firstRow{
+	margin-bottom: 5px;
+}
+section.firstRow,
+section.secondRow {
+   /* border-bottom: 1px solid #474747;
+    padding: 0 0 5px;
+    margin-bottom: 5px;*/
+    border: 1px solid #474747;
+    border-radius: 4px;
+    padding: 4px;
+}
+ .widgetActionWrapper {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.widgetActionWrapper h1{
+    font-size: 30px;
+}
+h2{
+	font-size: 20px;
+	margin: 10px 0;
+}
+.widgetActionpWrapper > p{
+	margin:0;
+}

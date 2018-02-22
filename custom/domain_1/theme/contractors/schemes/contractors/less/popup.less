@@ -1,0 +1,132 @@
+
+/**
+* eDirectory - Popups ( Modal boxes )
+*
+*/
+
+
+
+@import "variables.less";
+@import "mixins.less";
+
+
+.modal-content {
+	> h2{
+		color:@text-color;
+		font-size:@font-size-large;
+		font-weight: bold;
+		line-height:1.7em;
+		padding: 20px 0 5px 0;
+		margin:0 5% @medium-space 5%;
+		float:left;
+		width:90%;
+		clear:both;
+		border-bottom: 1px solid @gray;
+		text-align:left;	
+		b {
+			text-overflow:ellipsis; 
+			overflow:hidden;
+			max-width:75%; 
+			white-space:nowrap; 
+			display:inline-block;
+
+		}
+		> span a {
+			float: right;
+			font-weight: normal;
+			margin-right: 10px;
+			text-transform: capitalize;
+		    color:@brand-danger;
+		    font-size: @font-size-small;
+		    &:hover {text-decoration: underline;}
+		}
+	}
+	.content-custom h2 {
+		margin-left:10px;
+	}
+}
+
+
+.modal-content  .button h2 {
+	font-size: @font-size-small;
+	font-weight: normal;
+	line-height: 1.2em;
+	margin-bottom: 0;
+}
+
+
+/* Popups > body */
+
+body
+{ background: @well-color; font-family: @font-family-sans-serif; }
+
+/* Popups > modal content */
+
+.modal-content form span.comment { color: @gray-text; }
+
+.modal-content .customInvoice h3 { color: @gray-text; }
+
+/** Popups > buttons */
+
+.modal-content button[type="submit"], .modal-content .button-profile h2 a {
+	background-color: @brand-success;
+	color: white;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 10px;
+	margin: 0 auto 5px;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 233px;
+	float:none;
+	height:30px;
+	.transition(0.5s);
+	.box-sizing(border-box);
+}
+
+.modal-content button[type="submit"]:hover, .modal-content .button-profile h2 a:hover { background-color: @brand-success-hover; }
+
+
+p.input-button-form { padding:0;}
+
+p.input-button-form button { background:transparent;  line-height: 10px; padding:10px 30px; cursor:pointer; color:white; .transition(0.5s); }
+
+
+/** Popups > deal */
+
+.modal-content .redeem-deal h1 {
+	background-color: #efefef;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	clear:both;
+}
+
+.modal-content .redeem-deal h2 {font-size:20px;margin:10px 20px;}
+.modal-content .redeem-deal .terms p { color: #888; font-size: 10px; }
+.modal-content .redeem-deal .listing-info p { font-size: 11px; }
+
+
+/** Popups > rate */
+
+.modal-content .rate
+{ background-color: transparent; }
+
+
+/** Contact form > form > form tags */
+
+.modal-content .form div .text, .modal-content .form div .textarea
+{ margin-bottom: 2px; }
+
+
+/** Contact form > form > captcha */
+
+.modal-content .form .captcha img { 
+	border: 1px solid #B7C0C7;
+	height: 27px; 
+}
+
+

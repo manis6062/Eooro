@@ -1,0 +1,150 @@
+.order p {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+.content.content-full h2 {
+  font-size: 1.6em;
+  line-height: 2.4em;
+}
+.orderTable td,
+.orderTable th,
+.orderTable tr {
+  color: #636363;
+}
+.orderTitle {
+  background: #069;
+  color: #FFF;
+}
+.orderUserTable {
+  background: #F7F7F7;
+}
+.orderUserTable table {
+  background: #FFF;
+  border: 2px solid #EFEFEF;
+}
+.orderTable .orderUserTable .formFieldsLogin input {
+  border: 1px solid #E1E1E1;
+  border-bottom: 1px solid #EEE;
+}
+select.httpSelect {
+  width: 100px;
+}
+.standardSIGNUPTable {
+  color: #111;
+}
+.standardSIGNUPTable a {
+  color: #0072BC;
+}
+.standardSIGNUPTable td,
+.standardSIGNUPTable th,
+.standardSIGNUPTable tr {
+  color: #636363;
+}
+.standardSIGNUPTable td span {
+  color: #898989;
+}
+#checkUsername .UsernameRegistered {
+  color: #FF0000;
+}
+#checkUsername .UsernameNotRegistered {
+  color: #008000;
+}
+.orderTotalAmount {
+  background: transparent;
+  border: none;
+  color: #16a085;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.orderTotalAmount strong {
+  color: #111;
+  margin-right: 10px;
+}
+.orderPayment td {
+  background: none !important;
+  color: #636363;
+}
+.loadingOrderCalculate {
+  color: #111;
+}
+.paymentMethods tr {
+  float: left;
+  max-width: 935px;
+  overflow: auto;
+  white-space: nowrap;
+}
+.errorTitle {
+  color: #C00;
+}
+.orderUserTable {
+  background: none;
+}
+.orderUserTable table {
+  background: none;
+  border: medium none;
+  float: left;
+  width: 960px;
+}
+.order input.inpemail {
+  background: #fff url(images/iconography/mail.png) no-repeat 3px;
+  font-size: 10px;
+}
+.order input.inpname {
+  background: #fff url(images/iconography/user.png) no-repeat 3px;
+  font-size: 10px;
+}
+.order input.openid {
+  font-size: 10px;
+}
+.order .inputimg input {
+  font-size: 10px;
+  line-height: 16px;
+  box-shadow: none;
+}
+.order .inputimg input[type="password"] {
+  font-size: 9px;
+}
+.order .cont_50 > input.inppassword {
+  font-size: 10px;
+}
+.order  input.inppassword {
+  background: #fff url(images/iconography/lock.png) no-repeat 3px;
+  font-size: 10px;
+}
+.order label.checkUsername {
+  line-height: 15px;
+  font-size: 10px;
+}
+.order .right div.signup {
+  border-right: 1px solid #ddd;
+}
+.order .checking span {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 30px;
+}
+.order .checking .negative {
+  color: #b9451d;
+}
+.order .checking .negative > a {
+  padding: 10px;
+  font-style: italic;
+}
+.order .checking .positive {
+  color: #24781b;
+}
+.order .btn-facebook {
+  background-image: url(images/iconography/btn-facebook.png);
+}
+.order .btn-google {
+  background-image: url(images/iconography/btn-google.png);
+  background-position: 10px 5px;
+}
+.ie7 .order a.switchOpen,
+.ie7 .order  a.switchClose {
+  font-size: 16px;
+  color: #000;
+  font-weight: 800;
+}

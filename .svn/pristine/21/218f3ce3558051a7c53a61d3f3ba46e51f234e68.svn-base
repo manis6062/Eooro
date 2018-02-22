@@ -1,0 +1,327 @@
+/**
+* eDirectory - Advertise Page
+*
+* @package			layout
+* @filesource		advertise.css
+* @author			Arca Solutions
+*			
+*/
+
+/* #Contents*/
+.content.content-full {float: left; margin: 5px 2% 30px; padding: 0; width: 96%; }
+.content-main { border:none;float:left;width:96%; margin:0 2%;display:block; padding:0 0 3px 0;}
+
+
+/*Pricing Table*/
+
+.pricing-table {
+    border: medium none;
+    float: left;
+    margin: 28px 0 40px -10px;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-table blockquote {
+  text-align: left;
+}
+.pricing-table .pricinglevel {
+  width: 170px;
+  padding: 15px;
+  display: inline-table;
+  text-align: center;
+  background-color: #f3f7f8;
+  border: 1px solid #d9e3e8;
+  margin: 0 5px 20px;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+.pricing-table .pricinglevel .btn {
+  display: block;
+  width: auto;
+  margin: 10px auto;
+}
+
+.pricing-table .pricinglevel hgroup {
+    display:inline-block;
+}
+
+.pricing-table .pricinglevel h1,
+.pricing-table .pricinglevel h2 {
+  font-size: 38px;
+  font-weight: 400;
+  border-bottom: 1px solid #d9e3e9;
+  margin-bottom: 20px;
+}
+.pricing-table .pricinglevel h1 small,
+.pricing-table .pricinglevel h2 small {
+  font-size: 80%;
+}
+.pricing-table .pricinglevel h1 span,
+.pricing-table .pricinglevel h2 span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.pricing-table .pricinglevel h2 {
+  margin-bottom: -5px;
+  border: none;
+}
+.pricing-table .pricinglevel h3 {
+  font-size: 34px;
+  font-weight: normal;
+}
+.pricing-table .pricinglevel h3 small {
+  font-size: 30px;
+}
+.pricing-table .pricinglevel h3 span {
+  font-size: 12px;
+}
+.pricing-table .pricinglevel h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.pricing-table .pricinglevel h5 {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #2980b9;
+}
+.pricing-table .pricinglevel h6 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a3abb0;
+}
+.pricing-table .pricinglevel em {
+  background-color: #d9e3e9;
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  height: 1px;
+  line-height: 0;
+  margin: 25px 25px 15px;
+  text-transform: uppercase;
+}
+.pricing-table .pricinglevel em span {
+  background-color: #f3f7f8;
+  padding: 0 0 0 7px;
+}
+.pricing-table .pricinglevel ul li {
+  font-size: 13px;
+  line-height: 22px;
+}
+.pricing-table .pricinglevel ul li.disabled {
+  color: #9cb4bf;
+  text-decoration: line-through;
+}
+.pricing-table .pricinglevel.most-popular {
+  box-shadow: 0 1px 8px #CDCDCD;
+  padding: 10px 30px 20px;
+  margin: 0 -10px;
+  background-color: #fff;
+  position: relative;
+  z-index: 99;
+}
+.pricing-table .pricinglevel.most-popular h5 {
+  line-height: 30px;
+}
+.pricing-table .pricinglevel.most-popular em span {
+  background-color: #fff;
+  padding: 0 0 0 7px;
+}
+.pricing-table .lower-level {
+  float: right;
+  margin: 25px 0;
+  width: 217px;
+}
+.pricing-table .lower-level .pricinglevel {
+  margin-top: 0;
+}
+.pricing-table .lower-level.up {
+  margin-top: 0;
+}
+.pricing-table .contact-info {
+  float: right;
+  width: 180px;
+  padding: 15px;
+  margin: 5px 0 20px 10px;
+  border: 1px solid #d9e3e8;
+}
+.pricing-table .contact-info h2,
+.pricing-table .contact-info p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+}
+.pricing-table .contact-info h2 {
+  line-height: 26px;
+  margin: 4px 0 15px;
+  text-transform: uppercase;
+}
+.pricing-table .contact-info p {
+  color: #2980b9;
+}
+.pricing-table .contact-info hr {
+  margin: 10px 0;
+}
+
+/* #Tabs*/
+
+.tabs.tabs-advertise {float:left; width:96%; margin:10px 2%;height:30px;}
+.tabs li, .tabsLevels li {float:left;margin-right:8px; text-align: center;}
+.tabs > li > a {padding:5px 20px; display:inline-block; margin:0 auto -2px;}
+.tab-container {margin-bottom:40px;}
+
+
+
+
+/* #Media queries
+
+	All changes when you want a responsive website
+	
+*/
+@media (max-width: 979px) {
+  .tabs-advertise > li {
+    max-width: 20%;
+  }
+  .tabs-advertise > li > a {
+    font-size: 12px;
+    margin-bottom: -8px;
+    max-width: 100px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+   .pricing-table {
+    width: 100%;
+    padding-right: 0;
+     margin-left: -6px;
+  }
+  .pricing-table .pricinglevel {
+    width: 140px;
+    padding: 8px;
+    margin-left: 0;
+  }
+  .pricing-table .pricinglevel hgroup {
+    max-width: 140px;
+  }
+  .pricing-table .pricinglevel hgroup h1,
+  .pricing-table .pricinglevel hgroup h2 {
+    font-size: 1.7em;
+  }
+  .pricing-table .pricinglevel.most-popular {
+    padding: 5px 12px;
+  }
+  .pricing-table .pricinglevel .text-underline {
+    display: none;
+  }
+  .pricing-table .lower-level {
+    width: 150px;
+    margin-top: 28px;
+  }
+  .pricing-table .lower-level .pricinglevel,
+  .pricing-table .lower-level .contact-info {
+    width: 128px;
+    padding: 10px;
+    margin-right:0;
+  }
+}
+@media (max-width: 767px) {
+  .tabs.tabs-advertise {
+    float:left; 
+    width:96%; 
+    margin:10px 2%;
+    height:auto;
+    border:none;
+  }
+
+  .tabs-advertise > li {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .tabs.tabs-advertise > li a {
+    border-radius:4px;
+    border:1px solid #ccc;
+    font-size: 12px;
+    overflow: hidden;
+    padding-left: 2%;
+    padding-right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 98%;
+    max-width: 98%;
+  }
+  .pricing-table {
+    margin: 28px 0 40px;
+    width: 100%;
+  }
+  .pricing-table .pricinglevel {
+    width: 96%;
+    text-align: left;
+    padding: 10px 1%;
+    margin-bottom: 20px;
+  }
+  .pricing-table .pricinglevel hgroup,
+  .pricing-table .pricinglevel.lower-level hgroup {
+    float: none;
+    display: block;
+    width: auto;
+    padding: 0 10px;
+    margin-right: 0;
+    text-align: center;
+    border-right: none;
+  }
+  .pricing-table .pricinglevel hgroup h1,
+  .pricing-table .pricinglevel.lower-level hgroup h1 {
+    border-bottom: 1px solid #ccc;
+    line-height: 1em;
+  }
+  .pricing-table .pricinglevel hgroup h1 span,
+  .pricing-table .pricinglevel.lower-level hgroup h1 span {
+    white-space: nowrap;
+  }
+  .pricing-table .pricinglevel .text-underline {
+    display: none;
+  }
+  .pricing-table .pricinglevel .btn,
+  .pricing-table .pricinglevel.lower-level .btn {
+    float: none;
+    dsplay: block;
+    width: auto;
+  }
+  .pricing-table .pricinglevel ul li {
+    float: left;
+    font-size: 0.8em;
+    padding-right: 7px;
+    white-space: nowrap;
+    width: auto;
+    word-wrap: break-word;
+  }
+  .pricing-table .pricinglevel.most-popular {
+    padding: 10px 1.5%;
+    margin: 0 0 20px 0;
+  }
+  .pricing-table .lower-level {
+    width: 100%;
+  }
+  .pricing-table .lower-level .contact-info {
+    float: left;
+    padding: 10px 1%;
+    width: 97%;
+    margin: 0;
+  }
+  .pricing-table .lower-level .contact-info h2 {
+    line-height: 1.7em;
+  }
+}

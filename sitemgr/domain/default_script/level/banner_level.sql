@@ -1,0 +1,16 @@
+INSERT INTO `BannerLevel` (`value`, `name`, `defaultlevel`, `price`, `width`, `height`, `impression_block`, `impression_price`, `active`, `popular`, `content`, `displayName`, `theme`) VALUES
+(1, 'top', 'y', 50.00, 728, 90, 1000, 50.00, 'y', 'y', '', 'top', 'default' ),
+(2, 'bottom', 'n', 20.00, 468, 60, 1000, 20.00, 'y', 'n', '', 'bottom', 'default' ),
+(3, 'top right', 'n', 40.00, 120, 90, 1000, 40.00, 'y', 'n', '', 'top right', 'default' ),
+(50, 'sponsored links', 'n', 10.00, 180, 66, 1000, 10.00, 'y', 'n', '', 'sponsored links', 'default'),
+(2, 'bottom', 'y', 20.00, 468, 60, 1000, 20.00, 'y', 'n', '', 'bottom', 'realestate'),
+(3, 'featured', 'n', 40.00, 180, 150, 1000, 40.00, 'y', 'y', '', 'featured', 'realestate'),
+(50, 'sponsored links', 'n', 10.00, 180, 100, 1000, 10.00, 'y', 'n', '', 'sponsored links', 'realestate'),
+(1, 'top', 'y', 50.00, 728, 90, 1000, 50.00, 'y', 'y', '', 'top', 'diningguide' ),
+(2, 'bottom', 'n', 20.00, 468, 60, 1000, 20.00, 'y', 'n', '', 'bottom', 'diningguide' ),
+(3, 'top right', 'n', 40.00, 120, 90, 1000, 40.00, 'y', 'n', '', 'top right', 'diningguide' ),
+(50, 'sponsored links', 'n', 10.00, 180, 66, 1000, 10.00, 'n', 'n', '', 'sponsored links', 'diningguide'),
+(1, 'top', 'y', 50.00, 728, 90, 1000, 50.00, 'y', 'y', '', 'top', 'contractors' ),
+(2, 'bottom', 'n', 20.00, 468, 60, 1000, 20.00, 'y', 'n', '', 'bottom', 'contractors' ),
+(3, 'top right', 'n', 40.00, 120, 90, 1000, 40.00, 'y', 'n', '', 'top right', 'contractors' ),
+(50, 'sponsored links', 'n', 10.00, 180, 66, 1000, 10.00, 'y', 'n', '', 'sponsored links', 'contractors');

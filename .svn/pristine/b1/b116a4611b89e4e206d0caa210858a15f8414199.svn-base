@@ -1,0 +1,21 @@
+/**
+* eDirectory - Content Custom ( Dynamic content )
+*
+* @package			layout
+* @filesource		content_custom.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			April, 17, 2012
+*			
+*/
+
+
+.content-custom { color:#636363;}
+	
+.content-custom h1, .content-custom h2, .content-custom h3, .content-custom h4, .content-custom h5, .content-custom h6
+{ color:#636363; line-height:1; background:none; font-weight:600; border:none;}
+
+.content-custom p {line-height:18px;}
+
+.content-general .content-main .content-custom  h2 {border:none;}

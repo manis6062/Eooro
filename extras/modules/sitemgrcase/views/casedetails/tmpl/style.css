@@ -1,0 +1,49 @@
+.msg{
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    padding: 10px 12px 10px 15px !important;
+    border-radius: 10px;
+    width: 80%;
+}
+.msg p{
+    color: #111 !important;
+}
+.msg-received{
+    background-color: rgb(242, 222, 168);
+    border-top-left-radius:1em;
+    border-top-right-radius:2em;
+    border-bottom-right-radius:1em;
+    border-bottom-left-radius:0em;
+}
+.msg-sent{
+    background-color: rgb(201, 217, 179);/*rgb(223, 240, 216);*/
+    border-top-left-radius:2em;
+    border-top-right-radius:1em;
+    border-bottom-right-radius:0em;
+    border-bottom-left-radius:1em;
+    margin-right: 10px !important;
+}
+.msg-container{
+    max-height: 500px;
+    overflow-y: auto;
+}
+.msg-title{
+    border-top: 1px solid  #D8D8D7;
+}
+.msg-separate{
+    display: block;
+    clear: both;
+}
+.wrap-text{
+    word-wrap: break-word;
+}
+.col-2{
+    display: block;
+    width: 19%;
+    float: left;
+}
+.col-8{
+    display: block;
+    width: 79%;
+    float: left;
+}

@@ -1,0 +1,211 @@
+/**
+* eDirectory - Profile Pages
+*
+* @package			layout
+* @filesource		profile.css
+* @author			Arca Solutions
+*/
+
+
+@import "variables.less";
+@import "mixins.less";
+
+
+/*Profile Page 2014*/
+
+
+
+.profile-sidebar {
+	> h2 {
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	.user-info {
+		background-color:@gray-extralighter;
+		border:1px solid @gray;
+		p {
+				font-size:0.9em;
+				line-height:1.46em;
+				color:@gray-text;
+			}		
+	}
+	.basic-info {
+			h5 {
+				font-weight: 600;
+				line-height:1em;
+				font-size:1em;
+				padding-bottom:5px;
+			}			
+		}
+	.extra-info {
+		p {
+			margin:5px 0;
+			a {
+				word-break: break-word;
+			}
+		}
+		h4 {
+			margin:13px 0 5px;
+			font-size:1.1em;
+		}
+	}
+	.social-network {
+		p {
+			font-size:0.9em;
+			line-height:1.8em;
+			padding:5px 0 10px;
+		}
+	}	
+}
+
+.viewmore {
+	a {
+		color:@brand-info;
+		&:hover {
+			color:@brand-info-hover;
+		}
+	}
+}
+
+.list-favorites {
+	.item-favorite {
+		border:1px solid @gray;
+		.item-info {
+			background-color:@gray-extralighter;
+		}
+		.item-options {
+			background-color:@gray-light;
+		}
+		span, p {
+			color:@gray-text;
+			font-size:0.95em;
+			line-height:1.4em;
+		}
+		h4 {
+			color:@gray-dark;
+			font-size:1em;
+			line-height: 2em;
+			a {
+				color:@gray-dark;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		abbr {
+			font-size:0.8em;
+			a {
+				color:@gray-text;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.welcome-box {
+	h1 {
+		font-size:18px;
+		text-transform: uppercase;
+		line-height:18px;
+		font-weight: normal;
+		padding-bottom:15px;
+	}	
+	> h2 {
+		font-size: 1.4em;
+		line-height: 20px;
+		margin: 0 0 13px;
+		font-weight: normal;
+		text-transform: uppercase;
+
+	}
+	p {
+		line-height:2em;
+	}	
+}
+
+.search-box {
+		background-color: @gray-extralight;
+		border: 1px solid @gray;
+		h3 {
+			font-size:1.1em;
+			line-height: 1.4em;
+			font-weight: normal;
+			padding:10px 0;
+		}
+		p {
+			font-size:0.9em;
+			font-weight:600;
+			line-height:3em;
+		}
+	}
+
+.activity-box {	
+	h2 {
+		font-size:18px;
+		line-height:18px;
+		text-transform: uppercase;
+		font-weight: normal;
+		padding-bottom: 15px;
+	}
+	.item-activity {
+		border: 1px solid @gray;
+		.transition(0.3s);
+		p{
+			vertical-align: middle;
+			line-height: 1.4em;
+		}
+		&:hover{
+			cursor: pointer;
+			box-shadow: 0 0 5px @gray-light;
+		}
+		.activity-detail {
+			p {color:@gray-text;}
+			.reply {
+				.opacity(0.6);
+				padding-left:50px;
+			}
+		}
+	}
+}
+
+
+/*Social icons*/
+
+.socialicon  {
+		background-image: url(images/iconography/profile-icons.png);
+		background-repeat: no-repeat;
+		width:20px;
+		height:20px;
+		display:inline-block;
+		vertical-align: middle;
+		margin-right:10px;
+		&.social-facebook {
+			background-position:0 0;
+		}
+		&.social-twitter {
+			background-position:0 -30px;
+		}
+		&.social-facebook-mini {
+			background-position:0 -59px;
+		}
+		&.social-twitter-mini {
+			background-position:0 -89px;
+		}
+		&.social-clickcall-mini {
+			background-position:0 -117px;
+		}
+
+	}
+
+/* Twitter*/
+.last-tweets {
+	h2 {
+		margin:10px 0 0;
+	}
+	ul li span {
+		color:@gray-text;
+	}
+}
+

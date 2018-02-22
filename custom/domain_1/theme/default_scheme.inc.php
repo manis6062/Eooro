@@ -1,0 +1,20 @@
+<?php
+$edir_scheme="default";
+$arrayScheme["default"]["colorBackground"] = "EEEEEE";
+$arrayScheme["default"]["colorHeader"] = "383838";
+$arrayScheme["default"]["colorText"] = "999899";
+$arrayScheme["default"]["colorLink"] = "2980B9";
+$arrayScheme["default"]["colorNavbar"] = "232323";
+$arrayScheme["default"]["colorNavbarLink"] = "FFFFFF";
+$arrayScheme["default"]["colorNavbarLinkActive"] = "3498db";
+$arrayScheme["default"]["colorFooter"] = "383838";
+$arrayScheme["default"]["colorFooterText"] = "FFFFFF";
+$arrayScheme["default"]["colorFooterLink"] = "D8D9D9";
+$arrayScheme["default"]["color1"] = "16A085";
+$arrayScheme["default"]["color2"] = "27AE60";
+$arrayScheme["default"]["color3"] = "2980B9";
+$arrayScheme["default"]["color4"] = "2C3E50";
+$arrayScheme["default"]["color5"] = "F39C12";
+$arrayScheme["default"]["color6"] = "D35400";
+$arrayScheme["default"]["color7"] = "C0392B";
+$arrayScheme["default"]["fontOption"] = "1";

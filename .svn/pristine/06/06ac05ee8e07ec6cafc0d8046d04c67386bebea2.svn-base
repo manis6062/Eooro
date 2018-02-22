@@ -1,0 +1,41 @@
+<?php
+
+include INCLUDES_DIR.'/code/alllocation_recentreview.php';
+
+if(!empty($listings)){
+?>
+<h2>Recent Review</h2>
+<table class="table table-bordered reviewCollect table-hover recentReviewedTrending view-location-recentReviewedTrending text-left">
+    <thead class="thead-bg">
+        <tr>
+            <th class="col-sm-5 col-md-5">Business Name</th>
+            <th class="col-sm-2 col-md-2">Town/city</th>
+            <th class="col-sm-4 col-md-4">Review Title</th>
+            <th class="col-sm-1 col-md-1"> Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <? foreach($listings as $listingg) {?>
+        <tr>
+
+<?php                   $summary = new ListingSummary($listingg['item_id']);
+                        $location1friendlyurl = $summary->location_1_friendly_url;
+                        $location3friendlyurl = $summary->location_3_friendly_url;
+                        $location4friendlyurl = $summary->location_4_friendly_url;
+                        $link_city  = DEFAULT_URL . "/" . ALIAS_LISTING_MODULE . "/" . "locations/" . $location1friendlyurl . "/" . $location3friendlyurl . "/" . $location4friendlyurl . "/1";
+                        $state = $listingg['location_3_title'];
+
+?>
+    
+            <td>
+                <a href="<?=DEFAULT_URL.'/'.ALIAS_LISTING_MODULE.'/'.$listingg['friendly_url'];?>"><?=htmlspecialchars($listingg['title'])?></a>
+             </td>
+            <td> <?php echo  "<a href='". $link_city ."'>". $state . "</a>";?></td>
+            <td>   <a href="<?=DEFAULT_URL.'/'.ALIAS_LISTING_MODULE.'/'.$listingg['friendly_url'];?>" title="<?php echo $listingg['review_title'];  ?>"><?= substr(htmlentities(ucwords($listingg['review_title'])),0,25)?></a></td>
+
+            <td><?=$listingg['rating']?></td>
+        </tr>
+        <? } ?>
+    </tbody>
+</table>
+<? } ?>

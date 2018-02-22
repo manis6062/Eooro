@@ -1,0 +1,179 @@
+/**
+* eDirectory - Result Pages ( Modules )
+*
+* @package			layout
+* @filesource		results.css
+* @author			Arca Solutions
+*			
+*/
+
+@import "variables.less";
+@import "mixins.less";
+
+/* #Map
+*/
+	div.map {border: 1px solid #cccccc; background-color:#fff!important;}	
+	div.map .map-loading {background:url(images/iconography/icon-loading-content.gif) no-repeat 80% center transparent;font-size:11px;text-align:center; padding:10px 0;}
+    
+    .map-info-view {overflow:hidden!important;}
+    .map-info-view p, .map-info-view a {font-size:12px;line-height:15px;padding:0;}
+    .map-info-view img {width:13px;}
+    
+#list_rating label  {font-size:0px;}
+
+
+/* #Summary View Structure */
+
+.summary {
+    border:1px solid @gray-line; 
+    background-color:@well-color;
+    &.summary-backlink {
+        border:1px solid @brand-highlight; 
+    }
+    .divisor {
+        border-color:white;
+    }
+    .title {
+        border-bottom:1px solid @gray; 
+        padding-bottom:12px;
+        p {
+            padding-top: 1px; font-size:@font-size-small;
+        }
+        h3 {
+            line-height:1.2em; font-weight:600; font-size:@font-size-large;
+            a {
+                color:@text-color;
+            }
+            a:hover {
+                color:@brand-info-hover;
+            }
+        }
+        h4 {
+            color:@brand-info; font-size: @font-size-small;
+        }
+        em {
+            color:@brand-primary; font-style: normal; font-weight: normal; font-size:@font-size-small;
+        }
+    }
+    .map-link {
+        padding:0 2px 0 20px; 
+        background: url(images/iconography/pin-map.png) no-repeat 1px 1px;
+        }
+    .line-footer {
+        background-color:#F5F5F4; //Do not change this color
+        color:@gray-text;
+        .stars-rating {
+            [class*="rate-"] {
+            background-color:@gray-lighter;
+            }
+        }
+    }
+    .review-count {text-decoration:none;}
+    .claim {
+        a {
+            color:@brand-primary;            
+            font-size:0.85em;
+            &:hover {
+                color:@brand-primary-hover;
+            }
+        }
+    }
+}
+
+
+
+
+.summary-small {
+        .line-footer {
+            .review > a {
+                line-height: 30px;
+            }
+        }
+        .row-fluid > p { 
+            color:@gray-text;
+            line-height:1.4em;
+            font-size: 93%;
+        }
+        .rate p, .rate p a, .show-inline, .line-footer a {
+            font-size:@font-size-small;
+        }
+        .info {
+            font-size:@font-size-small;        
+            p {                 
+                line-height: 1.15em;
+                }           
+            small {
+                font-size:@font-size-small;
+            }
+        }
+    } 
+
+
+.summary-article {
+     .media-body {
+        p {
+        font-size:90%;
+        color:@gray-text;}
+    }
+    p {
+        font-size:@font-size-small;
+    }
+}
+
+.summary-deal .media-body p {color:@gray-text;line-height:1.3em; font-size:105%;}
+/* #Summary Specifics 
+	
+	Differences between modules. 
+	
+	* Deals
+	* Listings
+	* Articles
+ */
+	
+.listing-tag-deal, .deal-tag-small  {background-color:@brand-primary;}
+.name-tag-deal {font-size:14px; font-weight:500; text-transform: uppercase;}
+.name-tag-deal, .name-tag-deal a {color:white;}
+.name-tag-deal a:hover {color:@gray-extralight;}
+
+.name-tag-deal small { color: @gray-light;}
+
+
+
+.summary .deal-tag, .summary .title .price {
+    color: @gray; 
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: right;
+    }
+
+
+
+/*#Tab View*/
+.tabs {
+    .mapView.disableMapTab {
+            .opacity(0.5);
+            a, a:hover {
+                background-color:@gray-light; 
+                color:@gray-text; 
+                cursor:default;
+                border:none;
+            }
+        }
+}
+
+
+.results-info-listing p {font-size:@font-size-small;}
+
+.results-info-listing p strong:after, 
+.results-info-listing p strong:before, 
+.search-info p strong:after, 
+.search-info p strong:before 
+{content:"\0022";}
+
+
+.sidebar-filters .item-filter h3 a {
+    &:hover, &:focus {
+        background-color:transparent;
+    }
+}

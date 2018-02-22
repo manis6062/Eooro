@@ -1,0 +1,105 @@
+/*
+body
+{ background: url(../images/design/bg_login.gif) repeat 0 0; }
+
+div.wrapper div.header .header-backdrop 
+{ border-bottom: 1px solid #424242; }
+
+div.wrapper div.header .header-nav
+{ background: none; }
+*/
+
+body {
+	background-color:#fff;
+}
+
+body .wrapper div.content{
+	border:none;
+}
+
+.stmgr-login {
+	margin:150px auto 0 auto;
+	width:100%;
+	max-width:600px;
+	text-align:center;
+	font-size:12px;
+}
+
+.stmgr-login .form-login h2 {
+	display:block;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight:bold;
+	clear:both;
+}
+
+.stmgr-login .form-login h2 b {
+	font-weight:bold;
+}
+
+.stmgr-login .form-login p {
+	display:block;
+	clear:both;
+	margin-bottom:10px;
+}
+
+.stmgr-login .form-box {
+	width:280px;
+	margin:10px auto;
+	text-align:left;
+}
+
+.form-login .stmgr-btn, .form-login input{
+	width:100%;
+	padding:4px 0 4px 8px;
+	height:40px;
+	float:left;
+	margin:5px 0;
+	line-height:35px;
+	vertical-align: baseline;
+}
+
+ .form-login input {
+ 	line-height: 40px;
+ }
+
+::-webkit-input-placeholder { line-height:35px;} /*Placeholder on Chrome*/
+
+.form-login label {
+	line-height: 15px;
+    vertical-align: middle;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.form-login label.automaticLogin {
+	display:inherit;
+}
+
+.form-login .stmgr-btn {
+	margin:15px 0;
+	clear:both;
+}
+
+.form-login input {
+	background-color:#f4f6f7;	
+	max-width:272px;
+	max-height:34px;
+}
+
+.ie .form-login input {
+	vertical-align: baseline;
+}
+.ie .form-login label {
+	line-height:24px;
+}
+
+.form-login input[type="checkbox"] {
+	background-color:transparent;
+	border:none;
+	width:auto;
+	height:15px;
+	margin:0 10px 0 0;
+	float:left;
+}

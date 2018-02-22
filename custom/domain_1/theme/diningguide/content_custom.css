@@ -1,0 +1,27 @@
+/**
+* eDirectory - Content Custom ( Dynamic content )
+*
+* @package			layout
+* @filesource		content_custom.css
+* @author			Arca Solutions
+* @copyright		Copyright (c) 2009, Arca Solutions Inc.
+* @version			eDirectory 9.3
+* @since			October, 17, 2011
+*			
+*/
+
+.content-custom {padding:15px 2%; }
+
+.content-custom h2{font-size:16px }
+.content-custom h3{font-size:14px}
+
+.content-custom.create-profile {padding:15px 0; }
+
+.content-custom.cont_100 {padding:0; margin:20px 0;}
+
+.content-custom.cont_100 h2, .content-custom.cont_100 h3 {border:none; line-height:30px; font-weight:normal;}
+
+
+.content-custom ol {list-style: decimal }
+.content-custom ul {list-style: disc}
+.content-custom ol,  .content-custom ul {line-height:17px; margin:10px 0 10px 20px;}

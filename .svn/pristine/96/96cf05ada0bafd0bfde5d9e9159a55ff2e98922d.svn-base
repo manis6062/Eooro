@@ -1,0 +1,8 @@
+; Lucene config for Listing_Summary
+[section]
+database_table  = "Listing_Summary"
+search_dir      = "/home/dotmark4/index_test_49"
+return_fields   = "id,title,account_id,address,address2,friendly_url,url,phone,fax,image_id,thumb_id,description,level,claim_disable,display_url,fulltextsearch_keyword,fulltextsearch_where,location_3_abbreviation,location_1_title,location_3_title,location_4_title,zip_code,avg_review,thumb_type,thumb_width,thumb_height,attachment_file,latitude,longitude,email,show_email"
+jar_path        = "/var/www/lucene/lucene49-search.jar"
+
+;vps path       = "/var/www/vhosts/vps65937-5.lcnservers.com/10300_index"

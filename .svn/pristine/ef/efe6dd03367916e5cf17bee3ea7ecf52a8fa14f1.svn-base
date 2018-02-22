@@ -1,0 +1,188 @@
+<?
+include("../conf/loadconfig.inc.php");
+extract($_GET);
+
+$id            = mysql_real_escape_string($id);
+$reviewer_id   = $id;
+$reviewer_info = new Profile($id);
+$accObj = new Account($id);
+
+    #---------------------------------------------
+    #   Facebook/Twitter Integration Code
+    #---------------------------------------------
+
+    $publish = $accObj->getString("publish_contact");
+    $profileObj = new Profile(sess_getAccountIdFromSession());
+    $profileObj->extract();
+
+    //Facebook integration
+    Facebook::getFBInstance($facebook);
+    
+    //changed the value of $urlRedirect because of the Browser redirect loop problem 
+    $urlRedirect = $_SERVER["HTTP_REFERER"] ? $_SERVER["HTTP_REFERER"] : DEFAULT_URL.'/index.php';
+
+    
+    if (isset($_GET["signoffFacebook"])){
+        $facebookMessage = system_showText(LANG_LABEL_FB_ACT_DISC).".";
+
+        $accountObj = new Account(sess_getAccountIdFromSession());
+        $accountObj->setString("facebook_username", "");
+        $accountObj->setString("foreignaccount", "n");
+        $accountObj->setString("foreignaccount_done", "n");
+        $accountObj->setString("foreignaccount_auth", "");
+        $accountObj->Save();
+
+        $profileObj = new Profile(sess_getAccountIdFromSession());
+        $profileObj->setString("facebook_uid", "");
+        $profileObj->setString("usefacebooklocation", "0");
+        $profileObj->Save();
+    }
+    
+    //Twitter integration
+    if ($tw_oauth_token && $tw_oauth_token_secret && $tw_screen_name) {
+        $twitterInfo = true;
+    }
+
+    setting_get("foreignaccount_twitter_apikey", $foreignaccount_twitter_apikey);
+    setting_get("foreignaccount_twitter_apisecret", $foreignaccount_twitter_apisecret);
+    
+    if ($foreignaccount_twitter_apikey && $foreignaccount_twitter_apisecret) {
+        $twitterSupport = true;
+        $EpiTwitter = new EpiTwitter($foreignaccount_twitter_apikey, $foreignaccount_twitter_apisecret);
+    }
+    $twitterSupport = false;
+    
+    if ($_GET["twitter"]) {
+        if ($_GET["twitter"] == "success") $twitterMessage = system_showText(LANG_LABEL_TW_SIGNTW_CONN);
+        else if ($_GET["twitter"] == "fail") $twitterMessage = system_showText(LANG_LABEL_TW_SIGNTW);
+        else if ($_GET["twitter"] == "alreadyused") $twitterMessage = system_showText(LANG_TW_ALREADY_LINKED);
+    }
+
+    if ($_GET["signofftwitter"] == "success") $twitterMessage = system_showText(LANG_LABEL_TW_ACT_DISC).".";
+
+$joined_date   = date( "m/d/Y", strtotime($reviewer_info->entered));
+$total_reviews = Review::getReviewsCountByAccountID($id);
+$total_cases   = Review::getCasesByAccountID($id);
+$info = (array) $reviewer_info;
+
+?>
+<div class="Buinessdashboard-wrapper" style="color:#000;">
+	<div id="dashboard dashboard1">
+		<div class="profile-dashboard">
+			<div class="overview-wrapper">
+				<h2>Public Profile</h2>
+                <div class="row">
+    				<div class="col-sm-4 col-md-3 col-lg-3">
+        				<div id="image fb pull-left">
+        					        <?
+                                        if (!$info["facebook_image"]) {
+                                            $imgObj = new Image($info["image_id"], true);
+                                            if ($imgObj->imageExists()) {
+                                                echo $imgObj->getTag(true, PROFILE_MEMBERS_IMAGE_WIDTH, PROFILE_MEMBERS_IMAGE_HEIGHT);
+                                            } else {
+                                                echo "<div class=\"profile-noimage\"><img src='".DEFAULT_URL."/images/profile_noimage.png'></div>";
+                                            }
+                                        } else {
+                                            
+                                           if(checkExpiredImage($info["facebook_image"]) == "URL signature expired"){
+                                               $info["facebook_image"] = DEFAULT_URL . "/images/profile_noimage.png";
+                                           }
+
+                                            if (HTTPS_MODE == "on") {
+                                                $info["facebook_image"] = str_replace("http://", "https://", $info["facebook_image"]);
+                                            } ?>
+
+                                            <img width="<?=$info["facebook_image_width"] ? $info["facebook_image_width"] : 100?>" height="<?=$info["facebook_image_height"] ? $info["facebook_image_height"] : 100?>" src="<?=$info["facebook_image"]?>" border="0" alt="Facebook Image"/>
+
+                                        <? } ?>
+        				</div>
+    				</div>
+    				<div class="col-sm-4 col-md-4 col-lg-4">
+        				<div class="reviewer-info pull-left">
+        					<p>Name: <?=htmlentities($reviewer_info->nickname)?></p>
+        					<p>Member Since: <?=$joined_date?></p>
+        					<p>Total Reviews: <span class="badge overview"><?=$total_reviews?></span></p>
+                            <p>Total Cases: <span class="badge overview"><?=$total_cases?></span></p>
+        				</div>
+                    </div>
+                    <div class="col-sm-4 col-md-5 col-lg-4">
+                        <section class="social-network pull-right" id="socialNetworking">      
+                            <?if ($id == sess_getAccountIdFromSession() && ($twitterSupport || (FACEBOOK_APP_ENABLED == "on" && $accObj->getString("username") != $accObj->getString("facebook_username")))) {
+                                
+                                if ($_GET["error"] == "disableAttach") { ?>
+                                    <p class="errorMessage"><?=system_showText(LANG_FB_ALREADY_LINKED)?></p>
+                                <? }
+
+                                if (isset($_GET["facebookerror"])) { ?>
+                                    <p class="errorMessage"><?=system_showText(LANG_MSG_ERROR_NUMBER)." 10001. ".system_showText(LANG_MSG_TRY_AGAIN);?></p>
+                                <? }
+                                
+                                if ($accObj->getString("username") != $accObj->getString("facebook_username") && FACEBOOK_APP_ENABLED == "on") {
+
+                                    //Account already associated
+                                    if ($profileObj && $profileObj->facebook_uid != "") {
+
+                                        //Unlink account
+                                        if (isset($_GET["facebookattached"])) { ?>
+                                            <p class="successMessage"><?=system_showText(LANG_LABEL_FB_SIGNFB_CONN);?></p>
+                                        <? } ?>
+
+                                        <p><i class="socialicon social-facebook"></i><a href="<?=DEFAULT_URL?>/<?=SOCIALNETWORK_FEATURE_NAME?>/index.php?signoffFacebook"><?=system_showText(LANG_LABEL_UNLINK_FB);?></a></p>
+                                    <?
+                                    //Account not associated
+                                    } else {
+
+                                        $linkAttachFB = true;
+
+                                        //Link Account
+                                        if ($facebookMessage) { ?>
+                                            <p class="successMessage"><?=$facebookMessage?></p>
+                                        <? }
+
+                                        include(INCLUDES_DIR."/forms/form_facebooklogin.php");
+
+                                    } 
+                                }
+                                
+
+                                
+                                if ($twitterSupport) {
+                                    
+                                    if (!isset($twitterInfo)) {
+
+                                        if (!isset($EpiTwitter)) {
+                                            $EpiTwitter = new EpiTwitter($foreignaccount_twitter_apikey, $foreignaccount_twitter_apisecret);
+                                        }
+                                        
+                                        if ($twitterMessage) { ?>
+                                            <p class="<?=$_GET["signofftwitter"] == "success"? "successMessage": "errorMessage"?>"><?=$twitterMessage?></p>
+                                        <? } ?>
+                                            
+                                        <p><i class="socialicon social-twitter"></i><a href="<?=$EpiTwitter->getAuthorizationUrl()?>"><?=system_showText(LANG_LABEL_TW_LINK)?></a></p>
+
+                                    <? } else {
+                                        
+                                        if ($twitterMessage) { ?>
+                                            <p class="<?=$_GET["twitter"] == "success"? "successMessage": "errorMessage"?>"><?=$twitterMessage?></p>
+                                        <? } ?>
+                                        
+                                        <p><i class="socialicon social-twitter"></i><a href="<?=DEFAULT_URL?>/twitter.php?signoffTwitter"><?=system_showText(LANG_LABEL_UNLINK_TW)?></a></p>
+
+                                    <? }
+                                } 
+                            }?>
+                        </section>
+                    </div>
+			    </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="aboutme"><strong>About Me</strong><br><?=htmlentities($reviewer_info->personal_message)?></p>
+                
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,121 @@
+.modal-content > h2 {
+  color: #3d3d3d;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.7em;
+  padding: 20px 0 5px 0;
+  margin: 0 5% 21px 5%;
+  float: left;
+  width: 90%;
+  clear: both;
+  border-bottom: 1px solid #dee1e3;
+  text-align: left;
+}
+.modal-content > h2 b {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 75%;
+  white-space: nowrap;
+  display: inline-block;
+}
+.modal-content > h2 > span a {
+  float: right;
+  font-weight: normal;
+  margin-right: 10px;
+  text-transform: capitalize;
+  color: #d9534f;
+  font-size: 12px;
+}
+.modal-content > h2 > span a:hover {
+  text-decoration: underline;
+}
+.modal-content .content-custom h2 {
+  margin-left: 10px;
+}
+.modal-content  .button h2 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0;
+}
+body {
+  background: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+.modal-content form span.comment {
+  color: #939496;
+}
+.modal-content .customInvoice h3 {
+  color: #939496;
+}
+.modal-content button[type="submit"],
+.modal-content .button-profile h2 a {
+  background-color: #27ae60;
+  color: white;
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 10px;
+  margin: 0 auto 5px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 233px;
+  float: none;
+  height: 30px;
+  -webkit-transition: all 0.5s ease 0.16666666666667s;
+  -moz-transition: all 0.5s ease 0.16666666666667s;
+  -o-transition: all 0.5s ease 0.16666666666667s;
+  transition: all 0.5s ease 0.16666666666667s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.modal-content button[type="submit"]:hover,
+.modal-content .button-profile h2 a:hover {
+  background-color: #32d175;
+}
+p.input-button-form {
+  padding: 0;
+}
+p.input-button-form button {
+  background: transparent;
+  line-height: 10px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s ease 0.16666666666667s;
+  -moz-transition: all 0.5s ease 0.16666666666667s;
+  -o-transition: all 0.5s ease 0.16666666666667s;
+  transition: all 0.5s ease 0.16666666666667s;
+}
+.modal-content .redeem-deal h1 {
+  background-color: #efefef;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  clear: both;
+}
+.modal-content .redeem-deal h2 {
+  font-size: 20px;
+  margin: 10px 20px;
+}
+.modal-content .redeem-deal .terms p {
+  color: #888;
+  font-size: 10px;
+}
+.modal-content .redeem-deal .listing-info p {
+  font-size: 11px;
+}
+.modal-content .rate {
+  background-color: transparent;
+}
+.modal-content .form div .text,
+.modal-content .form div .textarea {
+  margin-bottom: 2px;
+}
+.modal-content .form .captcha img {
+  border: 1px solid #B7C0C7;
+  height: 27px;
+}

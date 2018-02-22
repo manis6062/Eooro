@@ -1,0 +1,243 @@
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700);
+@font-face{
+	font-family:"TeenIdle";
+	src : url("../fonts/TeenIdle.otf") format('truetype');
+}
+/*body{
+	font-size:16px;
+	color:#000;
+	font-family: 'Open Sans', sans-serif;
+        overflow-x:hidden;
+}
+a.navbar-brand {
+	display: none;
+}
+.cusnav{
+	margin-left:-29px;
+}
+.navbar{
+	border:transparent;
+	border-radius:0;
+	margin-bottom:0;
+}
+.navbar-default {
+	background-color: #ee3767;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+.bold a{
+	font-weight:bold;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	color: #fff;
+	background-color: #ce2550;
+}
+
+ul.nav.navbar-nav.bold li.active {
+	margin-left: 25px;
+}
+.fb-header{
+	margin-top: 12px;
+	cursor: pointer;
+
+}*/
+
+/*call to action page*/
+section.advertise {
+	background:url(../images/wallpapers/UnitedKingdom_img.jpg) top center no-repeat;
+	/*background-size:cover;*/
+	background-size:100% 100%;
+	/*padding: 145px 0 210px;*/
+  padding: 225px 0 539px;
+}
+
+.transparent-bg2{
+	background-color: rgba(63, 58, 53, 0.6);
+	padding: 10px;
+	border-radius: 5px
+}
+.forposition {
+  position: relative;
+}
+.calltoactionbtn {
+  width: 319px;
+}
+.calltoactionbtn:hover {
+    background-color: #5cb85c;
+}
+.advertise i.fa.fa-quote-left,
+.advertise i.fa.fa-quote-right{
+	font-size:25px;
+}
+section.advertise h1{
+	text-transform:capitalize;
+	color:#fff;
+	font-size:49px;
+ /* font-size:3em;*/
+	font-family:'TeenIdle';
+	margin-top: 0;
+}
+section.advertise p{
+	font-style:italic;
+}
+p.build-on-yours{
+	font-size:30px;
+	color:#5db85c;
+	font-family:'TeenIdle';
+}
+p.afford{
+	font-size:20px;
+	color:#fff;
+}
+.advertise i.fa.fa-share{
+	color:#fff;
+	font-size:53px;
+	transform:rotate(150deg);
+	-ms-transform:rotate(150deg);
+	-webkit-transform:rotate(150deg);
+	position: absolute;
+  	bottom: 14px;
+  	right: 45px;
+}
+.thumbnail.onedollarwrapper.eoororeason h4 {
+  font-size: 22px;
+  color: #ee3767;
+  text-transform: uppercase;
+  /* line-height: 30px; */
+}
+.onedollarwrapper h4 {
+  color: #5c6f75;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.thumbnail.onedollarwrapper.eoororeason h4 span {
+  font-size: 14px;
+  color: #696969;
+  text-transform: lowercase;
+  display: inline-block;
+  margin-left: 5px;
+}
+.thumbnail.onedollarwrapper.eoororeason {
+  line-height: 24px;
+  padding: 10px;
+  background-color: #fff;
+  /* margin-bottom: 342px; */
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+ul.somereason {
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  padding-left:0;
+}
+.somereason h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.conversion {
+  font-size: 15px;
+  overflow: hidden;
+  color:#696969;
+}
+img.firstimg, em.fa.fa-smile-o.smile.firstimg, em.fa.fa-check.check.firstimg {
+  position: relative;
+  /*top: 10px;*/
+  float: left;
+  margin-right: 10px;
+}
+em.fa.fa-smile-o.smile, em.fa.fa-check.check {
+  font-size: 70px;
+  color: #d8d8d8;
+  background-color: #fff;
+}
+.checkwrapper {
+  padding-top: 30px;
+}
+ul.helps {
+  padding-left: 0;
+}
+ul.helps li.check {
+  background: url(../images/check.jpg) no-repeat;
+  padding-bottom: 15px;
+    list-style: none;
+}
+ul.helps li a {
+  color: #696969;
+  font-size: 15px;
+  padding-left: 30px;
+  text-align: left;
+  display: block;
+  line-height: 25px;
+  font-weight:bold;
+}
+.row.plan {
+  display: none;
+}
+@media (min-width: 1201px){
+section.advertise {
+   padding: 195px 0 326px;
+}
+}
+@media (max-width: 1200px){
+  section.advertise {
+   padding: 145px 0 210px;
+ 
+}
+
+}
+@media (max-width : 1199px) and (min-width: 993px) {
+  section.advertise h1 {
+   font-size:38px;
+ 
+}
+.advertise i.fa.fa-share {
+  right: 8px;
+}
+
+}
+@media (max-width : 992px){
+  section.advertise h1 {
+   font-size:35px;
+ 
+}
+.advertise i.fa.fa-quote-left,
+.advertise i.fa.fa-quote-right{
+  font-size:17px;
+}
+
+.advertise i.fa.fa-share {
+  right: 8px;
+}
+
+}
+@media (max-width : 991px) and (min-width: 768px) {
+section.advertise h1 {
+  font-size: 28px;
+}
+p.afford {
+  font-size: 16px;
+}
+.advertise i.fa.fa-share {
+  color: #fff;
+  font-size: 35px;
+  right: 4px;
+  bottom: 21px;
+}
+.calltoactionbtn {
+  width: 220px;
+}
+
+}
+@media (max-width: 767px){
+  .advertise i.fa.fa-share {
+  right: auto;
+}
+}
